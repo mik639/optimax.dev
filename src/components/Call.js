@@ -5,7 +5,7 @@ const Call = props => (
   <div className="call">
     <div className="call-box-top">
       <div className="call-phone">
-        <strong>Phone: </strong>
+        <strong>Телефон: </strong>
         {props.data.site.siteMetadata.contact.phone}
       </div>
       <div className="call-email">
@@ -17,8 +17,8 @@ const Call = props => (
     </div>
     {props.button && (
       <div className="call-box-bottom">
-        <a href="/contact" className="button">
-          Contact
+        <a href="/contacts" className="button">
+          Контакты
         </a>
       </div>
     )}

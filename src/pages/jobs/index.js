@@ -3,24 +3,23 @@ import { Link, graphql } from 'gatsby';
 import SEO from '../../components/SEO';
 import Layout from '../../layouts/index';
 
-const Services = (props) => {
-  const services = props.data.allMarkdownRemark.edges;
+const Jobs = (props) => {
+  const jobs = props.data.allMarkdownRemark.edges;
   return (
     <Layout bodyClass="page-services">
-      <SEO title="Services" />
+      <SEO title="Вакансии" />
       <div className="intro">
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h1>Services</h1>
+              <h1>Вакансии</h1>
             </div>
           </div>
         </div>
       </div>
-
       <div className="container pb-6">
         <div className="row">
-          {services.map(edge => (
+          {jobs.map(edge => (
             <div key={edge.node.frontmatter.path} className="col-12 col-md-4 mb-1">
               <div className="card service service-teaser">
                 <div className="card-content">
@@ -39,9 +38,9 @@ const Services = (props) => {
 };
 
 export const query = graphql`
-  query ServicesQuery {
+  query JobsQuery {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/services/" } }
+      filter: { fileAbsolutePath: { regex: "/jobs/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
@@ -57,4 +56,4 @@ export const query = graphql`
   }
 `;
 
-export default Services;
+export default Jobs;

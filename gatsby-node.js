@@ -8,8 +8,8 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(
         `
           query {
-            services: allMarkdownRemark(
-              filter: { fileAbsolutePath: { regex: "/services/" } }
+            jobs: allMarkdownRemark(
+              filter: { fileAbsolutePath: { regex: "/jobs/" } }
               sort: { fields: [frontmatter___date], order: DESC }
             ) {
               edges {
@@ -40,8 +40,8 @@ exports.createPages = ({ graphql, actions }) => {
                 }
               }
             }
-            testimonials: allMarkdownRemark(
-              filter: { fileAbsolutePath: { regex: "/testimonials/" } }
+            blog: allMarkdownRemark(
+              filter: { fileAbsolutePath: { regex: "/blog/" } }
               sort: { fields: [frontmatter___date], order: DESC }
             ) {
               edges {
@@ -59,8 +59,8 @@ exports.createPages = ({ graphql, actions }) => {
           }
         `,
       ).then((result) => {
-        result.data.services.edges.forEach(({ node }) => {
-          const component = path.resolve('src/templates/service.js');
+        result.data.jobs.edges.forEach(({ node }) => {
+          const component = path.resolve('src/templates/job.js');
           createPage({
             path: node.frontmatter.path,
             component,
@@ -79,8 +79,8 @@ exports.createPages = ({ graphql, actions }) => {
             },
           });
         });
-        result.data.testimonials.edges.forEach(({ node }) => {
-          const component = path.resolve('src/templates/testimonial.js');
+        result.data.blog.edges.forEach(({ node }) => {
+          const component = path.resolve('src/templates/post.js');
           createPage({
             path: node.frontmatter.path,
             component,

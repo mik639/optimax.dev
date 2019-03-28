@@ -1,29 +1,30 @@
 const guid = process.env.NETLIFY_GOOGLE_ANALYTICS_ID;
 
 module.exports = {
+  pathPrefix: '/optimaxdev',
   siteMetadata: {
-    title: 'Gatsby Serif',
-    description: 'my theme',
+    title: 'Optimax',
+    description: 'Optimax is a global e-commerce company that is changing the world of eyewear in a very profound way.',
     contact: {
       phone: 'XXX XXX XXX',
-      email: 'zerostaticthemes@gmail.com',
+      email: 'dev@glassesusa.com',
     },
     menuLinks: [
       {
-        name: 'Services',
-        link: '/services',
+        name: 'Вакансии',
+        link: '/jobs',
       },
       {
-        name: 'Team',
+        name: 'Команда',
         link: '/team',
       },
       {
-        name: 'Testimonials',
-        link: '/testimonials',
+        name: 'Блог',
+        link: '/blog',
       },
       {
-        name: 'Contact',
-        link: '/contact',
+        name: 'Контакты',
+        link: '/contacts',
       },
     ],
   },
@@ -56,7 +57,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: guid ? guid : 'UA-XXX-1',
+        trackingId: guid || 'UA-XXX-1',
         // Puts tracking script in the head instead of the body
         head: false,
       },

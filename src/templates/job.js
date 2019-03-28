@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import SEO from '../components/SEO';
 import Layout from '../layouts/index';
 
-const Service = ({ data }) => {
+const Job = ({ data }) => {
   const { title } = data.markdownRemark.frontmatter;
   const { html } = data.markdownRemark;
   return (
@@ -37,4 +37,4 @@ export const query = graphql`
   }
 `;
 
-export default Service;
+export default Job;
