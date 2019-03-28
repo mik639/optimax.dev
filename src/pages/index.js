@@ -6,7 +6,6 @@ import Layout from '../layouts/index';
 import Call from '../components/Call';
 
 const Home = (props) => {
-  console.log('props.data', props.data);
   const markdown = props.data.allMarkdownRemark.edges;
   const json = props.data.allFeaturesJson.edges;
   return (
