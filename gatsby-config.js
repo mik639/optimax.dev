@@ -1,7 +1,6 @@
 const guid = process.env.NETLIFY_GOOGLE_ANALYTICS_ID;
 
 module.exports = {
-  pathPrefix: '/optimaxdev.github.io',
   siteMetadata: {
     title: 'Optimax',
     description: 'Optimax is a global e-commerce company that is changing the world of eyewear in a very profound way.',
