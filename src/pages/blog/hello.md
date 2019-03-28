@@ -7,7 +7,7 @@ featured: true
 draft: false
 ---
 
-Провели новогодний корпоратив
+Провели новогодний корпоратив!
 
 ![alt text](https://pp.userapi.com/c846216/v846216646/191d69/jI1Y5O182FY.jpg)
 
