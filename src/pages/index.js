@@ -19,7 +19,7 @@ const Home = (props) => {
       </Helmet>
       <div className="intro pb-4">
         <div className="container">
-          <h1>Optimax</h1>
+          <h1>Оптимакс Тольятти</h1>
           <p>
           Optimax is a global e-commerce company that is changing the world of eyewear in a very profound way.
           </p>
@@ -33,7 +33,7 @@ const Home = (props) => {
       <div className="container pt-8 pt-md-10">
         <div className="row justify-content-center">
           <div className="col-12">
-            <h2 className="title-3 text-dark mb-4">Наши проекты</h2>
+            <h2 className="title-3 text-dark mb-4">Проекты</h2>
           </div>
           {json.map(edge => (
             <div key={edge.node.id} className="col-12 col-md-6 col-lg-4 mb-2">
@@ -67,11 +67,6 @@ const Home = (props) => {
               </div>
             </div>
           ))}
-          <div className="col-12 text-center">
-              <Link className="button button-primary mt-2" to="/jobs">
-                Показать все вакансии
-              </Link>
-          </div>
         </div>
       </div>
 
