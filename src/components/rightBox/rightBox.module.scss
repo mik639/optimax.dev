@@ -1,0 +1,26 @@
+@import 'variables.scss';
+
+.rightBox {
+    display: flex;
+    align-self: center;
+}
+
+.wrapLanguage {
+    width: 25px;
+}
+
+.apply {
+    display: block;
+    width: 109px;
+    height: 37px;
+    margin-left: 20px;
+    border-radius: 18px;
+    background: $color-white;
+    font-size: 18px;
+    line-height: 2;
+    font-weight: 500;
+    letter-spacing: -.17px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-dobger-blue;
+}

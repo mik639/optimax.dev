@@ -59,36 +59,36 @@ exports.createPages = ({ graphql, actions }) => {
           }
         `,
       ).then((result) => {
-        result.data.jobs.edges.forEach(({ node }) => {
-          const component = path.resolve('src/templates/job.js');
-          createPage({
-            path: node.frontmatter.path,
-            component,
-            context: {
-              id: node.id,
-            },
-          });
-        });
-        result.data.team.edges.forEach(({ node }) => {
-          const component = path.resolve('src/templates/team.js');
-          createPage({
-            path: node.frontmatter.path,
-            component,
-            context: {
-              id: node.id,
-            },
-          });
-        });
-        result.data.blog.edges.forEach(({ node }) => {
-          const component = path.resolve('src/templates/post.js');
-          createPage({
-            path: node.frontmatter.path,
-            component,
-            context: {
-              id: node.id,
-            },
-          });
-        });
+        // result.data.jobs.edges.forEach(({ node }) => {
+        //   const component = path.resolve('src/templates/job.js');
+        //   createPage({
+        //     path: node.frontmatter.path,
+        //     component,
+        //     context: {
+        //       id: node.id,
+        //     },
+        //   });
+        // });
+        // result.data.team.edges.forEach(({ node }) => {
+        //   const component = path.resolve('src/templates/team.js');
+        //   createPage({
+        //     path: node.frontmatter.path,
+        //     component,
+        //     context: {
+        //       id: node.id,
+        //     },
+        //   });
+        // });
+        // result.data.blog.edges.forEach(({ node }) => {
+        //   const component = path.resolve('src/templates/post.js');
+        //   createPage({
+        //     path: node.frontmatter.path,
+        //     component,
+        //     context: {
+        //       id: node.id,
+        //     },
+        //   });
+        // });
         resolve();
       }),
     );

@@ -1,0 +1,18 @@
+@import 'variables.scss';
+
+.list {
+    display: flex;
+    align-items: center
+}
+
+.link {
+    height: 17px;	
+    width: 72px;	
+    margin-right: 10px;
+    opacity: .9;	
+    color: $color-limed-spruce;
+    font-family: $font-family-base;	
+    font-size: 16px;	
+    font-weight: 300;	
+    letter-spacing: -.15px;	
+}

@@ -28,10 +28,16 @@ module.exports = {
     ],
   },
   plugins: [
-    'gatsby-plugin-sass',
     'gatsby-transformer-json',
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-svg-sprite',
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        includePaths: ['src/scss/'],
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
