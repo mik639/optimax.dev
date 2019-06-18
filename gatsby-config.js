@@ -1,4 +1,5 @@
 const guid = process.env.NETLIFY_GOOGLE_ANALYTICS_ID;
+const path = require('path');
 
 module.exports = {
   siteMetadata: {
@@ -36,6 +37,14 @@ module.exports = {
       resolve: 'gatsby-plugin-sass',
       options: {
         includePaths: ['src/scss/'],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        components: path.join(__dirname, 'src/components'),
+        pages: path.join(__dirname, 'src/pages'),
+        layouts: path.join(__dirname, 'src/layouts'),
       },
     },
     {
