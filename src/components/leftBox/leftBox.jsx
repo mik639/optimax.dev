@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
-import BaseIcon from '../baseIcon/baseIcon';
-import Menu from '../menu/menu';
+import MediaQuery from 'react-responsive';
+
+import BaseIcon from 'components/baseIcon/baseIcon';
+import Menu from 'components/menu/menu';
 
 import s from './leftBox.module.scss';
 
@@ -13,7 +15,9 @@ class LeftBox extends Component {
             <div className={s.wrapLogo}>
                 <BaseIcon name="optimax" />
             </div>
-            <Menu/>
+            <MediaQuery query="(min-device-width: 975px)">
+              <Menu/>
+            </MediaQuery>
         </div>
     );
   }

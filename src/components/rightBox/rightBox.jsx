@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import BaseIcon from '../baseIcon/baseIcon';
+import BaseIcon from 'components/baseIcon/baseIcon';
 
 import s from './rightBox.module.scss';
 
