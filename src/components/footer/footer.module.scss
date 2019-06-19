@@ -1,0 +1,35 @@
+@import 'variables.scss';
+
+.container {
+    position: relative;
+    z-index: 2;
+    background-color: #F7F7F7;
+}
+
+.wrap {
+    width: 960px;
+    margin: auto;
+    display: flex;
+    height: 58px;
+    align-items: center;
+}
+
+.wrapLogo {
+    width: 108px;
+    margin-right: 30px;
+}
+
+.menu {
+    position: relative;
+
+    a {
+        opacity: 0.9;	
+        color: #B1BDC5;
+        font-family: Roboto;	
+        font-size: 14px;	
+        font-weight: 300;	
+        letter-spacing: -0.13px;	
+        line-height: 96px;
+        margin-right: 20px;
+    }
+}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Title from 'components/title/title';
 import BaseIcon from 'components/baseIcon/baseIcon';
 
 import s from './aboutUs.module.scss';
@@ -11,7 +12,7 @@ class AboutUs extends Component {
       <div className={s.wrap}>
           <div className={s.wrapText}>
               <div>
-                <h2 className={s.title}>About us</h2>
+                <Title>About us</Title>
                 <span className={s.desc}>
                   We change the way people buy glasses
                 </span>

@@ -5,6 +5,12 @@ import language from './svg/language.svg';
 import glassesusa from './svg/glassesusa.svg';
 import ottica from './svg/ottica.svg';
 import uvp from './svg/uvp.svg';
+import comfortable from './svg/comfortable.svg';
+import grow from './svg/grow.svg';
+import people from './svg/people.svg';
+import social from './svg/social.svg';
+import sport from './svg/sport.svg';
+import food from './svg/food.svg';
 
 import {
   SIZE_LARGE, SIZE_MEDIUM, SIZE_RESPONSIVE, SIZE_SMALL,
@@ -18,6 +24,12 @@ const ICONS = {
   glassesusa,
   ottica,
   uvp,
+  comfortable,
+  grow,
+  people,
+  social,
+  sport,
+  food,
 };
 
 const SIZES = {
@@ -28,11 +40,11 @@ const SIZES = {
 };
 
 
-const BaseIcon = ({ name }) => {
+const BaseIcon = ({ name, width, height }) => {
   const icon = ICONS[name];
-
+  console.log('width', width);
   return (
-        <svg width="100%" height="100%" viewBox={icon.viewBox} className={s.container}>
+        <svg width={width || '100%'} height={height || '100%'} viewBox={icon.viewBox} className={s.container}>
             <use xlinkHref={`#${icon.id}`} />
         </svg>
   );

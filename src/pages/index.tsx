@@ -9,36 +9,28 @@ import HeaderMobile from 'components/headerMobile/headerMobile';
 import FirstScreenBg from 'components/firstScreenBg/firstScreenBg';
 import FirstScreenBgMobile from 'components/firstScreenBgMobile/firstScreenBgMobile';
 import FirstScreenContent from 'components/firstScreenContent/firstScreenContent';
+import Benefits from 'components/home/benefits';
+import Footer from 'components/footer/footer';
 import FirstScreenContentMobile from 'components/firstScreenContentMobile/firstScreenContentMobile';
 
-const Home = props => (
+const Home = () => (
     <Layout>
       <MediaQuery query="(min-device-width: 975px)">
         <Header/>
-      </MediaQuery>
-      <MediaQuery query="(max-device-width: 975px)">
-        <HeaderMobile/>
-      </MediaQuery>
-      <MediaQuery query="(min-device-width: 975px)">
         <FirstScreenBg />
-      </MediaQuery>
-      <MediaQuery query="(max-device-width: 975px)">
-        <FirstScreenBgMobile/>
-      </MediaQuery>
-
-      <MediaQuery query="(min-device-width: 975px)">
         <FirstScreenContent />
-      </MediaQuery>
-      <MediaQuery query="(max-device-width: 975px)">
-        <FirstScreenContentMobile/>
-      </MediaQuery>
-
-      <MediaQuery query="(min-device-width: 975px)">
         <AboutUs />
       </MediaQuery>
+
       <MediaQuery query="(max-device-width: 975px)">
+        <HeaderMobile/>
+        <FirstScreenBgMobile/>
+        <FirstScreenContentMobile/>
         <AboutUsMobile/>
       </MediaQuery>
+
+      <Benefits />
+      <Footer />
     </Layout>
 );
 

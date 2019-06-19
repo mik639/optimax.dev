@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Title from 'components/title/title';
 
 import s from './firstScreenContent.module.scss';
 
@@ -9,7 +10,7 @@ class FirstScreenContent extends Component {
     return (
       <div className={s.wrap}>
           <div className={s.content}>
-            <h1 className={s.title}>Work With Us</h1>
+            <Title>Work With Us</Title>
             <span className={s.desc}>
                 We are a worldwide e-commerce
                 <br/>
