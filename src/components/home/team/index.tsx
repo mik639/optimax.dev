@@ -28,7 +28,7 @@ const TEAMS: TeamType[] = [
     {
         photo: require('./img/gusarov.jpg'),
         name: 'Eugeny Gusarov',
-        position: 'Release Teamlead',
+        position: 'Release manager',
         description: 'Freshly brewed coffee, tea, juice, drinks, breakfast, lunch',
     },
     {
@@ -52,7 +52,7 @@ const TEAMS: TeamType[] = [
     {
         photo: require('./img/nehozin.png'),
         name: 'Kirill Kolesnik',
-        position: 'Growth teamlead',
+        position: 'QA manager/PO',
         description: 'Fun, dynamic work enviornment with people like you :)',
     },
     {
@@ -86,7 +86,7 @@ const TEAMS: TeamType[] = [
         description: 'Fun, dynamic work enviornment with people like you :)',
     },
     {
-        photo: require('./img/nehozin.png'),
+        photo: require('./img/ulianov.jpg'),
         name: 'Aleksei Ulianov',
         position: 'Frontend techlead',
         description: 'Fun, dynamic work enviornment with people like you :)',
