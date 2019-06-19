@@ -10,6 +10,7 @@ import FirstScreenBg from 'components/home/firstScreenBg/firstScreenBg';
 import FirstScreenBgMobile from 'components/home/firstScreenBgMobile/firstScreenBgMobile';
 import FirstScreenContent from 'components/home/firstScreenContent/firstScreenContent';
 import Benefits from 'components/home/benefits';
+import Team from 'components/home/team';
 import Footer from 'components/footer/footer';
 import FirstScreenContentMobile from 'components/home/firstScreenContentMobile/firstScreenContentMobile';
 
@@ -29,6 +30,7 @@ const Home = (): ReactNode => (
             <AboutUsMobile />
         </MediaQuery>
 
+        <Team />
         <Benefits />
         <Footer />
     </Layout>
