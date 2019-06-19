@@ -12,9 +12,9 @@ class JoinUsItem extends Component<JoinUsProps> {
 
         return (
             <div className={s.wrap}>
-                <span className={s.title}>{item.title}</span>
+                <a href="#" className={s.title}>{item.title}</a>
                 <span className={s.address}>{item.address}</span>
-                <p className={s.text}>{item.text}</p>
+                <a className={s.text}>{item.text}</a>
             </div>
         );
     }
