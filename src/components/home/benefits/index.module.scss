@@ -1,7 +1,6 @@
 @import 'variables.scss';
 
 .wrap {
-    position: relative;
     width: 960px;
     margin: auto;
     margin-top: 100px;
@@ -9,7 +8,6 @@
 }
 
 .titles {
-    position: relative;
     text-align: center;
 
     h3 {
@@ -18,7 +16,7 @@
 }
 
 .perks {
-    position: relative;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }

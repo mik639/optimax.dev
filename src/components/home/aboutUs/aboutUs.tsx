@@ -29,15 +29,15 @@ class AboutUs extends Component {
                     </p>
                 </div>
                 <div className={s.projects}>
-                    <div className={s.item}>
+                    <a href="#" className={s.item}>
                         <BaseIcon name="uvp" />
-                    </div>
-                    <div className={s.item}>
+                    </a>
+                    <a href="#" className={s.item}>
                         <BaseIcon name="glassesusa" />
-                    </div>
-                    <div className={s.item}>
+                    </a>
+                    <a href="#" className={s.item}>
                         <BaseIcon name="ottica" />
-                    </div>
+                    </a>
                 </div>
             </div>
         );
