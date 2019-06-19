@@ -1,7 +1,7 @@
 import React, {ReactNode} from 'react';
 import MediaQuery from 'react-responsive';
 
-import Tantacle from 'components/home/tantacle/tantacle';
+import Tentacle from 'components/home/tentacle/tentacle';
 import AboutUs from 'components/home/aboutUs/aboutUs';
 import AboutUsMobile from 'components/home/aboutUsMobile/aboutUsMobile';
 import Layout from 'layouts/index';
@@ -10,6 +10,7 @@ import HeaderMobile from 'components/headerMobile/headerMobile';
 import FirstScreenBg from 'components/home/firstScreenBg/firstScreenBg';
 import FirstScreenBgMobile from 'components/home/firstScreenBgMobile/firstScreenBgMobile';
 import FirstScreenContent from 'components/home/firstScreenContent/firstScreenContent';
+import JoinUs from 'components/home/joinUs/joinUs';
 import Benefits from 'components/home/benefits';
 import Team from 'components/home/team';
 import Footer from 'components/footer/footer';
@@ -18,13 +19,15 @@ import FirstScreenContentMobile from 'components/home/firstScreenContentMobile/f
 const Home = (): ReactNode => (
     <Layout>
         <MediaQuery query="(min-device-width: 975px)">
-            <Tantacle>
+            <Tentacle>
                 <Header />
                 <FirstScreenBg />
                 <FirstScreenContent />
                 <AboutUs />
+                <JoinUs />
+                <Team />
                 <Benefits />
-            </Tantacle>
+            </Tentacle>
         </MediaQuery>
 
         <MediaQuery query="(max-device-width: 975px)">
@@ -32,11 +35,11 @@ const Home = (): ReactNode => (
             <FirstScreenBgMobile />
             <FirstScreenContentMobile />
             <AboutUsMobile />
+            <JoinUs />
+            <Team />
             <Benefits />
         </MediaQuery>
 
-        <Team />
-        <Benefits />
         <Footer />
     </Layout>
 );

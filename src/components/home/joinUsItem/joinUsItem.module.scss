@@ -1,0 +1,40 @@
+@import 'variables.scss';
+
+.wrap {
+    flex: 0 0 296px;
+    min-height: 226px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    padding: 55px 28px 27px;
+    border-radius: 8px;	
+    background-color: $color-white;	
+    box-shadow: 0 2px 8px 1px rgba($color-black ,0.1);
+    box-sizing: border-box;
+
+    &:nth-child(3n+3) {
+        margin-right: 0;;
+    }
+}
+
+.title {
+    display: block;
+    opacity: 0.9;	
+    font-size: 21px;	
+    margin-bottom: 5px;
+    font-weight: $font-weight-bold;	
+    letter-spacing: -.19px;
+}
+
+.address {	
+    display: block;
+    margin-bottom: 15px;
+    color: $color-tower-gray;	
+    font-size: 16px;	
+    letter-spacing: .52px;
+}
+
+.text {		
+   font-size: 16px;	
+   letter-spacing: .52px;	
+   line-height: 23px;
+}

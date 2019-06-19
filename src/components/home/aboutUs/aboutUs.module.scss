@@ -27,6 +27,7 @@
 
 .projects {
     display: flex;
+    justify-content: center;
     width: 960px;
     margin: 73px auto;
 }
@@ -40,4 +41,8 @@
     padding: 92px 53px;
     box-sizing: border-box;
     margin-right: 20px;
+
+    &:last-child {
+        margin-right: 0;
+    }
 }
