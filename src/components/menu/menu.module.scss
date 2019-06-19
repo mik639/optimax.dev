@@ -6,11 +6,15 @@
 }
 
 .link {	
-    margin-right: 10px;
+    margin-right: 22px;
     opacity: .9;	
     color: $color-limed-spruce;
     font-family: $font-family-base;	
     font-size: 16px;	
     font-weight: 300;	
     letter-spacing: -.15px;	
+
+    &:nth-child(n+4) {
+      color: $color-white;  
+    }
 }

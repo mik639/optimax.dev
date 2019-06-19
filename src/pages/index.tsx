@@ -1,6 +1,7 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
 
+import Tantacle from 'components/home/tantacle/tantacle';
 import AboutUs from 'components/home/aboutUs/aboutUs';
 import AboutUsMobile from 'components/home/aboutUsMobile/aboutUsMobile';
 import Layout from 'layouts/index';
@@ -16,10 +17,12 @@ import FirstScreenContentMobile from 'components/home/firstScreenContentMobile/f
 const Home = () => (
     <Layout>
       <MediaQuery query="(min-device-width: 975px)">
-        <Header/>
-        <FirstScreenBg />
-        <FirstScreenContent />
-        <AboutUs />
+        <Tantacle>
+          <Header/>
+          <FirstScreenBg />
+          <FirstScreenContent />
+          <AboutUs />
+        </Tantacle>
       </MediaQuery>
 
       <MediaQuery query="(max-device-width: 975px)">

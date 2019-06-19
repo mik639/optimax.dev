@@ -15,9 +15,9 @@ class FirstScreenContentMobile extends Component {
                     With Us
             </h1>
             <span className={s.desc}>
-                We are a worldwide e-commerce
+                We are the leading
                 <br/>
-                leader in the eyewear industry.
+                eyewear retailer online.
             </span>
             <a className={s.applyNow} href="mailto:example.com">Apply Now</a>
           </div>
