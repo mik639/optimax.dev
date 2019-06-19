@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import LeftBox from '../leftBox/leftBox';
-import RightBox from '../rightBox/rightBox';
+import LeftBox from 'components/leftBox/leftBox';
+import RightBox from 'components/rightBox/rightBox';
 
 import s from './header.module.scss';
 
