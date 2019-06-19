@@ -17,28 +17,15 @@ const Home = props => (
     <Layout>
       <MediaQuery query="(min-device-width: 975px)">
         <Header/>
-      </MediaQuery>
-      <MediaQuery query="(max-device-width: 975px)">
-        <HeaderMobile/>
-      </MediaQuery>
-      <MediaQuery query="(min-device-width: 975px)">
         <FirstScreenBg />
-      </MediaQuery>
-      <MediaQuery query="(max-device-width: 975px)">
-        <FirstScreenBgMobile/>
-      </MediaQuery>
-
-      <MediaQuery query="(min-device-width: 975px)">
         <FirstScreenContent />
-      </MediaQuery>
-      <MediaQuery query="(max-device-width: 975px)">
-        <FirstScreenContentMobile/>
-      </MediaQuery>
-
-      <MediaQuery query="(min-device-width: 975px)">
         <AboutUs />
       </MediaQuery>
+
       <MediaQuery query="(max-device-width: 975px)">
+        <HeaderMobile/>
+        <FirstScreenBgMobile/>
+        <FirstScreenContentMobile/>
         <AboutUsMobile/>
       </MediaQuery>
 
