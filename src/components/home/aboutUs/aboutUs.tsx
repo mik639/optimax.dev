@@ -1,6 +1,7 @@
 import React, {Component, ReactNode} from 'react';
 
 import Title from 'components/title/title';
+import BaseIcon from 'components/baseIcon/baseIcon';
 
 import s from './aboutUs.module.scss';
 
@@ -26,6 +27,17 @@ class AboutUs extends Component {
                         <br />
                         markets.
                     </p>
+                </div>
+                <div className={s.projects}>
+                    <div className={s.item}>
+                        <BaseIcon name="uvp" />
+                    </div>
+                    <div className={s.item}>
+                        <BaseIcon name="glassesusa" />
+                    </div>
+                    <div className={s.item}>
+                        <BaseIcon name="ottica" />
+                    </div>
                 </div>
             </div>
         );

@@ -2,6 +2,9 @@ import React, {ReactNode} from 'react';
 
 import optimax from './svg/optimax.svg';
 import language from './svg/language.svg';
+import glassesusa from './svg/glassesusa.svg';
+import ottica from './svg/ottica.svg';
+import uvp from './svg/uvp.svg';
 import comfortable from './svg/comfortable.svg';
 import grow from './svg/grow.svg';
 import people from './svg/people.svg';
@@ -14,6 +17,9 @@ import s from './baseIcon.scss';
 const ICONS = {
     optimax,
     language,
+    glassesusa,
+    ottica,
+    uvp,
     comfortable,
     grow,
     people,

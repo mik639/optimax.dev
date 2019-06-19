@@ -24,3 +24,19 @@
     line-height: 26px; 
     margin-left: 50px;
 }
+
+.projects {
+    display: flex;
+    width: 960px;
+    margin: 73px auto;
+}
+
+.item {
+    height: 229px;
+    width: 296px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.1);
+    padding: 76px 48px;
+    box-sizing: border-box;
+}
