@@ -9,7 +9,7 @@ import HeaderMobile from 'components/headerMobile/headerMobile';
 import FirstScreenBg from 'components/firstScreenBg/firstScreenBg';
 import FirstScreenBgMobile from 'components/firstScreenBgMobile/firstScreenBgMobile';
 import FirstScreenContent from 'components/firstScreenContent/firstScreenContent';
-import Benefits from 'components/benefits';
+import Benefits from 'components/home/benefits';
 import Footer from 'components/footer/footer';
 import FirstScreenContentMobile from 'components/firstScreenContentMobile/firstScreenContentMobile';
 
