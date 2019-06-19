@@ -34,6 +34,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-svg-sprite',
     'gatsby-plugin-typescript',
+    'gatsby-plugin-eslint',
     {
       resolve: 'gatsby-plugin-sass',
       options: {
@@ -84,6 +85,18 @@ module.exports = {
         jsxPragma: 'React', // defaults to "React"
         allExtensions: true, // defaults to false
       },
+    },
+    {
+      resolve: 'gatsby-plugin-eslint',
+      options: {
+        test: /\.js$|\.ts$|\.tsx$|\.jsx$/,
+        exclude: /(node_modules|.cache|public)/,
+        stages: ['develop'],
+        options: {
+          emitWarning: true,
+          failOnError: false
+        }
+      }
     },
   ],
 };

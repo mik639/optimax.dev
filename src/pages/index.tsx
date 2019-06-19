@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 import MediaQuery from 'react-responsive';
 
 import Tantacle from 'components/home/tantacle/tantacle';
@@ -14,7 +14,7 @@ import Benefits from 'components/home/benefits';
 import Footer from 'components/footer/footer';
 import FirstScreenContentMobile from 'components/home/firstScreenContentMobile/firstScreenContentMobile';
 
-const Home = () => (
+const Home = (): ReactNode => (
     <Layout>
       <MediaQuery query="(min-device-width: 975px)">
         <Tantacle>
@@ -25,15 +25,15 @@ const Home = () => (
         </Tantacle>
       </MediaQuery>
 
-      <MediaQuery query="(max-device-width: 975px)">
-        <HeaderMobile/>
-        <FirstScreenBgMobile/>
-        <FirstScreenContentMobile/>
-        <AboutUsMobile/>
-      </MediaQuery>
+        <MediaQuery query="(max-device-width: 975px)">
+            <HeaderMobile />
+            <FirstScreenBgMobile />
+            <FirstScreenContentMobile />
+            <AboutUsMobile />
+        </MediaQuery>
 
-      <Benefits />
-      <Footer />
+        <Benefits />
+        <Footer />
     </Layout>
 );
 

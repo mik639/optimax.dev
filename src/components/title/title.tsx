@@ -1,13 +1,16 @@
-import React, { Component } from 'react';
-
+import React, {Component, ReactNode} from 'react';
 
 import s from './title.module.scss';
 
+interface TitleProps {
+    children: ReactNode;
+}
 
-class Title extends Component {
-  render() {
-    return <h2 className={s.title}>{this.props.children}</h2>;
-  }
+class Title extends Component<TitleProps> {
+    render(): ReactNode {
+        const {children} = this.props;
+        return <h2 className={s.title}>{children}</h2>;
+    }
 }
 
 export default Title;
