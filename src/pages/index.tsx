@@ -16,23 +16,23 @@ import FirstScreenContentMobile from 'components/home/firstScreenContentMobile/f
 
 const Home = (): ReactNode => (
     <Layout>
-      <MediaQuery query="(min-device-width: 975px)">
-        <Tantacle>
-          <Header/>
-          <FirstScreenBg />
-          <FirstScreenContent />
-          <AboutUs />
-        </Tantacle>
-      </MediaQuery>
+        <MediaQuery query="(min-device-width: 975px)">
+            <Tantacle>
+                <Header />
+                <FirstScreenBg />
+                <FirstScreenContent />
+                <AboutUs />
+                <Benefits />
+            </Tantacle>
+        </MediaQuery>
 
         <MediaQuery query="(max-device-width: 975px)">
             <HeaderMobile />
             <FirstScreenBgMobile />
             <FirstScreenContentMobile />
             <AboutUsMobile />
+            <Benefits />
         </MediaQuery>
-
-        <Benefits />
         <Footer />
     </Layout>
 );
