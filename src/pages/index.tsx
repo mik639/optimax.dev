@@ -13,7 +13,7 @@ import Benefits from 'components/home/benefits';
 import Footer from 'components/footer/footer';
 import FirstScreenContentMobile from 'components/firstScreenContentMobile/firstScreenContentMobile';
 
-const Home = props => (
+const Home = () => (
     <Layout>
       <MediaQuery query="(min-device-width: 975px)">
         <Header/>

@@ -6,7 +6,7 @@ import Perk from 'components/home/benefits/perk/perk';
 
 import s from './index.module.scss';
 
-const PERKS = [
+const PERKS: Array<{name: string, title: string, description: string}> = [
   { name: 'comfortable', title: 'Get Comfortable', description: 'Max workplace comfort, high-end monitors for convenience' },
   { name: 'social', title: 'Social Activities', description: 'Plenty of corporate & team building events' },
   { name: 'food', title: 'Food & Drinks', description: 'Freshly brewed coffee, tea, juice, drinks, breakfast, lunch' },
@@ -15,7 +15,7 @@ const PERKS = [
   { name: 'people', title: 'Awesome people', description: 'Fun, dynamic work enviornment with people like you :)' },
 ];
 
-const Benefits = props => (
+const Benefits = () => (
     <div className={s.wrap}>
       <div className={s.titles}>
         <Title>Benefits & Perks</Title>

@@ -33,6 +33,7 @@ module.exports = {
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-svg-sprite',
+    'gatsby-plugin-typescript',
     {
       resolve: 'gatsby-plugin-sass',
       options: {
@@ -74,6 +75,14 @@ module.exports = {
         trackingId: guid || 'UA-XXX-1',
         // Puts tracking script in the head instead of the body
         head: false,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-typescript',
+      options: {
+        isTSX: true, // defaults to false
+        jsxPragma: 'React', // defaults to "React"
+        allExtensions: true, // defaults to false
       },
     },
   ],
