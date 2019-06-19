@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import BaseIcon from 'components/baseIcon/baseIcon';
 
 import s from './aboutUs.module.scss';
 
@@ -8,7 +9,7 @@ class AboutUs extends Component {
   render() {
     return (
       <div className={s.wrap}>
-            <div className={s.wrapText}>
+          <div className={s.wrapText}>
               <div>
                 <h2 className={s.title}>About us</h2>
                 <span className={s.desc}>
@@ -28,7 +29,18 @@ class AboutUs extends Component {
                 <br/>
                 markets.
               </p>
+          </div>
+          <div className={s.projects}>
+            <div className={s.item}>
+              <BaseIcon name="uvp" />
             </div>
+            <div className={s.item}>
+              <BaseIcon name="glassesusa" />
+            </div>
+            <div className={s.item}>
+              <BaseIcon name="ottica" />
+            </div>
+          </div>
       </div>
     );
   }

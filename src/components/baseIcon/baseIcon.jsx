@@ -2,6 +2,9 @@ import React from 'react';
 
 import optimax from './svg/optimax.svg';
 import language from './svg/language.svg';
+import glassesusa from './svg/glassesusa.svg';
+import ottica from './svg/ottica.svg';
+import uvp from './svg/uvp.svg';
 
 import {
   SIZE_LARGE, SIZE_MEDIUM, SIZE_RESPONSIVE, SIZE_SMALL,
@@ -12,6 +15,9 @@ import s from './baseIcon.scss';
 const ICONS = {
   optimax,
   language,
+  glassesusa,
+  ottica,
+  uvp,
 };
 
 const SIZES = {
