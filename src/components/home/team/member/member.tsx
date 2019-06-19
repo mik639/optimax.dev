@@ -21,7 +21,7 @@ const Member = ({
         </div>
         <p className={s.name}>{name}</p>
         <p className={s.position}>{position}</p>
-        <p className={s.description}>{description}</p>
+        {/* <p className={s.description}>{description}</p> */}
     </div>
 );
 
