@@ -26,9 +26,9 @@ const TEAMS: TeamType[] = [
         description: 'Plenty of corporate & team building events',
     },
     {
-        photo: require('./img/nehozin.png'),
-        name: 'food',
-        position: 'Food & Drinks',
+        photo: require('./img/gusarov.jpg'),
+        name: 'Eugeny Gusarov',
+        position: 'Release Teamlead',
         description: 'Freshly brewed coffee, tea, juice, drinks, breakfast, lunch',
     },
     {
