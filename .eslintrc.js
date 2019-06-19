@@ -1,7 +1,18 @@
 module.exports = {
-  parser: 'babel-eslint',
-  extends: ['airbnb'],
-  plugins: [],
+  parser: '@typescript-eslint/parser',
+  extends: [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+],
+  plugins: ['prettier'],
+  parserOptions: {
+    ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
+    sourceType: "module", // Allows for the use of imports
+    ecmaFeatures: {
+      jsx: true // Allows for the parsing of JSX
+    }
+  },
   rules: {
     'react/prefer-stateless-function': 'off',
     'react/jsx-filename-extension': 'off',
@@ -15,5 +26,17 @@ module.exports = {
     'react/jsx-max-props-per-line': 'off',
     'react/jsx-tag-spacing': 'off',
     'react/jsx-wrap-multilines': 'off',
+    '@typescript-eslint/explicit-member-accessibility': 'off'
   },
+  "settings": {
+    "import/resolver": {
+      "alias": [
+        ["components", "src/components"],
+        ["layouts", "src/layouts"],
+      ]
+    },
+    react: {
+      version: "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
+    }
+  }
 }

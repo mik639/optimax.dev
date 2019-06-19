@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 import MediaQuery from 'react-responsive';
 
 import AboutUs from 'components/aboutUs/aboutUs';
@@ -13,24 +13,24 @@ import Benefits from 'components/home/benefits';
 import Footer from 'components/footer/footer';
 import FirstScreenContentMobile from 'components/firstScreenContentMobile/firstScreenContentMobile';
 
-const Home = () => (
+const Home = (): ReactNode => (
     <Layout>
-      <MediaQuery query="(min-device-width: 975px)">
-        <Header/>
-        <FirstScreenBg />
-        <FirstScreenContent />
-        <AboutUs />
-      </MediaQuery>
+        <MediaQuery query="(min-device-width: 975px)">
+            <Header />
+            <FirstScreenBg />
+            <FirstScreenContent />
+            <AboutUs />
+        </MediaQuery>
 
-      <MediaQuery query="(max-device-width: 975px)">
-        <HeaderMobile/>
-        <FirstScreenBgMobile/>
-        <FirstScreenContentMobile/>
-        <AboutUsMobile/>
-      </MediaQuery>
+        <MediaQuery query="(max-device-width: 975px)">
+            <HeaderMobile />
+            <FirstScreenBgMobile />
+            <FirstScreenContentMobile />
+            <AboutUsMobile />
+        </MediaQuery>
 
-      <Benefits />
-      <Footer />
+        <Benefits />
+        <Footer />
     </Layout>
 );
 

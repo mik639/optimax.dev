@@ -1,5 +1,20 @@
 const path = require('path');
 
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        components: path.resolve(__dirname, 'src/components'),
+        pages: path.resolve(__dirname, 'src/pages'),
+        layouts: path.resolve(__dirname, 'src/layouts'),
+        scss: path.resolve(__dirname, 'src/scss'),
+        data: path.resolve(__dirname, 'src/data'),
+        images: path.resolve(__dirname, 'src/images'),
+      },
+    },
+  });
+};
+
 // Create pages from markdown files
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
