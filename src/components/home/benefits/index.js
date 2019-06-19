@@ -2,7 +2,7 @@ import React from 'react';
 
 import Title from 'components/title/title';
 import Subtitle from 'components/subtitle/subtitle';
-import Perk from 'components/benefits/perk/perk';
+import Perk from 'components/home/benefits/perk/perk';
 
 import s from './index.module.scss';
 
