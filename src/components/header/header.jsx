@@ -5,7 +5,6 @@ import RightBox from 'components/rightBox/rightBox';
 
 import s from './header.module.scss';
 
-
 class Header extends Component {
   render() {
     return (
