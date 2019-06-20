@@ -12,20 +12,38 @@ class Footer extends Component {
                     <div className={s.wrapLogo}>
                         <BaseIcon name="optimax" />
                     </div>
-                    <div className={s.menu}>
-                        <a href="#">About Us</a>
-                        <a href="#">Location</a>
-                        <a href="#">Careers</a>
-                        <a href="#">Our Team</a>
-                        <a href="#">Blog</a>
-                    </div>
+                    <a className={s.menuLink} href="#">
+                        About Us
+                    </a>
+                    <a className={s.menuLink} href="#">
+                        Location
+                    </a>
+                    <a className={s.menuLink} href="#">
+                        Careers
+                    </a>
+                    <a className={s.menuLink} href="#">
+                        Our Team
+                    </a>
+                    <a className={s.menuLink} href="#">
+                        Blog
+                    </a>
                 </div>
                 <div className={s.socialLinks}>
-                    <div className={s.socialLink}><BaseIcon name="facebook" /></div>
-                    <div className={s.socialLink}><BaseIcon name="instagram" /></div>
-                    <div className={s.socialLink}><BaseIcon name="twitter" /></div>
-                    <div className={s.socialLink}><BaseIcon name="youtube" /></div>
-                    <div className={s.socialLink}><BaseIcon name="linkdin" /></div>
+                    <div className={s.socialLink}>
+                        <BaseIcon name="facebook" />
+                    </div>
+                    <div className={s.socialLink}>
+                        <BaseIcon name="instagram" />
+                    </div>
+                    <div className={s.socialLink}>
+                        <BaseIcon name="twitter" />
+                    </div>
+                    <div className={s.socialLink}>
+                        <BaseIcon name="youtube" />
+                    </div>
+                    <div className={s.socialLink}>
+                        <BaseIcon name="linkdin" />
+                    </div>
                 </div>
             </div>
         );
