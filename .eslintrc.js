@@ -33,6 +33,7 @@ module.exports = {
       "alias": [
         ["components", "src/components"],
         ["layouts", "src/layouts"],
+        ["static", "static"],
       ]
     },
     react: {

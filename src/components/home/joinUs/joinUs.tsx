@@ -1,4 +1,5 @@
 import React, {Component, ReactNode} from 'react';
+import {StaticQuery, graphql} from 'gatsby';
 
 import Title from 'components/title/title';
 import Subtitle from 'components/subtitle/subtitle';
@@ -12,57 +13,48 @@ interface ItemType {
     text: string;
 }
 
-const JOINUS_ITEMS = [
-    {
-        title: 'Software Engineer1',
-        address: 'Tolyatti, St. 8b',
-        text: 'Lorem ipsum dolor sit amet, rutrum lectus donec augue, molestie egestas at sit.',
-    },
-    {
-        title: 'Software Engineer2',
-        address: 'Tolyatti, St. 8b',
-        text: 'Lorem ipsum dolor sit amet, rutrum lectus donec augue, molestie egestas at sit.',
-    },
-    {
-        title: 'Software Engineer3',
-        address: 'Tolyatti, St. 8b',
-        text: 'Lorem ipsum dolor sit amet, rutrum lectus donec augue, molestie egestas at sit.',
-    },
-    {
-        title: 'Software Engineer4',
-        address: 'Tolyatti, St. 8b',
-        text: 'Lorem ipsum dolor sit amet, rutrum lectus donec augue, molestie egestas at sit.',
-    },
-    {
-        title: 'Software Engineer5',
-        address: 'Tolyatti, St. 8b',
-        text: 'Lorem ipsum dolor sit amet, rutrum lectus donec augue, molestie egestas at sit.',
-    },
-    {
-        title: 'Software Engineer6',
-        address: 'Tolyatti, St. 8b',
-        text: 'Lorem ipsum dolor sit amet, rutrum lectus donec augue, molestie egestas at sit.',
-    },
-];
-
-class JoinUs extends Component {
-    render(): ReactNode {
-        return (
-            <div className={s.wrap}>
-                <div className={s.wrapTitles}>
-                    <Title>Join Us</Title>
-                    <Subtitle>Current openings</Subtitle>
-                </div>
-                <div className={s.wrapItems}>
-                    {JOINUS_ITEMS.map(
-                        (item: ItemType): ReactNode => (
-                            <JoinUsItem key={item.title} item={item} />
-                        ),
-                    )}
-                </div>
+const JoinUs = ({data}) => {
+    const jobs = data.allMarkdownRemark.edges;
+    console.log('jobs: ', jobs);
+    return (
+        <div className={s.wrap}>
+            <div className={s.wrapTitles}>
+                <Title>Join Us</Title>
+                <Subtitle>Current openings</Subtitle>
             </div>
-        );
-    }
-}
+            <div className={s.wrapItems}>
+                {jobs.map(
+                    (item: ItemType): ReactNode => (
+                        <JoinUsItem key={item.node.frontmatter.path} item={item.node.frontmatter} />
+                    ),
+                )}
+            </div>
+        </div>
+    );
+};
 
-export default JoinUs;
+export default props => (
+    <StaticQuery
+        query={graphql`
+            query {
+                allMarkdownRemark(
+                    filter: {fileAbsolutePath: {regex: "/jobs/"}}
+                    sort: {fields: [frontmatter___date], order: DESC}
+                ) {
+                    edges {
+                        node {
+                            excerpt
+                            frontmatter {
+                                title
+                                address
+                                date
+                                path
+                            }
+                        }
+                    }
+                }
+            }
+        `}
+        render={data => <JoinUs data={data} {...props} />}
+    />
+);

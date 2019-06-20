@@ -1,4 +1,5 @@
 import React, {Component, ReactNode} from 'react';
+import {Link} from 'gatsby';
 
 import s from './joinUsItem.module.scss';
 
@@ -12,9 +13,11 @@ class JoinUsItem extends Component<JoinUsProps> {
 
         return (
             <div className={s.wrap}>
-                <a href="#" className={s.title}>{item.title}</a>
+                <Link to={item.path} className={s.title}>
+                    {item.title}
+                </Link>
                 <span className={s.address}>{item.address}</span>
-                <a className={s.text}>{item.text}</a>
+                <span className={s.text}>{item.text}</span>
             </div>
         );
     }
