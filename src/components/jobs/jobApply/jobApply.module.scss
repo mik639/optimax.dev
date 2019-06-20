@@ -1,0 +1,15 @@
+@import 'variables.scss';
+
+.apply {
+    display: block;
+    width: 100%;	
+    height: 62px;	
+    border-radius: 30px;	
+    background-color: $color-azure-radiance;
+    color: $color-white;	
+    font-size: 21px;	
+    line-height: 2.9;
+    font-weight: $font-weight-normal;	
+    letter-spacing: -.45px;
+    text-align: center;
+}

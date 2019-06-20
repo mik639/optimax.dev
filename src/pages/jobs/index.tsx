@@ -5,7 +5,6 @@ import MediaQuery from 'react-responsive';
 import SEO from 'components/SEO/SEO';
 import Layout from 'layouts/index';
 import Header from 'components/header/header';
-import HeaderMobile from 'components/headerMobile/headerMobile';
 import Footer from 'components/footer/footer';
 import JobContent from 'components/jobs/jobContent/jobContent';
 
@@ -14,13 +13,7 @@ const Jobs = props => {
     return (
         <Layout>
             <SEO title="Jobs" />
-            <MediaQuery query="(min-device-width: 1024px)">
-                <Header />
-            </MediaQuery>
-
-            <MediaQuery query="(max-device-width: 1024px)">
-                <HeaderMobile />
-            </MediaQuery>
+            <Header />
 
             <Footer />
         </Layout>
