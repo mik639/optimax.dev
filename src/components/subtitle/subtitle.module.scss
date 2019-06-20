@@ -1,13 +1,18 @@
 @import 'variables.scss';
 
 .subtitle {
-    color: #3A4850;
-    font-family: Roboto;
+    color: $color-limed-spruce;
     font-size: 21px;
-    letter-spacing: 0.5px;
+    letter-spacing: .5px;
     line-height: 26px;
+
+    @media screen and (max-width: 1024px) {
+        padding: 0 47px;
+        line-height: 1.5;
+        font-size: 26px;
+    }
 }
 
 .white {
-    color: white;
+    color: $color-white;
 }

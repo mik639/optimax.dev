@@ -1,11 +1,14 @@
 import React, {Component, ReactNode} from 'react';
+import classNames from 'classnames';
 
 import s from './menu.module.scss';
 
 class Menu extends Component {
     render(): ReactNode {
+        const {isOpen} = this.props;
+
         return (
-            <div className={s.wrap}>
+            <div className={classNames(s.wrap, {[s.open]: isOpen})}>
                 <nav className={s.list}>
                     <a className={s.link} href="#">
                         About Us
@@ -22,6 +25,7 @@ class Menu extends Component {
                     <a className={s.link} href="#">
                         Blog
                     </a>
+                    <a className={s.apply} href="mailto:example.com">Apply</a>
                 </nav>
             </div>
         );

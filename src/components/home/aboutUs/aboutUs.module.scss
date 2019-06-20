@@ -3,47 +3,81 @@
 .wrap {
     position: relative;
     margin-bottom: 108px;
+
+    @media screen and (max-width: 1024px) {
+        text-align: center;
+    }
 }
 
 .wrapText {
-    display: flex;
-    width: 880px;
+    width: 890px;
     margin: 73px auto 0;
+
+    @media screen and (max-width: 1024px) {
+        width: auto;
+        margin-top: 56px;
+    }
 }
 
-.desc {
-    opacity: 0.9;	
-    color: #3A4850;	
-    font-size: 21px;	
-    font-weight: $font-weight-normal;	
-    letter-spacing: -.09px;	
+.wrapTitle {
+    display: inline-block;
+    vertical-align: top;
 }
 
 .text {
+    display: inline-block;
+    vertical-align: top;
+    width: 455px;
     font-size: 16px;	
     letter-spacing: .38px;	
-    line-height: 26px; 
+    line-height: 1.5; 
     margin-left: 50px;
+
+    @media screen and (max-width: 1024px) {
+        display: block;
+        width: auto;
+        margin-top: 24px;
+        margin-left: 0;
+        padding: 0 17px;
+    }
 }
 
 .projects {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     width: 960px;
-    margin: 73px auto;
+    margin: 73px auto 0;
+
+    @media screen and (max-width: 1024px) {
+        width: auto;
+        margin-top: 28px;
+        padding: 0 27px;
+    }
 }
 
 .item {
+    display: inline-block;
+    vertical-align: top;
     height: 229px;
     width: 296px;
     border-radius: 8px;
     background-color: $color-white;
     box-shadow: 0 2px 8px 1px rgba($color-black, 0.1);
-    padding: 92px 53px;
+    padding: 60px;
     box-sizing: border-box;
     margin-right: 20px;
 
     &:last-child {
+        margin-right: 0;
+    }
+
+    svg use {
+        min-width: 205px;
+    }
+
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+        height: 220px;
+        margin-bottom: 20px;
         margin-right: 0;
     }
 }

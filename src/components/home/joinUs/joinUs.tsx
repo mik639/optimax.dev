@@ -15,20 +15,17 @@ interface ItemType {
 
 const JoinUs = ({data}) => {
     const jobs = data.allMarkdownRemark.edges;
-    console.log('jobs: ', jobs);
     return (
         <div className={s.wrap}>
             <div className={s.wrapTitles}>
                 <Title>Join Us</Title>
                 <Subtitle>Current openings</Subtitle>
             </div>
-            <div className={s.wrapItems}>
-                {jobs.map(
-                    (item: ItemType): ReactNode => (
-                        <JoinUsItem key={item.node.frontmatter.path} item={item.node.frontmatter} />
-                    ),
-                )}
-            </div>
+            {jobs.map(
+                (item: ItemType): ReactNode => (
+                    <JoinUsItem key={item.node.frontmatter.path} item={item.node.frontmatter} />
+                ),
+            )}
         </div>
     );
 };

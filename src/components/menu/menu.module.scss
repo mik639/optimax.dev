@@ -1,20 +1,86 @@
 @import 'variables.scss';
 
+.wrap {
+  @media screen and (max-width: 1024px) {
+    position: absolute;
+    top: 53px;
+    right: 0;
+    width: 100%;
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+  }
+}
+
+.open {
+  @media screen and (max-width: 1024px) {
+    max-height: 500px;
+    transition: max-height 0.25s ease-in;
+  }
+}
+
 .list {
     display: flex;
-    align-items: center
+    align-items: center;
+
+    @media screen and (max-width: 1024px) {
+        position: relative;
+        display: block;
+        margin-top: 15px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: -15px;
+          right: 5px;
+          border-left: 15px solid transparent;
+          border-right: 15px solid transparent;
+          border-bottom: 15px solid $color-alabaster;
+        }
+    }
 }
 
 .link {	
     margin-right: 22px;
-    opacity: .9;	
-    color: $color-limed-spruce;
+    color: rgba($color-limed-spruce, .9);
     font-family: $font-family-base;	
     font-size: 16px;	
-    font-weight: 300;	
-    letter-spacing: -.15px;	
+    font-weight: $font-weight-light;	
+    letter-spacing: -.15px;
 
     &:nth-child(n+4) {
       color: $color-white;  
     }
+
+    @media screen and (max-width: 1024px) {
+        display: flex;
+        align-items: center;
+        margin-right: 0;
+        font-size: 19px;
+        letter-spacing: -.18px;
+        height: 55px;
+        padding-left: 22px;
+        border-bottom: 1px solid $color-tower-gray;
+        background: $color-alabaster;
+
+
+        &:nth-child(n+4) {
+          color: $color-limed-spruce; 
+        }
+    }
+}
+
+.apply {
+  display: none;
+  
+  @media screen and (max-width: 1024px) {
+    display: block;
+    background: $color-azure-radiance;
+    opacity: 0.9;	
+    color: $color-white;	
+    font-size: 19px;	
+    letter-spacing: -.18px;
+    line-height: 56px;	
+    text-align: center;
+  }
 }

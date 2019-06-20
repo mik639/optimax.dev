@@ -1,6 +1,7 @@
 import React, {Component, ReactNode} from 'react';
 
 import Title from 'components/title/title';
+import Subtitle from 'components/subtitle/subtitle';
 import BaseIcon from 'components/baseIcon/baseIcon';
 
 import s from './aboutUs.module.scss';
@@ -10,22 +11,16 @@ class AboutUs extends Component {
         return (
             <div className={s.wrap}>
                 <div className={s.wrapText}>
-                    <div>
-                        <Title>About us</Title>
-                        <span className={s.desc}>We change the way people buy glasses</span>
+                    <div className={s.wrapTitle}>
+                        <Title>About Us</Title>
+                        <Subtitle>We change the way people buy glasses</Subtitle>
                     </div>
                     <p className={s.text}>
-                        We founded Optimax in 2008 to change the way people buy
-                        <br />
-                        glasses, both in terms of price as well as convenience.
-                        <br />
-                        Optimax operates several subsidiaries, such as GlassesUSA,
-                        <br />
-                        Ottica and UVP, that all deliver affordable eyewear across
-                        <br />
-                        different platforms while targeting varied and segmented
-                        <br />
-                        markets.
+                        We founded Optimax in 2008 to change the way people buy glasses, both in
+                        terms of price as well as convenience. Optimax operates several
+                        subsidiaries, such as GlassesUSA, Ottica and UVP, that all deliver
+                        affordable eyewear across different platforms while targeting varied and
+                        segmented markets.
                     </p>
                 </div>
                 <div className={s.projects}>

@@ -11,7 +11,6 @@ import FirstScreenMobile from 'components/home/firstScreenMobile/firstScreenMobi
 import FirstScreen from 'components/home/firstScreen/firstScreen';
 import JoinUs from 'components/home/joinUs/joinUs';
 import JoinUsMobile from 'components/home/joinUsMobile/joinUsMobile';
-import JobByLocation from 'components/home/jobByLocation/jobByLocation';
 import Benefits from 'components/home/benefits';
 import Team from 'components/home/team';
 import Footer from 'components/footer/footer';
@@ -23,7 +22,6 @@ const Home = (): ReactNode => (
                 <Header />
                 <FirstScreen />
                 <AboutUs />
-                <JobByLocation />
                 <JoinUs />
                 <Team />
                 <Benefits />
@@ -31,10 +29,9 @@ const Home = (): ReactNode => (
         </MediaQuery>
 
         <MediaQuery query="(max-device-width: 1024px)">
-            <HeaderMobile />
+            <Header />
             <FirstScreenMobile />
-            <AboutUsMobile />
-            <JobByLocation />
+            <AboutUs />
             <JoinUsMobile />
             <Team />
             <Benefits />

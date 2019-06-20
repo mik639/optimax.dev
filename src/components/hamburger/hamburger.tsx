@@ -1,13 +1,35 @@
 import React, {Component, ReactNode} from 'react';
 import classNames from 'classnames';
 
+import Menu from 'components/menu/menu';
+
 import s from './hamburger.module.scss';
 
-class Hamburger extends Component {
+interface HamburgerStateType {
+    isOpen: boolean;
+}
+
+class Hamburger extends Component<null, HamburgerStateType> {
+    state = {
+        isOpen: false,
+    };
+
+    changeVisibilityMenu = () => {
+        this.setState({isOpen: !this.state.isOpen});
+    };
+
     render(): ReactNode {
+        const {isOpen} = this.state;
+
         return (
-            <div className={classNames(s.wrapHamburger)}>
-                <div className={s.inner} />
+            <div className={s.wrap}>
+                <div
+                    className={classNames(s.wrapHamburger, {[s.open]: isOpen})}
+                    onClick={this.changeVisibilityMenu}
+                >
+                    <div className={s.inner} />
+                </div>
+                <Menu isOpen={isOpen} />
             </div>
         );
     }
