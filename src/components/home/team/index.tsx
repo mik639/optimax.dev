@@ -62,7 +62,7 @@ const TEAMS: TeamType[] = [
         description: 'Fun, dynamic work enviornment with people like you :)',
     },
     {
-        photo: require('./img/nehozin.png'),
+        photo: require('./img/smirnov.jpg'),
         name: 'Vladislav Smirnov',
         position: 'Rebels teamlead',
         description: 'Fun, dynamic work enviornment with people like you :)',
