@@ -29,21 +29,21 @@ class Footer extends Component {
                     </a>
                 </div>
                 <div className={s.socialLinks}>
-                    <div className={s.socialLink}>
+                    <a href="#" className={s.socialLink}>
                         <BaseIcon name="facebook" />
-                    </div>
-                    <div className={s.socialLink}>
+                    </a>
+                    <a href="#" className={s.socialLink}>
                         <BaseIcon name="instagram" />
-                    </div>
-                    <div className={s.socialLink}>
+                    </a>
+                    <a href="#" className={s.socialLink}>
                         <BaseIcon name="twitter" />
-                    </div>
-                    <div className={s.socialLink}>
+                    </a>
+                    <a href="#" className={s.socialLink}>
                         <BaseIcon name="youtube" />
-                    </div>
-                    <div className={s.socialLink}>
+                    </a>
+                    <a href="#" className={s.socialLink}>
                         <BaseIcon name="linkdin" />
-                    </div>
+                    </a>
                 </div>
             </div>
         );
