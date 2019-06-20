@@ -12,7 +12,7 @@ import JobShare from 'components/jobs/jobShare/jobShare';
 import s from './job.module.scss';
 
 const Job = ({data}) => {
-    const {title} = data.markdownRemark.frontmatter;
+    const {title, path} = data.markdownRemark.frontmatter;
     const {html} = data.markdownRemark;
     return (
         <Layout>
@@ -26,7 +26,7 @@ const Job = ({data}) => {
                 </div>
                 <div className={s.sidebar}>
                     <JobApply />
-                    <JobShare />
+                    <JobShare url={path} />
                 </div>
             </div>
             <Footer />
