@@ -25,6 +25,7 @@ const Home = (): ReactNode => (
                 <JoinUs />
                 <Team />
                 <Benefits />
+                <Footer />
             </Tentacle>
         </MediaQuery>
 
@@ -36,8 +37,6 @@ const Home = (): ReactNode => (
             <Team />
             <Benefits />
         </MediaQuery>
-
-        <Footer />
     </Layout>
 );
 
