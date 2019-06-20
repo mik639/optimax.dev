@@ -4,9 +4,19 @@
     background-color: $color-alabaster;
 }
 
-.wrap {
+.inner {
+    display: flex;
+    justify-content: space-between;
     width: 960px;
     margin: auto;
+
+    @media screen and (max-width: 992px) {
+        width: auto;
+    }
+
+}
+
+.wrap {
     height: 58px;
 
     @media screen and (max-width: 992px) {
@@ -35,19 +45,27 @@
 }
 
 .socialLinks {
-    display: none;
+    display: flex;
 
     @media screen and (max-width: 992px) {
-        display: flex;
         border-top: 1px solid $color-tower-gray;
+    }
+
+    @media screen and (min-width: 992px) {
+        width: 240px;
     }
 }
 
 .socialLink {
     flex: 1 1 auto;
-    border-right: 1px solid $color-tower-gray;
     padding: 14px;
     box-sizing: border-box;
+    opacity: .3;
+
+    @media screen and (max-width: 992px) {
+        border-right: 1px solid $color-tower-gray;
+        opacity: 1;
+    }
 
     &:last-child {
         border-right: 0;
