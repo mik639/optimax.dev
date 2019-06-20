@@ -34,9 +34,8 @@ const Home = (): ReactNode => (
             <HeaderMobile />
             <FirstScreenMobile />
             <AboutUsMobile />
-            <JoinUsMobile />
             <JobByLocation />
-            <JoinUs />
+            <JoinUsMobile />
             <Team />
             <Benefits />
         </MediaQuery>
