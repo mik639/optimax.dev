@@ -2,8 +2,8 @@
 
 .member {
     position: relative;
-    width: 172px;
-    padding-bottom: 40px;
+    width: 200px;
+    padding-bottom: 30px;
     padding-top: 30px;
     margin-right: 48px;
     text-align: center;
@@ -11,18 +11,29 @@
     &:nth-child(4n) {
         margin-right: 0;
     }
+
+    @media screen and (max-width: 1024px) {
+        width: 50%;
+        margin-right: 0;
+        padding-bottom: 0;
+    }
 }
 
 .name {
     opacity: 0.9;
     color: #FFFFFF;
     font-family: Roboto;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     letter-spacing: -0.22px;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 5px;
+
+    @media screen and (max-width: 1024px) {
+        font-size: 18px;
+        margin-top: 10px;
+    }
 }
 
 .image {
@@ -33,16 +44,25 @@
     border-radius: 100%;
     overflow: hidden;
     margin: 0 auto;
+
+    @media screen and (max-width: 1024px) {
+        height: 120px;
+        width: 120px;
+    }
 }
 
 .position {
     opacity: 0.9;
     color: #FFFFFF;
     font-family: Roboto;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     letter-spacing: -0.17px;
     margin-bottom: 15px;
+
+    @media screen and (max-width: 1024px) {
+        font-size: 14px;
+    }
 }
 
 .description {

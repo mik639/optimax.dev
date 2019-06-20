@@ -19,6 +19,21 @@
     &:nth-child(6n) {
         border-bottom: 0;
     }
+
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        margin-left: 40px;
+        margin-right: 40px;
+        text-align: center;
+        border-right: 0;
+        border-bottom: 1px solid #B1BDC5 !important;
+
+        &:last-child {
+            border-bottom: 0 !important;
+        }
+    }
 }
 
 .icon {
@@ -42,5 +57,6 @@
     font-size: 16px;
     letter-spacing: 0.52px;
     line-height: 23px;
+    font-weight: 300;
     margin: 0;
 }
