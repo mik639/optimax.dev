@@ -2,4 +2,8 @@
 
 .wrap {
     background: url(./img/tentacle.png) left 419px no-repeat;
+
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
 }

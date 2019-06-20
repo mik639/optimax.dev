@@ -1,8 +1,6 @@
 import React, {Component, ReactNode} from 'react';
 
 import Title from 'components/title/title';
-import FirstScreenBg from 'components/home/firstScreenBg/firstScreenBg';
-import FirstScreenContent from 'components/home/firstScreenContent/firstScreenContent';
 
 import s from './firstScreen.module.scss';
 
@@ -21,7 +19,7 @@ class FirstScreen extends Component {
                         Apply now
                     </a>
                 </div>
-                <div className={s.bg} />;
+                <div className={s.bg} />
             </div>
         );
     }

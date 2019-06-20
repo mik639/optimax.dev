@@ -3,7 +3,11 @@ import classNames from 'classnames';
 
 import s from './menu.module.scss';
 
-class Menu extends Component {
+interface MenuProps {
+    isOpen: boolean;
+}
+
+class Menu extends Component<MenuProps> {
     render(): ReactNode {
         const {isOpen} = this.props;
 
@@ -25,7 +29,9 @@ class Menu extends Component {
                     <a className={s.link} href="#">
                         Blog
                     </a>
-                    <a className={s.apply} href="mailto:example.com">Apply</a>
+                    <a className={s.apply} href="mailto:example.com">
+                        Apply
+                    </a>
                 </nav>
             </div>
         );

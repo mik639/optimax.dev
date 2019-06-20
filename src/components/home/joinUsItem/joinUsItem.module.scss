@@ -11,6 +11,14 @@
     background-color: $color-white;	
     box-shadow: 0 2px 8px 1px rgba($color-black ,0.1);
     box-sizing: border-box;
+
+    @media screen and (max-width: 1024px) {
+        display: block;
+        width: auto;
+        min-height: 88px;
+        margin-bottom: 20px;
+        padding: 20px 25px;
+    }
 }
 
 .title {
@@ -21,6 +29,10 @@
     margin-bottom: 5px;
     font-weight: $font-weight-bold;	
     letter-spacing: -.19px;
+
+    @media screen and (max-width: 1024px) {
+        margin-bottom: 10px;
+    }
 }
 
 .address {	
@@ -29,10 +41,18 @@
     color: $color-tower-gray;	
     font-size: 16px;	
     letter-spacing: .52px;
+
+    @media screen and (max-width: 1024px) {
+        margin-bottom: 0;
+    }
 }
 
 .text {		
-   font-size: 16px;	
-   letter-spacing: .52px;	
-   line-height: 23px;
+    font-size: 16px;	
+    letter-spacing: .52px;	
+    line-height: 23px;
+
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
 }
