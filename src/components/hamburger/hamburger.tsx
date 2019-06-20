@@ -14,6 +14,9 @@ class Hamburger extends Component<null, HamburgerStateType> {
         isOpen: false,
     };
 
+    /**
+     * Change visability menu
+     */
     changeVisibilityMenu = () => {
         this.setState({isOpen: !this.state.isOpen});
     };
