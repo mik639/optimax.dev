@@ -20,6 +20,13 @@ class Footer extends Component {
                         <a href="#">Blog</a>
                     </div>
                 </div>
+                <div className={s.socialLinks}>
+                    <div className={s.socialLink}><BaseIcon name="facebook" /></div>
+                    <div className={s.socialLink}><BaseIcon name="instagram" /></div>
+                    <div className={s.socialLink}><BaseIcon name="twitter" /></div>
+                    <div className={s.socialLink}><BaseIcon name="youtube" /></div>
+                    <div className={s.socialLink}><BaseIcon name="linkdin" /></div>
+                </div>
             </div>
         );
     }

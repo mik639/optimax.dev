@@ -11,6 +11,11 @@ import people from './svg/people.svg';
 import social from './svg/social.svg';
 import sport from './svg/sport.svg';
 import food from './svg/food.svg';
+import facebook from './svg/facebook.svg';
+import linkdin from './svg/linkdin.svg';
+import twitter from './svg/twitter.svg';
+import instagram from './svg/instagram.svg';
+import youtube from './svg/youtube.svg';
 
 import s from './baseIcon.scss';
 
@@ -26,6 +31,11 @@ const ICONS = {
     social,
     sport,
     food,
+    facebook,
+    linkdin,
+    twitter,
+    instagram,
+    youtube,
 };
 
 interface IconProps {
@@ -36,6 +46,12 @@ interface IconProps {
 
 const BaseIcon = ({name, width, height}: IconProps): ReactNode => {
     const icon = ICONS[name];
+
+    if (typeof icon === 'undefined') {
+        console.error('Requested icon does not exist');
+        return null;
+    }
+
     return (
         <svg
             width={width || '100%'}

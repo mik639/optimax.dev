@@ -4,10 +4,6 @@
     position: relative;
     z-index: 2;
     background-color: #F7F7F7;
-
-    @media screen and (max-width: 992px) {
-        display: none;
-    }
 }
 
 .wrap {
@@ -16,6 +12,10 @@
     display: flex;
     height: 58px;
     align-items: center;
+
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
 }
 
 .wrapLogo {
@@ -35,5 +35,25 @@
         letter-spacing: -0.13px;	
         line-height: 96px;
         margin-right: 20px;
+    }
+}
+
+.socialLinks {
+    display: none;
+
+    @media screen and (max-width: 992px) {
+        display: flex;
+        border-top: 1px solid $color-tower-gray;
+    }
+}
+
+.socialLink {
+    flex: 1 1 auto;
+    border-right: 1px solid $color-tower-gray;
+    padding: 14px;
+    box-sizing: border-box;
+
+    &:last-child {
+        border-right: 0;
     }
 }
