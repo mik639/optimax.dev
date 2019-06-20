@@ -1,8 +1,5 @@
 import React, {Component, ReactNode} from 'react';
 
-import FirstScreenBgMobile from 'components/home/firstScreenBgMobile/firstScreenBgMobile';
-import FirstScreenContentMobile from 'components/home/firstScreenContentMobile/firstScreenContentMobile';
-
 import s from './firstScreenMobile.module.scss';
 
 class FirstScreenMobile extends Component {

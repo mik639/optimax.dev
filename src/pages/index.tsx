@@ -16,7 +16,6 @@ import JobByLocation from 'components/home/jobByLocation/jobByLocation';
 import Benefits from 'components/home/benefits';
 import Team from 'components/home/team';
 import Footer from 'components/footer/footer';
-import FirstScreenContentMobile from 'components/home/firstScreenContentMobile/firstScreenContentMobile';
 
 const Home = (): ReactNode => (
     <Layout>
@@ -38,14 +37,13 @@ const Home = (): ReactNode => (
             <FirstScreenMobile />
             <AboutUsMobile />
             <JoinUsMobile />
-            {/*
             <JobByLocation />
             <JoinUs />
             <Team />
-            <Benefits /> */}
+            <Benefits />
         </MediaQuery>
 
-        {/* <Footer /> */}
+        <Footer />
     </Layout>
 );
 

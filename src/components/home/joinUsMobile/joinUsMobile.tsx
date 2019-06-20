@@ -1,4 +1,4 @@
-import React, {Component, Fragment, ReactNode} from 'react';
+import React, {Component, ReactNode} from 'react';
 
 import Title from 'components/title/title';
 import Subtitle from 'components/subtitle/subtitle';
@@ -55,7 +55,7 @@ class JoinUsMobile extends Component {
                 </div>
                 {JOINUS_ITEMS.map(
                     (item: ItemType): ReactNode => (
-                        <JoinUsItemMobile item={item} />
+                        <JoinUsItemMobile key={item.title} item={item} />
                     ),
                 )}
             </div>

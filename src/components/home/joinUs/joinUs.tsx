@@ -1,4 +1,4 @@
-import React, {Component, Fragment, ReactNode} from 'react';
+import React, {Component, ReactNode} from 'react';
 
 import Title from 'components/title/title';
 import Subtitle from 'components/subtitle/subtitle';
@@ -56,7 +56,7 @@ class JoinUs extends Component {
                 <div className={s.wrapItems}>
                     {JOINUS_ITEMS.map(
                         (item: ItemType): ReactNode => (
-                            <JoinUsItem item={item} />
+                            <JoinUsItem key={item.title} item={item} />
                         ),
                     )}
                 </div>
