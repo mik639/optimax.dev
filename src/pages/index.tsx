@@ -7,23 +7,21 @@ import AboutUsMobile from 'components/home/aboutUsMobile/aboutUsMobile';
 import Layout from 'layouts/index';
 import Header from 'components/header/header';
 import HeaderMobile from 'components/headerMobile/headerMobile';
-import FirstScreenBg from 'components/home/firstScreenBg/firstScreenBg';
-import FirstScreenBgMobile from 'components/home/firstScreenBgMobile/firstScreenBgMobile';
-import FirstScreenContent from 'components/home/firstScreenContent/firstScreenContent';
+import FirstScreenMobile from 'components/home/firstScreenMobile/firstScreenMobile';
+import FirstScreen from 'components/home/firstScreen/firstScreen';
 import JoinUs from 'components/home/joinUs/joinUs';
+import JoinUsMobile from 'components/home/joinUsMobile/joinUsMobile';
 import JobByLocation from 'components/home/jobByLocation/jobByLocation';
 import Benefits from 'components/home/benefits';
 import Team from 'components/home/team';
 import Footer from 'components/footer/footer';
-import FirstScreenContentMobile from 'components/home/firstScreenContentMobile/firstScreenContentMobile';
 
 const Home = (): ReactNode => (
     <Layout>
         <MediaQuery query="(min-device-width: 1024px)">
             <Tentacle>
                 <Header />
-                <FirstScreenBg />
-                <FirstScreenContent />
+                <FirstScreen />
                 <AboutUs />
                 <JobByLocation />
                 <JoinUs />
@@ -34,9 +32,9 @@ const Home = (): ReactNode => (
 
         <MediaQuery query="(max-device-width: 1024px)">
             <HeaderMobile />
-            <FirstScreenBgMobile />
-            <FirstScreenContentMobile />
+            <FirstScreenMobile />
             <AboutUsMobile />
+            <JoinUsMobile />
             <JobByLocation />
             <JoinUs />
             <Team />

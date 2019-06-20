@@ -1,5 +1,7 @@
 import React, {Component, ReactNode} from 'react';
 
+import BaseIcon from 'components/baseIcon/baseIcon';
+
 import s from './aboutUsMobile.module.scss';
 
 class AboutUsMobile extends Component {
@@ -33,6 +35,17 @@ class AboutUsMobile extends Component {
                         <br />
                         segmented markets.
                     </p>
+                </div>
+                <div className={s.projects}>
+                    <a href="#" className={s.item}>
+                        <BaseIcon name="uvp" />
+                    </a>
+                    <a href="#" className={s.item}>
+                        <BaseIcon name="glassesusa" />
+                    </a>
+                    <a href="#" className={s.item}>
+                        <BaseIcon name="ottica" />
+                    </a>
                 </div>
             </div>
         );

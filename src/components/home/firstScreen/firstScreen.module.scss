@@ -1,17 +1,16 @@
 @import 'variables.scss';
 
-
 .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 960px;
-    min-height: 510px;
     margin: 0 auto;
-
-    @include valignAfter;
+    padding: 0 17px;
 }
 
 .content {
-    display: inline-block;
-    vertical-align: middle;
+    width: 350px;
 }
 
 .title {
@@ -42,4 +41,29 @@
     font-weight: $font-weight-normal;	
     letter-spacing: -.45px;
     text-align: center;
+}
+
+.bg {
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 674px;
+        height: 640px;
+        background: url(./img/space.png) 0 0 no-repeat;
+        margin-top: -128px;
+        margin-left: 60px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 104px;
+        left: 155px;
+        width: 338px;
+        height: 370px;
+        background: url(./img/astronaut.png) 0 0 no-repeat;
+        transform: rotate(.3deg);
+    }
 }

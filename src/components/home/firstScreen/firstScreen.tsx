@@ -1,29 +1,30 @@
 import React, {Component, ReactNode} from 'react';
 
-import s from './firstScreenContentMobile.module.scss';
+import Title from 'components/title/title';
+import FirstScreenBg from 'components/home/firstScreenBg/firstScreenBg';
+import FirstScreenContent from 'components/home/firstScreenContent/firstScreenContent';
 
-class FirstScreenContentMobile extends Component {
+import s from './firstScreen.module.scss';
+
+class FirstScreen extends Component {
     render(): ReactNode {
         return (
             <div className={s.wrap}>
                 <div className={s.content}>
-                    <h1 className={s.title}>
-                        Work
-                        <br />
-                        With Us
-                    </h1>
+                    <Title>Work With Us</Title>
                     <span className={s.desc}>
                         We are a worldwide e-commerce
                         <br />
                         leader in the eyewear industry.
                     </span>
                     <a className={s.applyNow} href="mailto:example.com">
-                        Apply Now
+                        Apply now
                     </a>
                 </div>
+                <div className={s.bg} />;
             </div>
         );
     }
 }
 
-export default FirstScreenContentMobile;
+export default FirstScreen;

@@ -1,22 +1,26 @@
 @import 'variables.scss';
 
 .wrap {
-    flex: 0 0 296px;
-    min-height: 226px;
-    margin-right: 20px;
-    margin-bottom: 30px;
-    padding: 55px 28px 27px;
+    min-width: 40px;
+    min-height: 88px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 25px;
     border-radius: 8px;	
     background-color: $color-white;	
     box-shadow: 0 2px 8px 1px rgba($color-black ,0.1);
     box-sizing: border-box;
+
+    &:nth-child(3n+3) {
+        margin-right: 0;;
+    }
 }
 
 .title {
     display: block;
     opacity: 0.9;	
     font-size: 21px;	
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-weight: $font-weight-bold;	
     letter-spacing: -.19px;
 }

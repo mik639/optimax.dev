@@ -2,17 +2,11 @@
 
 .wrap {
     width: 100%;
-    max-width: 960px;
+    max-width: 936px;
     margin: 0 auto 50px;
 }
 
 .wrapTitles {
     text-align: center;
     margin-bottom: 42px;
-}
-
-.wrapItems {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
