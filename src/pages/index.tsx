@@ -1,14 +1,5 @@
 import React, {ReactNode} from 'react';
-import {useMediaQuery} from 'react-responsive';
-
-const Desktop = ({children}) => {
-    const isDesktop = useMediaQuery({minWidth: 992});
-    return isDesktop ? children : null;
-};
-const Mobile = ({children}) => {
-    const isNotMobile = useMediaQuery({maxWidth: 991});
-    return isNotMobile ? children : null;
-};
+import MediaQuery from 'react-responsive';
 
 import Tentacle from 'components/home/tentacle/tentacle';
 import AboutUs from 'components/home/aboutUs/aboutUs';
@@ -27,7 +18,7 @@ import Footer from 'components/footer/footer';
 
 const Home = (): ReactNode => (
     <Layout>
-        <Desktop>
+        <MediaQuery query="(min-device-width: 1024px)">
             <Tentacle>
                 <Header />
                 <FirstScreen />
@@ -36,11 +27,11 @@ const Home = (): ReactNode => (
                 <JoinUs />
                 <Team />
                 <Benefits />
+                <Footer />
             </Tentacle>
-            <Footer />
-        </Desktop>
+        </MediaQuery>
 
-        <Mobile>
+        <MediaQuery query="(max-device-width: 1024px)">
             <HeaderMobile />
             <FirstScreenMobile />
             <AboutUsMobile />
@@ -48,7 +39,7 @@ const Home = (): ReactNode => (
             <JoinUsMobile />
             <Team />
             <Benefits />
-        </Mobile>
+        </MediaQuery>
     </Layout>
 );
 
