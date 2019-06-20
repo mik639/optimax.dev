@@ -9,7 +9,9 @@ class JobByLocation extends Component {
         return (
             <div className={s.wrap}>
                 <div className={s.container}>
-                    <div className={s.wrapTitle}><Title isWhite>Job by Location</Title></div>
+                    <div className={s.wrapTitle}>
+                        <Title isWhite>Job by Location</Title>
+                    </div>
                     <div className={s.box}>
                         <div className={s.item}>
                             <div className={s.wrapAddress}>

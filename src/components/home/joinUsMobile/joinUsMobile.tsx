@@ -2,9 +2,9 @@ import React, {Component, Fragment, ReactNode} from 'react';
 
 import Title from 'components/title/title';
 import Subtitle from 'components/subtitle/subtitle';
-import JoinUsItem from 'components/home/joinUsItem/joinUsItem';
+import JoinUsItemMobile from 'components/home/joinUsItemMobile/joinUsItemMobile';
 
-import s from './joinUs.module.scss';
+import s from './joinUsMobile.module.scss';
 
 interface ItemType {
     title: string;
@@ -45,7 +45,7 @@ const JOINUS_ITEMS = [
     },
 ];
 
-class JoinUs extends Component {
+class JoinUsMobile extends Component {
     render(): ReactNode {
         return (
             <div className={s.wrap}>
@@ -53,16 +53,14 @@ class JoinUs extends Component {
                     <Title>Join Us</Title>
                     <Subtitle>Current openings</Subtitle>
                 </div>
-                <div className={s.wrapItems}>
-                    {JOINUS_ITEMS.map(
-                        (item: ItemType): ReactNode => (
-                            <JoinUsItem item={item} />
-                        ),
-                    )}
-                </div>
+                {JOINUS_ITEMS.map(
+                    (item: ItemType): ReactNode => (
+                        <JoinUsItemMobile item={item} />
+                    ),
+                )}
             </div>
         );
     }
 }
 
-export default JoinUs;
+export default JoinUsMobile;

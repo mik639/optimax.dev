@@ -7,11 +7,12 @@ import AboutUsMobile from 'components/home/aboutUsMobile/aboutUsMobile';
 import Layout from 'layouts/index';
 import Header from 'components/header/header';
 import HeaderMobile from 'components/headerMobile/headerMobile';
+import FirstScreenMobile from 'components/home/firstScreenMobile/firstScreenMobile';
 import FirstScreenBg from 'components/home/firstScreenBg/firstScreenBg';
-import FirstScreenBgMobile from 'components/home/firstScreenBgMobile/firstScreenBgMobile';
 import FirstScreenContent from 'components/home/firstScreenContent/firstScreenContent';
 import JoinUs from 'components/home/joinUs/joinUs';
-import JobByLocation from 'components/home/jobByLocation/jobByLocation'
+import JoinUsMobile from 'components/home/joinUsMobile/joinUsMobile';
+import JobByLocation from 'components/home/jobByLocation/jobByLocation';
 import Benefits from 'components/home/benefits';
 import Team from 'components/home/team';
 import Footer from 'components/footer/footer';
@@ -34,16 +35,17 @@ const Home = (): ReactNode => (
 
         <MediaQuery query="(max-device-width: 1024px)">
             <HeaderMobile />
-            <FirstScreenBgMobile />
-            <FirstScreenContentMobile />
+            <FirstScreenMobile />
             <AboutUsMobile />
+            <JoinUsMobile />
+            {/*
             <JobByLocation />
             <JoinUs />
             <Team />
-            <Benefits />
+            <Benefits /> */}
         </MediaQuery>
 
-        <Footer />
+        {/* <Footer /> */}
     </Layout>
 );
 

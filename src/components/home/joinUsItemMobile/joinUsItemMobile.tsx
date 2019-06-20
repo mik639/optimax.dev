@@ -1,12 +1,12 @@
 import React, {Component, ReactNode} from 'react';
 
-import s from './joinUsItem.module.scss';
+import s from './joinUsItemMobile.module.scss';
 
 interface JoinUsProps {
     item: {};
 }
 
-class JoinUsItem extends Component<JoinUsProps> {
+class JoinUsItemMobile extends Component<JoinUsProps> {
     render(): ReactNode {
         const {item} = this.props;
 
@@ -16,10 +16,9 @@ class JoinUsItem extends Component<JoinUsProps> {
                     {item.title}
                 </a>
                 <span className={s.address}>{item.address}</span>
-                <a className={s.text}>{item.text}</a>
             </div>
         );
     }
 }
 
-export default JoinUsItem;
+export default JoinUsItemMobile;
