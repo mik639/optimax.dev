@@ -8,8 +8,7 @@ import Layout from 'layouts/index';
 import Header from 'components/header/header';
 import HeaderMobile from 'components/headerMobile/headerMobile';
 import FirstScreenMobile from 'components/home/firstScreenMobile/firstScreenMobile';
-import FirstScreenBg from 'components/home/firstScreenBg/firstScreenBg';
-import FirstScreenContent from 'components/home/firstScreenContent/firstScreenContent';
+import FirstScreen from 'components/home/firstScreen/firstScreen';
 import JoinUs from 'components/home/joinUs/joinUs';
 import JoinUsMobile from 'components/home/joinUsMobile/joinUsMobile';
 import JobByLocation from 'components/home/jobByLocation/jobByLocation';
@@ -22,8 +21,7 @@ const Home = (): ReactNode => (
         <MediaQuery query="(min-device-width: 1024px)">
             <Tentacle>
                 <Header />
-                <FirstScreenBg />
-                <FirstScreenContent />
+                <FirstScreen />
                 <AboutUs />
                 <JobByLocation />
                 <JoinUs />

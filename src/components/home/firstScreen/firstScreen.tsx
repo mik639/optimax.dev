@@ -1,10 +1,12 @@
 import React, {Component, ReactNode} from 'react';
 
 import Title from 'components/title/title';
+import FirstScreenBg from 'components/home/firstScreenBg/firstScreenBg';
+import FirstScreenContent from 'components/home/firstScreenContent/firstScreenContent';
 
-import s from './firstScreenContent.module.scss';
+import s from './firstScreen.module.scss';
 
-class FirstScreenContent extends Component {
+class FirstScreen extends Component {
     render(): ReactNode {
         return (
             <div className={s.wrap}>
@@ -19,9 +21,10 @@ class FirstScreenContent extends Component {
                         Apply now
                     </a>
                 </div>
+                <div className={s.bg} />;
             </div>
         );
     }
 }
 
-export default FirstScreenContent;
+export default FirstScreen;
