@@ -14,22 +14,21 @@ import {
 import s from './jobShare.module.scss';
 import {className} from 'classnames';
 
-const JobShare = ({children}) => {
-    const shareUrl = window.location.href;
+const JobShare = ({path}) => {
     return (
         <div className={s.container}>
             <p className={s.title}>Share This Job Opening</p>
             <div className={s.socials}>
-                <FacebookShareButton url={shareUrl}>
+                <FacebookShareButton url={path}>
                     <FacebookIcon size={32} round={true} />
                 </FacebookShareButton>
-                <LinkedinShareButton url={shareUrl}>
+                <LinkedinShareButton url={path}>
                     <LinkedinIcon size={32} round={true} />
                 </LinkedinShareButton>
-                <TwitterShareButton url={shareUrl}>
+                <TwitterShareButton url={path}>
                     <TwitterIcon size={32} round={true} />
                 </TwitterShareButton>
-                <VKShareButton url={shareUrl}>
+                <VKShareButton url={path}>
                     <VKIcon size={32} round={true} />
                 </VKShareButton>
             </div>
