@@ -6,6 +6,10 @@ import Layout from 'layouts/index';
 import Header from 'components/header/header';
 import Footer from 'components/footer/footer';
 import JobContent from 'components/jobs/jobContent/jobContent';
+import JobApply from 'components/jobs/jobApply/jobApply';
+import JobShare from 'components/jobs/jobShare/jobShare';
+
+import s from './job.module.scss';
 
 const Job = ({data}) => {
     const {title} = data.markdownRemark.frontmatter;
@@ -13,11 +17,18 @@ const Job = ({data}) => {
     return (
         <Layout>
             <SEO title={title} />
-
             <Header />
-
-            <JobContent>{html}</JobContent>
-
+            <div className={s.container}>
+                <div className={s.content}>
+                    <h1 className={s.title}>{title}</h1>
+                    <h2 className={s.subtitle}>Job Description</h2>
+                    <JobContent>{html}</JobContent>
+                </div>
+                <div className={s.sidebar}>
+                    <JobApply />
+                    <JobShare />
+                </div>
+            </div>
             <Footer />
         </Layout>
     );
