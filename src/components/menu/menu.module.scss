@@ -51,15 +51,17 @@
     &:nth-child(n+4) {
       color: $color-white;  
     }
+    
+    svg {
+      display: none;
+    }
 
     @media screen and (max-width: 1024px) {
         display: flex;
         align-items: center;
         margin-right: 0;
-        font-size: 19px;
-        letter-spacing: -.18px;
-        height: 55px;
-        padding-left: 22px;
+        height: 60px;
+        padding-left: 18px;
         border-bottom: 1px solid $color-tower-gray;
         background: $color-alabaster;
 
@@ -67,20 +69,32 @@
         &:nth-child(n+4) {
           color: $color-limed-spruce; 
         }
+
+        svg {
+          display: block;
+        }
     }
 }
 
-.apply {
-  display: none;
-  
-  @media screen and (max-width: 1024px) {
-    display: block;
-    background: $color-azure-radiance;
-    opacity: 0.9;	
-    color: $color-white;	
-    font-size: 19px;	
-    letter-spacing: -.18px;
-    line-height: 56px;	
-    text-align: center;
+.name {
+    @media screen and (max-width: 1024px) {
+      margin-left: 20px;
+      font-size: 20px;
+      letter-spacing: -.18px;
   }
+}
+
+.apply {
+    display: none;
+    
+    @media screen and (max-width: 1024px) {
+        display: block;
+        background: $color-azure-radiance;
+        opacity: 0.9;	
+        color: $color-white;	
+        font-size: 19px;	
+        letter-spacing: -.18px;
+        line-height: 3.4;	
+        text-align: center;
+    }
 }

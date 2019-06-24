@@ -1,4 +1,5 @@
 import React, {Component, ReactNode} from 'react';
+import classNames from 'classnames';
 
 import Title from 'components/title/title';
 
@@ -23,7 +24,10 @@ class JobByLocation extends Component {
                                 <p className={s.address}>Habarzei, St. 34, Tel Aviv</p>
                             </div>
                         </div>
-                        <div className={s.item}></div>
+                        <div className={s.map}>
+                            <div className={classNames(s.marker, s.israel)}/>
+                            <div className={classNames(s.marker, s.russia)}/>
+                        </div>
                     </div>
                 </div>
             </div>

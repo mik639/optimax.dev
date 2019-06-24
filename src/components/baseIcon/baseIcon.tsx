@@ -16,6 +16,11 @@ import linkdin from './svg/linkdin.svg';
 import twitter from './svg/twitter.svg';
 import instagram from './svg/instagram.svg';
 import youtube from './svg/youtube.svg';
+import aboutUs from './svg/aboutUs.svg';
+import blog from './svg/blog.svg';
+import careers from './svg/careers.svg';
+import location from './svg/location.svg';
+import ourTeam from './svg/ourTeam.svg';
 
 import s from './baseIcon.scss';
 
@@ -36,6 +41,11 @@ const ICONS = {
     twitter,
     instagram,
     youtube,
+    aboutUs,
+    location,
+    blog,
+    careers,
+    ourTeam,
 };
 
 interface IconProps {

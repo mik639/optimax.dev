@@ -1,6 +1,8 @@
 import React, {Component, ReactNode} from 'react';
 import classNames from 'classnames';
 
+import BaseIcon from 'components/baseIcon/baseIcon';
+
 import s from './menu.module.scss';
 
 interface MenuProps {
@@ -15,19 +17,24 @@ class Menu extends Component<MenuProps> {
             <div className={classNames(s.wrap, {[s.open]: isOpen})}>
                 <nav className={s.list}>
                     <a className={s.link} href="#">
-                        About Us
+                        <BaseIcon name="aboutUs" width={24} height={24} />
+                        <span className={s.name}>About Us</span>
                     </a>
                     <a className={s.link} href="#">
-                        Location
+                        <BaseIcon name="location" width={24} height={24} />
+                        <span className={s.name}>Location</span>
                     </a>
                     <a className={s.link} href="#">
-                        Careers
+                        <BaseIcon name="careers" width={24} height={24} />
+                        <span className={s.name}>Careers</span>
                     </a>
                     <a className={s.link} href="#">
-                        Our team
+                        <BaseIcon name="ourTeam" width={24} height={24} />
+                        <span className={s.name}>Our team</span>
                     </a>
                     <a className={s.link} href="#">
-                        Blog
+                        <BaseIcon name="blog" width={24} height={24} />
+                        <span className={s.name}>Blog</span>
                     </a>
                     <a className={s.apply} href="mailto:example.com">
                         Apply

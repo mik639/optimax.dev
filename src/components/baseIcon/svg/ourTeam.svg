@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="21px" viewBox="0 0 25 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="symbol" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(-15.000000, -17.000000)">
+            <rect id="Rectangle-Copy-3" x="0" y="0" width="55" height="55"></rect>
+            <g id="team-icon" transform="translate(15.000000, 18.000000)" stroke="#B1BDC5" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.87">
+                <path d="M22.0058,6.7879 C22.0058,8.7369 20.4258,10.3179 18.4758,10.3179 C16.5238,10.3179 14.9458,8.7369 14.9458,6.7879 C14.9458,4.8389 16.5238,3.2589 18.4758,3.2589 C20.4258,3.2589 22.0058,4.8389 22.0058,6.7879 Z" id="Stroke-1"></path>
+                <path d="M13.9179,12.6297 C14.9449,11.2277 16.6039,10.3177 18.4759,10.3177 C21.5949,10.3177 24.1239,12.8467 24.1239,15.9657 L16.2479,15.9657" id="Stroke-3"></path>
+                <path d="M13.6904,5.533 C13.6904,8.349 11.4084,10.631 8.5924,10.631 C5.7744,10.631 3.4944,8.349 3.4944,5.533 C3.4944,2.718 5.7744,0.434 8.5924,0.434 C11.4084,0.434 13.6904,2.718 13.6904,5.533 Z" id="Stroke-5"></path>
+                <path d="M16.75,18.7889 L0.435,18.7889 C0.435,14.2849 4.086,10.6309 8.593,10.6309 C13.099,10.6309 16.75,14.2849 16.75,18.7889 Z" id="Stroke-7"></path>
+            </g>
+        </g>
+    </g>
+</svg>
