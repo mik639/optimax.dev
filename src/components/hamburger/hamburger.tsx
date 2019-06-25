@@ -9,7 +9,11 @@ interface HamburgerStateType {
     isOpen: boolean;
 }
 
-class Hamburger extends Component<null, HamburgerStateType> {
+interface HamburgerPropsType {
+    isBlack: boolean
+}
+
+class Hamburger extends Component<HamburgerPropsType, HamburgerStateType> {
     state = {
         isOpen: false,
     };
@@ -23,9 +27,10 @@ class Hamburger extends Component<null, HamburgerStateType> {
 
     render(): ReactNode {
         const {isOpen} = this.state;
+        const {isBlack} = this.props;
 
         return (
-            <div className={s.wrap}>
+            <div className={classNames(s.wrap, {[s.white]: !isBlack}, {[s.black]: isBlack})}>
                 <div
                     className={classNames(s.wrapHamburger, {[s.open]: isOpen})}
                     onClick={this.changeVisibilityMenu}

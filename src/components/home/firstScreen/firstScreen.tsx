@@ -1,6 +1,8 @@
 import React, {Component, ReactNode} from 'react';
 
 import Title from 'components/title/title';
+import Button from 'components/button/button';
+import {MAIL_TO} from 'constants/mailTo';
 
 import s from './firstScreen.module.scss';
 
@@ -16,9 +18,9 @@ class FirstScreen extends Component {
                             <br />
                             leader in the eyewear industry.
                         </span>
-                        <a className={s.applyNow} href="mailto:example.com">
-                            Apply now
-                        </a>
+                        <Button className={s.btn} href={MAIL_TO}>
+                            <span className={s.btnText}>Apply now</span>
+                        </Button>
                     </div>
                     <div className={s.bg} />
                 </div>

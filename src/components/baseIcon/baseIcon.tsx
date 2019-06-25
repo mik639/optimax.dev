@@ -21,6 +21,7 @@ import blog from './svg/blog.svg';
 import careers from './svg/careers.svg';
 import location from './svg/location.svg';
 import ourTeam from './svg/ourTeam.svg';
+import arrow from './svg/arrow.svg';
 
 import s from './baseIcon.scss';
 
@@ -46,6 +47,7 @@ const ICONS = {
     blog,
     careers,
     ourTeam,
+    arrow,
 };
 
 interface IconProps {

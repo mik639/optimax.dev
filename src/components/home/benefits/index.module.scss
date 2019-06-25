@@ -24,3 +24,21 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.btn {
+    display: none;
+    width: 194px;
+    height: 54px;
+    margin: 50px auto 0;
+
+    @media screen and (max-width: 992px) {
+        display: block;
+    }
+}
+
+.btnText {
+    font-size: 18px;	
+    font-weight: $font-weight-bold;	
+    letter-spacing: -.39px;	
+    line-height: 3;	
+}

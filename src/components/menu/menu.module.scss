@@ -32,7 +32,7 @@
           content: '';
           position: absolute;
           top: -15px;
-          right: 5px;
+          right: 10px;
           border-left: 15px solid transparent;
           border-right: 15px solid transparent;
           border-bottom: 15px solid $color-alabaster;
@@ -97,4 +97,15 @@
         line-height: 3.4;	
         text-align: center;
     }
+}
+
+.fixed {
+  .link {
+    color: rgba($color-limed-spruce, .9);
+
+
+    &:nth-child(n+4) {
+      color: rgba($color-limed-spruce, .9); 
+    }
+  }
 }

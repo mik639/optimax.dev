@@ -13,12 +13,18 @@
     box-sizing: border-box;
 
     @media screen and (max-width: 1024px) {
-        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: auto;
         min-height: 88px;
         margin-bottom: 20px;
         padding: 20px 25px;
     }
+}
+
+.content {
+    flex: 1 1 auto;
 }
 
 .title {
@@ -54,5 +60,15 @@
 
     @media screen and (max-width: 1024px) {
         display: none;
+    }
+}
+
+.wrapArrow {
+    display: none;
+    width: 20px;
+    height: 20px;
+
+    @media screen and (max-width: 1024px) {
+        display: block;
     }
 }

@@ -3,6 +3,8 @@ import React, {ReactNode} from 'react';
 import Title from 'components/title/title';
 import Subtitle from 'components/subtitle/subtitle';
 import Perk from 'components/home/benefits/perk/perk';
+import Button from 'components/button/button';
+import {MAIL_TO} from 'constants/mailTo';
 
 import s from './index.module.scss';
 
@@ -58,6 +60,9 @@ const Benefits = (): ReactNode => (
                 ),
             )}
         </div>
+        <Button className={s.btn} isShadow href={MAIL_TO}>
+            <span className={s.btnText}>Apply now</span>
+        </Button>
     </div>
 );
 

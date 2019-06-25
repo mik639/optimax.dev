@@ -55,28 +55,30 @@
     }
 }
 
-.applyNow {
+.btn {
     display: block;
     width: 216px;	
     height: 62px;	
     margin-top: 30px;
-    border-radius: 30px;	
-    background-color: $color-azure-radiance;
-    color: $color-white;	
-    font-size: 21px;	
-    line-height: 2.9;
-    font-weight: $font-weight-normal;	
-    letter-spacing: -.45px;
-    text-align: center;
 
     @media screen and (max-width: 1024px) {
         width: 100%;
         max-width: 170px;
-        height: 53px;	
-        margin-top: 20px;	
+        height: 53px;
+    }
+}
+
+.btnText {
+    font-size: 21px;	
+    line-height: 2.9;
+    font-weight: $font-weight-normal;	
+    letter-spacing: -.45px;
+
+    @media screen and (max-width: 1024px) {
         line-height: 2.6;
     }
 }
+
 
 .bg {
     position: relative;
@@ -85,7 +87,6 @@
         position: relative;
         width: 372px;
         height: 340px;
-        z-index: 1;
         overflow: hidden;
         margin-left: -48px;
         margin-top: -68px;
