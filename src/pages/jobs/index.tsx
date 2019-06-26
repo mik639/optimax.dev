@@ -1,14 +1,13 @@
-import React from 'react';
-import {Link, graphql} from 'gatsby';
+import React, {ReactNode} from 'react';
+import {graphql} from 'gatsby';
 
 import SEO from 'components/SEO/SEO';
 import Layout from 'layouts/index';
 import Header from 'components/header/header';
 import Footer from 'components/footer/footer';
-import JobContent from 'components/jobs/jobContent/jobContent';
 
-const Jobs = props => {
-    const jobs = props.data.allMarkdownRemark.edges;
+const Jobs = (): ReactNode => {
+    // const jobs = props.data.allMarkdownRemark.edges;
     return (
         <Layout>
             <SEO title="Jobs" />

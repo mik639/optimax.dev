@@ -15,9 +15,7 @@ class JoinUsItem extends Component<JoinUsProps> {
         return (
             <Link to={item.path} className={s.wrap}>
                 <div className={s.content}>
-                    <span className={s.title}>
-                        {item.title}
-                    </span>
+                    <span className={s.title}>{item.title}</span>
                     <span className={s.address}>{item.address}</span>
                     <span className={s.text}>{item.text}</span>
                 </div>

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 import {graphql} from 'gatsby';
 
 import SEO from 'components/SEO/SEO';
 import Layout from 'layouts/index';
+import {MarkdownRemark} from 'src/types.ts';
 
-const Post = ({data}) => {
+const Post = ({data}: MarkdownRemark): ReactNode => {
     const {title} = data.markdownRemark.frontmatter;
     // const {html} = data.markdownRemark;
     return (

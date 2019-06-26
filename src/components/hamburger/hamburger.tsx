@@ -10,7 +10,7 @@ interface HamburgerStateType {
 }
 
 interface HamburgerPropsType {
-    isBlack: boolean
+    isBlack: boolean;
 }
 
 class Hamburger extends Component<HamburgerPropsType, HamburgerStateType> {

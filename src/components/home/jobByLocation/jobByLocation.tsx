@@ -1,5 +1,8 @@
 import React, {Component, ReactNode} from 'react';
 import classNames from 'classnames';
+import {Element} from 'react-scroll';
+
+import {LOCATION} from 'constants/anchors';
 
 import Title from 'components/title/title';
 
@@ -8,7 +11,7 @@ import s from './jobByLocation.module.scss';
 class JobByLocation extends Component {
     render(): ReactNode {
         return (
-            <div className={s.wrap}>
+            <Element name={LOCATION} className={s.wrap}>
                 <div className={s.container}>
                     <div className={s.wrapTitle}>
                         <Title isWhite>Job by Location</Title>
@@ -25,12 +28,12 @@ class JobByLocation extends Component {
                             </div>
                         </div>
                         <div className={s.map}>
-                            <div className={classNames(s.marker, s.israel)}/>
-                            <div className={classNames(s.marker, s.russia)}/>
+                            <div className={classNames(s.marker, s.israel)} />
+                            <div className={classNames(s.marker, s.russia)} />
                         </div>
                     </div>
                 </div>
-            </div>
+            </Element>
         );
     }
 }

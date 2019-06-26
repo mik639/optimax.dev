@@ -1,11 +1,11 @@
-import React from 'react';
-import {Link, graphql} from 'gatsby';
+import React, {ReactNode} from 'react';
+import {graphql} from 'gatsby';
 // import SEO from '../../components/SEO';
 
 import Layout from 'layouts/index';
 
-const Blog = props => {
-    const posts = props.data.allMarkdownRemark.edges;
+const Blog = (): ReactNode => {
+    // const posts = props.data.allMarkdownRemark.edges;
     return (
         <Layout bodyClass="page-blog">
             {/* <SEO title="Вакансии" /> */}

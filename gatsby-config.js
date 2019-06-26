@@ -12,20 +12,21 @@ module.exports = {
         },
         menuLinks: [
             {
-                name: 'Вакансии',
+                name: 'About Us',
+            },
+            {
+                name: 'Location',
+            },
+            {
+                name: 'Careers',
                 link: '/jobs',
             },
             {
-                name: 'Команда',
-                link: '/team',
+                name: 'Our Team',
             },
             {
-                name: 'Блог',
+                name: 'Blog',
                 link: '/blog',
-            },
-            {
-                name: 'Контакты',
-                link: '/contacts',
             },
         ],
     },

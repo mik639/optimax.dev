@@ -1,8 +1,12 @@
 import React, {Component, ReactNode} from 'react';
 import classNames from 'classnames';
+import {scroller} from 'react-scroll';
+import {StaticQuery, graphql} from 'gatsby';
+
+import {ABOUT_US, OUR_TEAM, LOCATION} from 'constants/anchors';
+import {MAIL_TO} from 'constants/mailTo';
 
 import BaseIcon from 'components/baseIcon/baseIcon';
-import {MAIL_TO} from 'constants/mailTo'
 
 import s from './menu.module.scss';
 
@@ -12,39 +16,73 @@ interface MenuProps {
 }
 
 class Menu extends Component<MenuProps> {
+    onClick = (name: string) => () => {
+        scroller.scrollTo(name, {
+            duration: 700,
+            smooth: true,
+            isDynamic: true,
+            offset: -200,
+        });
+    };
+
     render(): ReactNode {
         const {isOpen, isFixed} = this.props;
 
         return (
-            <div className={classNames(s.wrap, {[s.open]: isOpen}, {[s.fixed]: isFixed})}>
-                <nav className={s.list}>
-                    <a className={s.link} href="#">
-                        <BaseIcon name="aboutUs" width={24} height={24} />
-                        <span className={s.name}>About Us</span>
-                    </a>
-                    <a className={s.link} href="#">
-                        <BaseIcon name="location" width={24} height={24} />
-                        <span className={s.name}>Location</span>
-                    </a>
-                    <a className={s.link} href="#">
-                        <BaseIcon name="careers" width={24} height={24} />
-                        <span className={s.name}>Careers</span>
-                    </a>
-                    <a className={s.link} href="#">
-                        <BaseIcon name="ourTeam" width={24} height={24} />
-                        <span className={s.name}>Our team</span>
-                    </a>
-                    <a className={s.link} href="#">
-                        <BaseIcon name="blog" width={24} height={24} />
-                        <span className={s.name}>Blog</span>
-                    </a>
-                    <a className={s.apply} href={MAIL_TO}>
-                        Apply
-                    </a>
-                </nav>
-            </div>
+            <StaticQuery
+                query={menuQuery}
+                render={(data) => {
+                    console.log(data);
+                    return (
+                        <div
+                            className={classNames(s.wrap, {[s.open]: isOpen}, {[s.fixed]: isFixed})}
+                        >
+                            <nav className={s.list}>
+                                {/* {menuLinks && menuLinks.map(item => {
+                                    if (item.link) {
+                                        return (
+                                            <a className={s.link} href={item.link}>
+                                                <BaseIcon name={item.name} width={24} height={24} />
+                                                <span className={s.name}>{item.name}</span>
+                                            </a>
+                                        );
+                                    } else {
+                                        return (
+                                            <span className={s.link}>
+                                                <BaseIcon name={item.name} width={24} height={24} />
+                                                <span
+                                                    onClick={this.onClick(item.name)}
+                                                    className={s.name}
+                                                >
+                                                    {item.name}
+                                                </span>
+                                            </span>
+                                        );
+                                    }
+                                })} */}
+                                <a className={s.apply} href={MAIL_TO}>
+                                    Apply
+                                </a>
+                            </nav>
+                        </div>
+                    );
+                }}
+            />
         );
     }
 }
+
+const menuQuery = graphql`
+    query DefaultMenuQuery {
+        site {
+            siteMetadata {
+                menuLinks {
+                    name
+                    link
+                }
+            }
+        }
+    }
+`;
 
 export default Menu;

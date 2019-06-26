@@ -1,5 +1,4 @@
-import React from 'react';
-import {graphql} from 'gatsby';
+import React, {ReactNode} from 'react';
 import {
     FacebookShareButton,
     LinkedinShareButton,
@@ -12,9 +11,8 @@ import {
 } from 'react-share';
 
 import s from './jobShare.module.scss';
-import {className} from 'classnames';
 
-const JobShare = ({path}) => {
+const JobShare = ({path}: string): ReactNode => {
     return (
         <div className={s.container}>
             <p className={s.title}>Share This Job Opening</p>

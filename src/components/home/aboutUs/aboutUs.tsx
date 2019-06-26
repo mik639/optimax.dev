@@ -1,4 +1,7 @@
 import React, {Component, ReactNode} from 'react';
+import {Element} from 'react-scroll';
+
+import {ABOUT_US} from 'constants/anchors';
 
 import Title from 'components/title/title';
 import Subtitle from 'components/subtitle/subtitle';
@@ -9,7 +12,7 @@ import s from './aboutUs.module.scss';
 class AboutUs extends Component {
     render(): ReactNode {
         return (
-            <div className={s.wrap}>
+            <Element name={ABOUT_US} className={s.wrap}>
                 <div className={s.wrapText}>
                     <div className={s.wrapTitle}>
                         <Title>About Us</Title>
@@ -34,7 +37,7 @@ class AboutUs extends Component {
                         <BaseIcon name="ottica" />
                     </a>
                 </div>
-            </div>
+            </Element>
         );
     }
 }

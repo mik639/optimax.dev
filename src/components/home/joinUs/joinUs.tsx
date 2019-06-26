@@ -1,9 +1,10 @@
-import React, {Component, ReactNode} from 'react';
+import React, {ReactNode} from 'react';
 import {StaticQuery, graphql} from 'gatsby';
 
 import Title from 'components/title/title';
 import Subtitle from 'components/subtitle/subtitle';
 import JoinUsItem from 'components/home/joinUsItem/joinUsItem';
+import {MarkdownRemarkConnection} from 'src/types.ts';
 
 import s from './joinUs.module.scss';
 
@@ -13,7 +14,7 @@ interface ItemType {
     text: string;
 }
 
-const JoinUs = ({data}) => {
+const JoinUs = ({data}: MarkdownRemarkConnection): ReactNode => {
     const jobs = data.allMarkdownRemark.edges;
     return (
         <div className={s.wrap}>
@@ -30,7 +31,7 @@ const JoinUs = ({data}) => {
     );
 };
 
-export default props => (
+export default (): ReactNode => (
     <StaticQuery
         query={graphql`
             query {
@@ -52,6 +53,6 @@ export default props => (
                 }
             }
         `}
-        render={data => <JoinUs data={data} {...props} />}
+        render={(data: MarkdownRemarkConnection): ReactNode => <JoinUs data={data} />}
     />
 );

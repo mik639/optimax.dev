@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 import {graphql} from 'gatsby';
 
 import SEO from 'components/SEO/SEO';
@@ -8,10 +8,11 @@ import Footer from 'components/footer/footer';
 import JobContent from 'components/jobs/jobContent/jobContent';
 import JobApply from 'components/jobs/jobApply/jobApply';
 import JobShare from 'components/jobs/jobShare/jobShare';
+import {MarkdownRemark} from 'src/types.ts';
 
 import s from './job.module.scss';
 
-const Job = ({data}) => {
+const Job = ({data}: MarkdownRemark): ReactNode => {
     const {title, path} = data.markdownRemark.frontmatter;
     const {html} = data.markdownRemark;
     return (
