@@ -1,4 +1,5 @@
 import React, {ReactNode} from 'react';
+import {Element} from 'react-scroll';
 
 import Title from 'components/title/title';
 import Subtitle from 'components/subtitle/subtitle';
@@ -100,7 +101,7 @@ const TEAMS: TeamType[] = [
 ];
 
 const Team = (): ReactNode => (
-    <div className={s.wrap}>
+    <Element name="Our Team" className={s.wrap}>
         <div className={s.container}>
             <div className={s.titles}>
                 <Title isWhite>Jobs by team</Title>
@@ -114,7 +115,7 @@ const Team = (): ReactNode => (
                 )}
             </div>
         </div>
-    </div>
+    </Element>
 );
 
 export default Team;

@@ -4,7 +4,7 @@ import Title from 'components/title/title';
 import Subtitle from 'components/subtitle/subtitle';
 import Perk from 'components/home/benefits/perk/perk';
 import Button from 'components/button/button';
-import {MAIL_TO} from 'constants/mailTo';
+import useSiteMetadata from 'hooks/useSiteMetaData';
 
 import s from './index.module.scss';
 
@@ -47,23 +47,26 @@ const PERKS: PerkType[] = [
     },
 ];
 
-const Benefits = (): ReactNode => (
-    <div className={s.wrap}>
-        <div className={s.titles}>
-            <Title>Benefits & Perks</Title>
-            <Subtitle>Discover more reasons to join our team:</Subtitle>
+const Benefits = (): ReactNode => {
+    const {contact} = useSiteMetadata();
+    return (
+        <div className={s.wrap}>
+            <div className={s.titles}>
+                <Title>Benefits & Perks</Title>
+                <Subtitle>Discover more reasons to join our team:</Subtitle>
+            </div>
+            <div className={s.perks}>
+                {PERKS.map(
+                    (perk: PerkType): ReactNode => (
+                        <Perk key={perk.name} {...perk} />
+                    ),
+                )}
+            </div>
+            <Button className={s.btn} isShadow href={contact.email}>
+                <span className={s.btnText}>Apply now</span>
+            </Button>
         </div>
-        <div className={s.perks}>
-            {PERKS.map(
-                (perk: PerkType): ReactNode => (
-                    <Perk key={perk.name} {...perk} />
-                ),
-            )}
-        </div>
-        <Button className={s.btn} isShadow href={MAIL_TO}>
-            <span className={s.btnText}>Apply now</span>
-        </Button>
-    </div>
-);
+    );
+};
 
 export default Benefits;

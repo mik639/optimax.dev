@@ -50,6 +50,7 @@ module.exports = {
                 constants: path.join(__dirname, 'src/constants'),
                 pages: path.join(__dirname, 'src/pages'),
                 layouts: path.join(__dirname, 'src/layouts'),
+                hooks: path.join(__dirname, 'src/hooks'),
             },
         },
         {
