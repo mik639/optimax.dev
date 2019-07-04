@@ -1,4 +1,4 @@
-import React, {Component, ReactNode} from 'react';
+import React, {ReactNode} from 'react';
 import {Link} from 'gatsby';
 
 import BaseIcon from 'components/baseIcon/baseIcon';

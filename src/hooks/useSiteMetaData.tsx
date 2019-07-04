@@ -1,6 +1,8 @@
 import {useStaticQuery, graphql} from 'gatsby';
 
-const useSiteMetadata = () => {
+import {SiteSiteMetadataFilterInput} from 'types';
+
+const useSiteMetadata = (): SiteSiteMetadataFilterInput => {
     const {site} = useStaticQuery(
         graphql`
             query SiteMetaData {

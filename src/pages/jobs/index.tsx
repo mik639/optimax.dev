@@ -2,18 +2,22 @@ import React, {ReactNode} from 'react';
 import {graphql} from 'gatsby';
 
 import SEO from 'components/SEO/SEO';
+import WrapHeader from 'components/wrapHeader/wrapHeader';
+import Background from 'components/background/background';
 import Layout from 'layouts/index';
-import Header from 'components/header/header';
-import Footer from 'components/footer/footer';
+import JobsContent from 'components/jobs/jobsContent/jobsContent';
+import ButtonBack from 'components/buttonBack/buttonBack';
 
-const Jobs = (): ReactNode => {
+const Jobs = (props): ReactNode => {
     // const jobs = props.data.allMarkdownRemark.edges;
+    console.log('props', props);
     return (
         <Layout>
             <SEO title="Jobs" />
-            <Header />
-
-            <Footer />
+            <WrapHeader />
+            <Background name="job" />
+            <ButtonBack url={props.location.state.prevPath} />
+            <JobsContent />
         </Layout>
     );
 };

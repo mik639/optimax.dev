@@ -4,7 +4,14 @@ import Helmet from 'react-helmet';
 import favicon from 'static/favicon.png';
 import useSiteMetadata from 'hooks/useSiteMetaData';
 
-const SEO = (props) => {
+interface SEOProps {
+    title: string;
+    lang?: string;
+    meta?: string[];
+    keywords?: string[];
+}
+
+const SEO = (props: SEOProps) => {
     const siteMetadata = useSiteMetadata();
 
     const title = props.title || siteMetadata.title;

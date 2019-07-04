@@ -1,13 +1,16 @@
-import React, {FunctionComponent, ReactNode} from 'react';
-
-import '../scss/base.scss';
+import React, {Fragment, FunctionComponent, ReactNode} from 'react';
+import Footer from 'components/footer/footer';
+import s from '../scss/base.module.scss';
 
 interface LayoutProps {
     children: ReactNode;
 }
 
 const Layout: FunctionComponent = ({children}: LayoutProps): ReactNode => (
-    <React.Fragment>{children}</React.Fragment>
+    <Fragment>
+        <div className={s.content}>{children}</div>
+        <Footer />
+    </Fragment>
 );
 
 export default Layout;

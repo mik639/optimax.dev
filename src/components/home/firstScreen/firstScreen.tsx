@@ -4,10 +4,7 @@ import Title from 'components/title/title';
 import Button from 'components/button/button';
 import useSiteMetadata from 'hooks/useSiteMetaData';
 
-import {SiteEdge} from '../../../types';
-
 import s from './firstScreen.module.scss';
-
 
 const FirstScreen = (): ReactNode => {
     const {contact} = useSiteMetadata();

@@ -1,0 +1,11 @@
+@import 'variables.scss';
+
+.wrap {
+    height: 67px;
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}

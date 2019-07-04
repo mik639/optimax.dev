@@ -1,6 +1,7 @@
 import React, {PureComponent, ReactNode} from 'react';
 import {scroller} from 'react-scroll';
 import classNames from 'classnames';
+import {Link} from 'gatsby';
 
 import BaseIcon from 'components/baseIcon/baseIcon';
 
@@ -13,11 +14,15 @@ interface MenuLinkProps {
 }
 
 class MenuLink extends PureComponent<MenuLinkProps> {
+    static defaultProps = {
+        link: '',
+    };
+
     /**
      *  Scroll to block by name
      * @param {string} name - name block
      */
-    onClick = (name: string) => () => {
+    onClick = (name: string): (() => void) => () => {
         scroller.scrollTo(name, {
             duration: 700,
             smooth: true,
@@ -31,10 +36,10 @@ class MenuLink extends PureComponent<MenuLinkProps> {
 
         if (link) {
             return (
-                <a className={s.link} href={link}>
+                <Link className={s.link} to={link} state={{prevPath: location.pathname}}>
                     <BaseIcon name={name} width={24} height={24} />
                     <span className={classNames(s.name, {[s.black]: isBlack})}>{name}</span>
-                </a>
+                </Link>
             );
         }
 
