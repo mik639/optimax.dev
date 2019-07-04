@@ -10,12 +10,14 @@ import s from './menuLink.module.scss';
 interface MenuLinkProps {
     name: string;
     link?: string;
-    isBlack: boolean;
+    color: string[];
+    size?: string;
 }
 
 class MenuLink extends PureComponent<MenuLinkProps> {
     static defaultProps = {
         link: '',
+        size: 'big',
     };
 
     /**
@@ -31,25 +33,30 @@ class MenuLink extends PureComponent<MenuLinkProps> {
         });
     };
 
+    getColorClasses = () => this.props.color.map(className => s[className]);
+
     render(): ReactNode {
-        const {name, link, isBlack} = this.props;
+        const {name, link, size} = this.props;
+
+        const classes = this.getColorClasses();
 
         if (link) {
             return (
-                <Link className={s.link} to={link} state={{prevPath: location.pathname}}>
+                <Link
+                    className={classNames(s.link, ...classes, s[size])}
+                    to={link}
+                    state={{prevPath: location.pathname}}
+                >
                     <BaseIcon name={name} width={24} height={24} />
-                    <span className={classNames(s.name, {[s.black]: isBlack})}>{name}</span>
+                    <span className={s.name}>{name}</span>
                 </Link>
             );
         }
 
         return (
-            <span className={s.link}>
+            <span className={classNames(s.link, ...classes, s[size])}>
                 <BaseIcon name={name} width={24} height={24} />
-                <span
-                    onClick={this.onClick(name)}
-                    className={classNames(s.name, {[s.black]: isBlack})}
-                >
+                <span onClick={this.onClick(name)} className={s.name}>
                     {name}
                 </span>
             </span>

@@ -1,7 +1,7 @@
 import React, {ReactNode} from 'react';
 import classNames from 'classnames';
-import useSiteMetadata from 'hooks/useSiteMetaData';
 
+import useSiteMetadata from 'hooks/useSiteMetaData';
 import MenuLink from 'components/menuLink/menuLink';
 
 import {SiteSiteMetadataMenuLinks} from '../../types';
@@ -16,6 +16,8 @@ interface MenuProps {
 const Menu = ({isOpen, isFixed}: MenuProps): ReactNode => {
     const {menuLinks, contact} = useSiteMetadata();
 
+    const colors = isFixed ? ['black'] : ['white', 'black']
+
     return (
         <div className={classNames(s.wrap, {[s.open]: isOpen}, {[s.fixed]: isFixed})}>
             <nav className={s.list}>
@@ -25,13 +27,19 @@ const Menu = ({isOpen, isFixed}: MenuProps): ReactNode => {
                             return (
                                 <MenuLink
                                     key={item.name}
-                                    isBlack={isFixed}
+                                    color={colors}
                                     name={item.name}
                                     link={item.link}
                                 />
                             );
                         } else {
-                            return <MenuLink key={item.name} isBlack={isFixed} name={item.name} />;
+                            return (
+                                <MenuLink
+                                    key={item.name}
+                                    color={colors}
+                                    name={item.name}
+                                />
+                            );
                         }
                     },
                 )}
