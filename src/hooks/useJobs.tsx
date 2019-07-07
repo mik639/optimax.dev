@@ -1,8 +1,8 @@
 import {useStaticQuery, graphql} from 'gatsby';
 
-import {MarkdownRemarkFrontmatterFilterInput} from 'types';
+import {SiteSiteMetadataFilterInput} from 'types';
 
-const useJobs = (): MarkdownRemarkFrontmatterFilterInput => {
+const useJobs = (): SiteSiteMetadataFilterInput => {
     const {allMarkdownRemark} = useStaticQuery(
         graphql`
             query {
@@ -25,7 +25,6 @@ const useJobs = (): MarkdownRemarkFrontmatterFilterInput => {
             }
         `,
     );
-
     return allMarkdownRemark.edges;
 };
 

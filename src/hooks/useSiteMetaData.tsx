@@ -11,6 +11,7 @@ const useSiteMetadata = (): SiteSiteMetadataFilterInput => {
                         title
                         menuLinks {
                             name
+                            icon
                             link
                         }
                         contact {

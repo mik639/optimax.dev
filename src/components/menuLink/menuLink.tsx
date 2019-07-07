@@ -36,7 +36,7 @@ class MenuLink extends PureComponent<MenuLinkProps> {
     getColorClasses = () => this.props.color.map(className => s[className]);
 
     render(): ReactNode {
-        const {name, link, size} = this.props;
+        const {name, icon, link, size} = this.props;
 
         const classes = this.getColorClasses();
 
@@ -47,7 +47,7 @@ class MenuLink extends PureComponent<MenuLinkProps> {
                     to={link}
                     state={{prevPath: location.pathname}}
                 >
-                    <BaseIcon name={name} width={24} height={24} />
+                    {icon && <BaseIcon name={icon} width={24} height={24} />}
                     <span className={s.name}>{name}</span>
                 </Link>
             );
@@ -55,7 +55,7 @@ class MenuLink extends PureComponent<MenuLinkProps> {
 
         return (
             <span className={classNames(s.link, ...classes, s[size])}>
-                <BaseIcon name={name} width={24} height={24} />
+                {icon && <BaseIcon name={icon} width={24} height={24} />}
                 <span onClick={this.onClick(name)} className={s.name}>
                     {name}
                 </span>

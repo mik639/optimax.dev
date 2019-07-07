@@ -17,16 +17,16 @@ const JobShare = ({path}: string): ReactNode => {
         <div className={s.container}>
             <p className={s.title}>Share This Job Opening</p>
             <div className={s.socials}>
-                <FacebookShareButton url={path}>
+                <FacebookShareButton className={s.item} url={path}>
                     <FacebookIcon size={32} round={true} />
                 </FacebookShareButton>
-                <LinkedinShareButton url={path}>
+                <LinkedinShareButton className={s.item} url={path}>
                     <LinkedinIcon size={32} round={true} />
                 </LinkedinShareButton>
-                <TwitterShareButton url={path}>
+                <TwitterShareButton className={s.item} url={path}>
                     <TwitterIcon size={32} round={true} />
                 </TwitterShareButton>
-                <VKShareButton url={path}>
+                <VKShareButton className={s.item} url={path}>
                     <VKIcon size={32} round={true} />
                 </VKShareButton>
             </div>

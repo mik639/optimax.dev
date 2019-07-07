@@ -13,19 +13,24 @@ module.exports = {
         menuLinks: [
             {
                 name: 'About Us',
+                icon: 'aboutUs',
             },
             {
                 name: 'Location',
+                icon: 'location',
             },
             {
                 name: 'Careers',
+                icon: 'careers',
                 link: '/jobs',
             },
             {
                 name: 'Our Team',
+                icon: 'ourTeam',
             },
             {
                 name: 'Blog',
+                icon: 'blog',
                 link: '/blog',
             },
         ],

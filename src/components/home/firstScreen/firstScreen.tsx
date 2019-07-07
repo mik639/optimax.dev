@@ -18,7 +18,7 @@ const FirstScreen = (): ReactNode => {
                         <br />
                         leader in the eyewear industry.
                     </span>
-                    <Button className={s.btn} href={contact.email}>
+                    <Button className={s.btn} href={`mailto:${contact.email}`}>
                         <span className={s.btnText}>Apply now</span>
                     </Button>
                 </div>

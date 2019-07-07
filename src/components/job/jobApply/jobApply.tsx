@@ -1,12 +1,16 @@
 import React, {ReactNode} from 'react';
 
+import Button from 'components/button/button';
+import useSiteMetadata from 'hooks/useSiteMetaData';
+
 import s from './jobApply.module.scss';
 
 const JobApply = (): ReactNode => {
+    const {contact} = useSiteMetadata();
     return (
-        <a className={s.apply} href={'MAIL_TO'}>
-            Apply For This Job
-        </a>
+        <Button className={s.btn} href={`mailto:${contact.email}`}>
+            <span className={s.btnText}>Apply For This Job</span>
+        </Button>
     );
 };
 

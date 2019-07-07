@@ -1,9 +1,10 @@
 import React, {ReactNode} from 'react';
+import {useStaticQuery, graphql} from 'gatsby';
 
 import Title from 'components/title/title';
 import Subtitle from 'components/subtitle/subtitle';
 import JoinUsItem from 'components/joinUsItem/joinUsItem';
-import useJobs from 'hooks/useJobs';
+import useJobs from 'hooks/useJobs'
 
 import s from './joinUs.module.scss';
 
@@ -15,6 +16,7 @@ interface ItemType {
 
 const JoinUs = (): ReactNode => {
     const jobs = useJobs();
+
     return (
         <div className={s.wrap}>
             <div className={s.wrapTitles}>

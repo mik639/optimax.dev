@@ -60,7 +60,7 @@ const BaseIcon = ({name, width, height}: IconProps): ReactNode => {
     const icon = ICONS[name];
 
     if (typeof icon === 'undefined') {
-        console.error('Requested icon does not exist');
+        console.error('Requested icon does not exist', name);
         return null;
     }
 

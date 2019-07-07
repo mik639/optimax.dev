@@ -1,4 +1,4 @@
-import React, {ReactNode, PureComponent} from 'react';
+import React, {ReactNode, Component} from 'react';
 import classNames from 'classnames';
 
 import s from './button.module.scss';
@@ -17,7 +17,7 @@ interface ButtonProps {
 /**
  * Button which must be used at whole of the GlassesUsa
  */
-class Button extends PureComponent<ButtonProps> {
+class Button extends Component<ButtonProps> {
     static defaultProps = {
         color: 'blue',
         type: 'button',

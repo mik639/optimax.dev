@@ -40,19 +40,19 @@
     }
 }
 
-.apply {
-    display: none;
-    
-    @media screen and (max-width: 1024px) {
-        display: block;
-        background: $color-azure-radiance;
-        opacity: 0.9;	
-        color: $color-white;	
-        font-size: 19px;	
-        letter-spacing: -.18px;
-        line-height: 3.4;	
-        text-align: center;
+.btn {
+    display: block;
+    border-radius: 0;
+
+    @media screen and (min-width: 1024px) {
+      display: none;
     }
+}
+
+.btnText {
+    font-size: 19px;	
+    letter-spacing: -.18px;
+    line-height: 3.4;	
 }
 
 .fixed {

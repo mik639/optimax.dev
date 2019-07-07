@@ -1,4 +1,5 @@
 import React, {ReactNode} from 'react';
+import {Link} from 'gatsby';
 
 import useSiteMetadata from 'hooks/useSiteMetaData';
 import BaseIcon from 'components/baseIcon/baseIcon';
@@ -19,9 +20,9 @@ const Footer = (): ReactNode => {
         <div className={s.container}>
             <div className={s.inner}>
                 <div className={s.wrap}>
-                    <div className={s.wrapLogo}>
+                    <Link to="/" className={s.wrapLogo}>
                         <BaseIcon name="optimax" />
-                    </div>
+                    </Link>
                     {menuLinks.map(
                         (item: SiteSiteMetadataMenuLinks): ReactNode => {
                             if (item.link) {
@@ -36,7 +37,12 @@ const Footer = (): ReactNode => {
                                 );
                             } else {
                                 return (
-                                    <MenuLink color={['gray']} size="small" key={item.name} name={item.name} />
+                                    <MenuLink
+                                        color={['gray']}
+                                        size="small"
+                                        key={item.name}
+                                        name={item.name}
+                                    />
                                 );
                             }
                         },

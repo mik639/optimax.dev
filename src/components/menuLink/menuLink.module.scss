@@ -17,10 +17,17 @@
         padding-left: 18px;
         border-bottom: 1px solid $color-tower-gray;
         background: $color-alabaster;
+
         svg {
           display: block;
         }
     }
+}
+
+.name {
+  @media screen and (max-width: 1024px) {
+    margin-left: 20px;
+  }
 }
 
 .black {
@@ -45,7 +52,6 @@
     letter-spacing: -.15px;
 
     @media screen and (max-width: 1024px) {
-        margin-left: 20px;
         font-size: 20px;
         letter-spacing: -.18px;
     }

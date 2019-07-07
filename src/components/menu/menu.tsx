@@ -3,8 +3,9 @@ import classNames from 'classnames';
 
 import useSiteMetadata from 'hooks/useSiteMetaData';
 import MenuLink from 'components/menuLink/menuLink';
+import Button from 'components/button/button';
 
-import {SiteSiteMetadataMenuLinks} from '../../types';
+import {SiteSiteMetadataMenuLinks} from 'types';
 
 import s from './menu.module.scss';
 
@@ -16,7 +17,7 @@ interface MenuProps {
 const Menu = ({isOpen, isFixed}: MenuProps): ReactNode => {
     const {menuLinks, contact} = useSiteMetadata();
 
-    const colors = isFixed ? ['black'] : ['white', 'black']
+    const colors = isFixed ? ['black'] : ['white', 'black'];
 
     return (
         <div className={classNames(s.wrap, {[s.open]: isOpen}, {[s.fixed]: isFixed})}>
@@ -29,6 +30,7 @@ const Menu = ({isOpen, isFixed}: MenuProps): ReactNode => {
                                     key={item.name}
                                     color={colors}
                                     name={item.name}
+                                    icon={item.icon}
                                     link={item.link}
                                 />
                             );
@@ -38,14 +40,15 @@ const Menu = ({isOpen, isFixed}: MenuProps): ReactNode => {
                                     key={item.name}
                                     color={colors}
                                     name={item.name}
+                                    icon={item.icon}
                                 />
                             );
                         }
                     },
                 )}
-                <a className={s.apply} href={`mailto:${contact.email}`}>
-                    Apply
-                </a>
+                <Button className={s.btn} href={`mailto:${contact.email}`}>
+                    <span className={s.btnText}>Apply</span>
+                </Button>
             </nav>
         </div>
     );
