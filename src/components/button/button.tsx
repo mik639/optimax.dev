@@ -1,4 +1,5 @@
 import React, {ReactNode, Component} from 'react';
+import {Link} from 'gatsby';
 import classNames from 'classnames';
 
 import s from './button.module.scss';
@@ -47,16 +48,16 @@ class Button extends Component<ButtonProps> {
 
         if (href) {
             return (
-                <a
+                <Link
                     className={classNames(s.btn, colorClassName, className, {
                         [s.shadow]: isShadow,
                     })}
                     onClick={onClick}
-                    href={href}
+                    to={href}
                     {...restProps}
                 >
                     {children}
-                </a>
+                </Link>
             );
         }
 

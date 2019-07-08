@@ -4,9 +4,9 @@
     position: relative;
     display: flex;
     max-width: 960px;
-    margin: 50px auto;
+    margin: 50px auto 0;
     padding-top: 26px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     border-top: 1px solid $color-tower-gray;
 
     @media screen and (max-width: 1024px) {
@@ -17,6 +17,21 @@
         box-sizing: border-box;
         border-top: 0;
     }
+}
+
+.wrapSubtitle {
+    text-align: center;
+}
+
+.wrapMarker {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.wrapAddress {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
 }
 
 .title {
@@ -59,4 +74,57 @@
         width: 100%;
         padding: 0;
     }
+}
+
+.wrapJobs {
+    max-width: 960px;
+    margin: 0 auto 40px;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 88px;
+    margin-bottom: 20px;
+    padding: 20px 25px;
+    border-radius: 8px;	
+    background-color: $color-white;	
+    box-shadow: 0 2px 8px 1px rgba($color-black ,0.1);
+    box-sizing: border-box;
+}
+
+.body {
+    flex: 1 1 auto;
+}
+
+.jobTitle {
+    display: block;
+    opacity: 0.9;	
+    font-size: 21px;
+    line-height: 1.2;	
+    margin-bottom: 10px;
+    font-weight: $font-weight-bold;	
+    letter-spacing: -.19px;
+}
+
+.jobAddress {	
+    display: block;
+    color: $color-tower-gray;	
+    font-size: 16px;	
+    letter-spacing: .52px;
+}
+
+
+.btn {
+    display: block;
+    flex: 0 0 173px;
+    height: 52px;
+}
+
+.btnText {
+    font-size: 19px;	
+    font-weight: $font-weight-normal;	
+    letter-spacing: -.41px;	
+    line-height: 1.1;
 }

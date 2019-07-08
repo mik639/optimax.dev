@@ -22,6 +22,7 @@ import careers from './svg/careers.svg';
 import location from './svg/location.svg';
 import ourTeam from './svg/ourTeam.svg';
 import arrow from './svg/arrow.svg';
+import marker from './svg/marker.svg';
 
 import s from './baseIcon.module.scss';
 
@@ -48,6 +49,7 @@ const ICONS = {
     careers,
     ourTeam,
     arrow,
+    marker,
 };
 
 interface IconProps {

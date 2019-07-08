@@ -13,6 +13,7 @@ const useJobs = (): SiteSiteMetadataFilterInput => {
                     edges {
                         node {
                             excerpt
+                            id
                             frontmatter {
                                 title
                                 address
