@@ -48,16 +48,16 @@ class Button extends Component<ButtonProps> {
 
         if (href) {
             return (
-                <Link
+                <a
                     className={classNames(s.btn, colorClassName, className, {
                         [s.shadow]: isShadow,
                     })}
                     onClick={onClick}
-                    to={href}
+                    href={href}
                     {...restProps}
                 >
                     {children}
-                </Link>
+                </a>
             );
         }
 

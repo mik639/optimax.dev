@@ -21,15 +21,22 @@ class MenuLink extends PureComponent<MenuLinkProps> {
     };
 
     /**
+     * Method is invoked immediately after a component is mounted.
+     */
+    componentDidMount() {
+        this.scrollToBlock(location.hash)();
+    }
+
+    /**
      *  Scroll to block by name
      * @param {string} name - name block
      */
-    onClick = (name: string): (() => void) => () => {
+    scrollToBlock = (name: string): (() => void) => (event) => {
         scroller.scrollTo(name, {
             duration: 700,
             smooth: true,
             isDynamic: true,
-            offset: -100,
+            offset: -110,
         });
     };
 
@@ -39,8 +46,9 @@ class MenuLink extends PureComponent<MenuLinkProps> {
         const {name, icon, link, size} = this.props;
 
         const classes = this.getColorClasses();
+        const isHash = link.indexOf('#');
 
-        if (link) {
+        if (isHash) {
             return (
                 <Link
                     className={classNames(s.link, ...classes, s[size])}
@@ -54,12 +62,12 @@ class MenuLink extends PureComponent<MenuLinkProps> {
         }
 
         return (
-            <span className={classNames(s.link, ...classes, s[size])}>
+            <a href={`/${link}`} onClick={this.scrollToBlock(link)} className={classNames(s.link, ...classes, s[size])}>
                 {icon && <BaseIcon name={icon} width={24} height={24} />}
-                <span onClick={this.onClick(name)} className={s.name}>
+                <span className={s.name}>
                     {name}
                 </span>
-            </span>
+            </a>
         );
     }
 }

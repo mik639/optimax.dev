@@ -62,7 +62,7 @@ const Benefits = (): ReactNode => {
                     ),
                 )}
             </div>
-            <Button className={s.btn} isShadow href={contact.email}>
+            <Button className={s.btn} isShadow href={`mailto:${contact.email}`}>
                 <span className={s.btnText}>Apply now</span>
             </Button>
         </div>

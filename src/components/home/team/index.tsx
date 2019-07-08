@@ -101,7 +101,7 @@ const TEAMS: TeamType[] = [
 ];
 
 const Team = (): ReactNode => (
-    <Element name="Our Team" className={s.wrap}>
+    <Element name="#ourTeam" className={s.wrap}>
         <div className={s.container}>
             <div className={s.titles}>
                 <Title isWhite>Jobs by team</Title>

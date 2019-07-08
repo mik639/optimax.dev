@@ -8,7 +8,7 @@ import BaseIcon from 'components/baseIcon/baseIcon';
 import s from './aboutUs.module.scss';
 
 const AboutUs = (): ReactNode => (
-    <Element name="About Us" className={s.wrap}>
+    <Element name="#aboutUs" className={s.wrap}>
         <div className={s.wrapText}>
             <div className={s.wrapTitle}>
                 <Title>About Us</Title>

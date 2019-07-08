@@ -7,7 +7,7 @@ import Title from 'components/title/title';
 import s from './jobByLocation.module.scss';
 
 const JobByLocation = (): ReactNode => (
-    <Element name="Location" className={s.wrap}>
+    <Element name="#location" className={s.wrap}>
         <div className={s.container}>
             <div className={s.wrapTitle}>
                 <Title isWhite>Job by Location</Title>
