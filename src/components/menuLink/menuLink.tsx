@@ -31,7 +31,7 @@ class MenuLink extends PureComponent<MenuLinkProps> {
      *  Scroll to block by name
      * @param {string} name - name block
      */
-    scrollToBlock = (name: string): (() => void) => (event) => {
+    scrollToBlock = (name: string): (() => void) => () => {
         scroller.scrollTo(name, {
             duration: 700,
             smooth: true,
@@ -62,11 +62,13 @@ class MenuLink extends PureComponent<MenuLinkProps> {
         }
 
         return (
-            <a href={`/${link}`} onClick={this.scrollToBlock(link)} className={classNames(s.link, ...classes, s[size])}>
+            <a
+                href={`/${link}`}
+                onClick={this.scrollToBlock(link)}
+                className={classNames(s.link, ...classes, s[size])}
+            >
                 {icon && <BaseIcon name={icon} width={24} height={24} />}
-                <span className={s.name}>
-                    {name}
-                </span>
+                <span className={s.name}>{name}</span>
             </a>
         );
     }

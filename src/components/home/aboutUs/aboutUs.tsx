@@ -1,5 +1,6 @@
 import React, {ReactNode} from 'react';
 import {Element} from 'react-scroll';
+import {Link} from 'gatsby';
 
 import Title from 'components/title/title';
 import Subtitle from 'components/subtitle/subtitle';
@@ -22,15 +23,15 @@ const AboutUs = (): ReactNode => (
             </p>
         </div>
         <div className={s.projects}>
-            <a href="#" className={s.item}>
+            <Link to="/uvp" className={s.item}>
                 <BaseIcon name="uvp" />
-            </a>
-            <a href="#" className={s.item}>
+            </Link>
+            <Link to="/glassesusa" className={s.item}>
                 <BaseIcon name="glassesusa" />
-            </a>
-            <a href="#" className={s.item}>
+            </Link>
+            <Link to="/ottica" className={s.item}>
                 <BaseIcon name="ottica" />
-            </a>
+            </Link>
         </div>
     </Element>
 );

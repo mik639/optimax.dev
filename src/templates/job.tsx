@@ -18,7 +18,11 @@ import {MarkdownRemark} from 'types';
 import s from './job.module.scss';
 
 const Job = ({data}: MarkdownRemark): ReactNode => {
-    const {id, html, frontmatter: {title, path, address}} = data.markdownRemark;
+    const {
+        id,
+        html,
+        frontmatter: {title, path, address},
+    } = data.markdownRemark;
     const jobs = useJobs();
 
     return (
@@ -26,10 +30,14 @@ const Job = ({data}: MarkdownRemark): ReactNode => {
             <SEO title={title} />
             <WrapHeader />
             <Background name="job">
-                <Title isWhite>{title}</Title>
+                <Title isWhite>
+                    <div className={s.wrapTitle}>{title}</div>
+                </Title>
                 <SubTitle isWhite>
                     <div className={s.wrapSubtitle}>
-                        <div className={s.wrapMarker}><BaseIcon width="8px" height="12px" name="marker" /></div>
+                        <div className={s.wrapMarker}>
+                            <BaseIcon width="8px" height="12px" name="marker" />
+                        </div>
                         <span className={s.wrapAddress}>{address}</span>
                     </div>
                 </SubTitle>
@@ -52,7 +60,7 @@ const Job = ({data}: MarkdownRemark): ReactNode => {
                         if (itemId === id) return null;
 
                         return (
-                            <Link to={item.path} className={s.wrap}>
+                            <Link key={itemId} to={item.path} className={s.wrap}>
                                 <div className={s.body}>
                                     <span className={s.jobTitle}>{item.title}</span>
                                     <span className={s.jobAddress}>{item.address}</span>
@@ -61,8 +69,8 @@ const Job = ({data}: MarkdownRemark): ReactNode => {
                                     <span className={s.btnText}>View Job</span>
                                 </Button>
                             </Link>
-                        )
-                    }
+                        );
+                    },
                 )}
             </div>
         </Layout>

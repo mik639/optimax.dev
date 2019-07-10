@@ -1,6 +1,6 @@
 import React, {ReactNode} from 'react';
 
-import glassesUsa from './img/glassesusaD.jpg';
+import glassesusa from './img/glassesusaD.jpg';
 import ottica from './img/otticaD.jpg';
 import uvp from './img/uvpD.jpg';
 import job from './img/job.jpg';
@@ -13,7 +13,7 @@ interface BackgroundProps {
 }
 
 const IMAGES_MAP = {
-    glassesUsa,
+    glassesusa,
     ottica,
     uvp,
     job,

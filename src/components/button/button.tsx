@@ -1,5 +1,4 @@
 import React, {ReactNode, Component} from 'react';
-import {Link} from 'gatsby';
 import classNames from 'classnames';
 
 import s from './button.module.scss';

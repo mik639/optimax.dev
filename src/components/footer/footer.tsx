@@ -14,7 +14,7 @@ import s from './footer.module.scss';
  * @returns {RactNode} return component footer
  */
 const Footer = (): ReactNode => {
-    const {menuLinks, contact} = useSiteMetadata();
+    const {menuLinks} = useSiteMetadata();
 
     return (
         <div className={s.container}>

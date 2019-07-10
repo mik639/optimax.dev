@@ -25,6 +25,7 @@
 
 .content {
     flex: 1 1 auto;
+    padding-right: 10px;
 }
 
 .title {
@@ -65,7 +66,7 @@
 
 .wrapArrow {
     display: none;
-    width: 20px;
+    flex: 0 0 20px;
     height: 20px;
 
     @media screen and (max-width: 1024px) {

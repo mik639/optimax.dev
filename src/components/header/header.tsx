@@ -1,4 +1,4 @@
-import React, {Component, ReactNode} from 'react';
+import React, {ReactNode} from 'react';
 import classNames from 'classnames';
 import {Link} from 'gatsby';
 
@@ -13,8 +13,8 @@ import s from './header.module.scss';
 interface HeaderProps {
     isFixed: boolean;
 }
-const Header = ({isFixed}: HeaderProps) => {
-    const {contact} = useSiteMetadata()
+const Header = ({isFixed}: HeaderProps): ReactNode => {
+    const {contact} = useSiteMetadata();
     return (
         <div className={classNames(s.container, {[s.fixed]: isFixed})}>
             <div className={s.wrap}>
@@ -28,7 +28,11 @@ const Header = ({isFixed}: HeaderProps) => {
                     <div className={s.wrapLanguage}>
                         <BaseIcon name="language" />
                     </div>
-                    <Button className={s.btn} color={isFixed ? 'blue' : 'white'} href={`mailto:${contact.email}`}>
+                    <Button
+                        className={s.btn}
+                        color={isFixed ? 'blue' : 'white'}
+                        href={`mailto:${contact.email}`}
+                    >
                         <span className={s.btnText}>Apply</span>
                     </Button>
                 </div>
