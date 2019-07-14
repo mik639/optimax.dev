@@ -1,0 +1,85 @@
+@import 'variables.scss';
+
+.wrap {
+    flex: 0 0 296px;
+    margin-right: 25px;
+    margin-bottom: 39px;
+
+    &:nth-child(3n+5) {
+        margin-right: 0;
+    }
+
+    &:first-child {
+        flex: 0 0 616px;
+
+        + .wrap {
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        flex: 1 1 auto;
+        margin-right: 0;
+
+
+        &:first-child {
+            flex: 1 1 auto;
+        }
+    }
+}
+
+.wrapImg {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 152px;
+    margin-bottom: 20px;
+}
+
+.img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: none;
+    z-index: 0;
+    transform: translate(-50%,-50%);
+}
+
+.title {
+    display: block;
+    min-height: 60px;
+    opacity: .9;
+    font-size: 26px;	
+    font-weight: $font-weight-normal;	
+    letter-spacing: -.24px;
+    margin-bottom: 10px;
+}
+
+.wrapAuthor {
+    margin-bottom: 10px;
+}
+
+.avatar {
+    display: inline-block;
+    vertical-align: middle;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+}
+
+.author {
+    vertical-align: middle;
+    margin-left: 8px;
+    font-size: 16px;	
+    letter-spacing: .69px;
+}
+
+.text {	
+    font-size: 17px;	
+    font-weight: $font-weight-light;
+    letter-spacing: .55px;	
+    line-height: 1.4;
+    margin-bottom: 18px;
+}

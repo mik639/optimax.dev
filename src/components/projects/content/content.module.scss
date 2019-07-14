@@ -8,6 +8,44 @@
 
 .content {
     max-width: 410px;
+
+    p {
+        color: $color-tundora;		
+        font-size: 16px;	
+        font-weight: $font-weight-light;	
+        letter-spacing: .38px;	
+        line-height: 1.7;
+    
+        @media screen and (max-width: 1024px) {
+            font-size: 18px;
+            letter-spacing: .78px;
+        }
+    }
+    
+    blockquote {
+        border-left: 1px solid color-limed-spruce;
+        margin: 13px 0 28px;
+        padding: 7px 0 7px 13px;
+    
+        @media screen and (max-width: 1024px) {
+            width: auto;
+            padding: 7px 13px;
+            margin: 20px 0 23px;
+        }
+    
+        > p {
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 1.1;
+    
+            @media screen and (max-width: 1024px) {
+                font-size: 33px;
+                line-height: 1.2;
+                letter-spacing: 1.78px;
+                color: $color-dobger-blue;
+            }
+        }
+    }
 }
 
 .img {
@@ -27,44 +65,5 @@
     @media screen and (max-width: 1024px) {
         width: calc(100% - 13px);
         margin: 80px auto;
-    }
-}
-
-p {
-    color: $color-tundora;		
-    font-size: 16px;	
-    font-weight: $font-weight-light;	
-    letter-spacing: .38px;	
-    line-height: 1.7;
-
-    @media screen and (max-width: 1024px) {
-        font-size: 18px;
-        letter-spacing: .78px;
-    }
-}
-
-blockquote {
-    width: 240px;
-    border-left: 1px solid color-limed-spruce;
-    margin: 13px 0 28px;
-    padding: 7px 0 7px 13px;
-
-    @media screen and (max-width: 1024px) {
-        width: auto;
-        padding: 7px 13px;
-        margin: 20px 0 23px;
-    }
-
-    > p {
-        font-weight: 500;
-        font-size: 30px;
-        line-height: 1.1;
-
-        @media screen and (max-width: 1024px) {
-            font-size: 33px;
-            line-height: 1.2;
-            letter-spacing: 1.78px;
-            color: $color-dobger-blue;
-        }
     }
 }

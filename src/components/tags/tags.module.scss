@@ -1,0 +1,24 @@
+@import 'variables.scss';
+
+.tag {
+    display: inline-block;
+    vertical-align: top;	
+    font-size: 12px;	
+    letter-spacing: .75px;	
+    text-align: center;
+    color: $color-tower-gray;
+    border-radius: 26px;	
+    background-color: $color-mercury;
+    box-sizing: border-box;
+    margin-right: 8px;
+}
+
+.small {
+    height: 16px;
+    padding: 2px 12px;
+}
+
+.big {
+    height: 18px;
+    padding: 3px 12px;
+}

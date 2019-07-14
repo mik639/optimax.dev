@@ -10,7 +10,7 @@
     width: 960px;
     margin: auto;
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 1024px) {
         width: auto;
     }
 
@@ -19,7 +19,7 @@
 .wrap {
     height: 58px;
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 1024px) {
         display: none;
     }
 
@@ -36,11 +36,10 @@
 .socialLinks {
     display: flex;
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 1024px) {
         border-top: 1px solid $color-tower-gray;
     }
-
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 1024px) {
         width: 240px;
     }
 }
@@ -51,7 +50,7 @@
     box-sizing: border-box;
     opacity: .3;
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 1024px) {
         border-right: 1px solid $color-tower-gray;
         opacity: 1;
     }

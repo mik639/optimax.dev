@@ -1,36 +1,21 @@
 import React, {ReactNode} from 'react';
 import {graphql} from 'gatsby';
-// import SEO from '../../components/SEO';
 
+import SEO from 'components/SEO/SEO';
+import WrapHeader from 'components/wrapHeader/wrapHeader';
+import Background from 'components/background/background';
 import Layout from 'layouts/index';
+import BlogWrapper from 'components/blog/blogWrapper/blogWrapper';
 
 const Blog = (): ReactNode => {
-    // const posts = props.data.allMarkdownRemark.edges;
     return (
-        <Layout bodyClass="page-blog">
-            {/* <SEO title="Вакансии" /> */}
-            <div className="intro">Blog!</div>
+        <Layout>
+            <SEO title="Blog" />
+            <WrapHeader />
+            <Background name="job" />
+            <BlogWrapper />
         </Layout>
     );
 };
-
-export const query = graphql`
-    query BlogQuery {
-        allMarkdownRemark(
-            filter: {fileAbsolutePath: {regex: "/blog/"}}
-            sort: {fields: [frontmatter___date], order: DESC}
-        ) {
-            edges {
-                node {
-                    excerpt
-                    frontmatter {
-                        title
-                        path
-                    }
-                }
-            }
-        }
-    }
-`;
 
 export default Blog;

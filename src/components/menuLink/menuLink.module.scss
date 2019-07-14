@@ -40,6 +40,10 @@
       }
     }
   }
+
+  &.active {
+    font-weight: $font-weight-normal;	
+  }
 }
 
 .gray {

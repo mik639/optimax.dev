@@ -54,6 +54,8 @@ class MenuLink extends PureComponent<MenuLinkProps> {
                     className={classNames(s.link, ...classes, s[size])}
                     to={link}
                     state={{prevPath: location.pathname}}
+                    activeClassName={s.active}
+                    partiallyActive={true}
                 >
                     {icon && <BaseIcon name={icon} width={24} height={24} />}
                     <span className={s.name}>{name}</span>
