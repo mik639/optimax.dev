@@ -12,15 +12,16 @@ body {
     line-height: 1;
     color: $color-limed-spruce;
     background: $color-alabaster;
+}
+
+.main {
+    height: 100%;
+
 
     > div {
+        display: flex;
+        flex-direction: column;
         height: 100%;
-
-        > div {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
     }
 }
 

@@ -53,7 +53,6 @@ class MenuLink extends PureComponent<MenuLinkProps> {
                 <Link
                     className={classNames(s.link, ...classes, s[size])}
                     to={link}
-                    state={{prevPath: location.pathname}}
                     activeClassName={s.active}
                     partiallyActive={true}
                 >

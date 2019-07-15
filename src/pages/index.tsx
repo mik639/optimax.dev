@@ -10,7 +10,7 @@ import Benefits from 'components/home/benefits';
 import Team from 'components/home/team';
 
 const Home = (): ReactNode => (
-    <Layout>
+    <Layout bodyClass="sasdad">
         <WrapHeader isHome />
         <FirstScreen />
         <AboutUs />
