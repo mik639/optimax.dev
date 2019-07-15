@@ -11,11 +11,15 @@ import Tags from 'components/tags/tags';
 import Author from 'components/blog/author/author';
 import useBlogPosts from 'hooks/useBlog';
 
-import {MarkdownRemark} from 'src/types.ts';
+import {MarkdownRemark} from 'types';
 
 import s from './post.module.scss';
 
-const Post = ({data}: MarkdownRemark): ReactNode => {
+interface PostType {
+    data: MarkdownRemark
+}
+
+const Post: React.SFC<PostType> = ({data}: PostType):ReactNode => {
     const {
         html,
         id,

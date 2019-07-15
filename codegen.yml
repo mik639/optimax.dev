@@ -1,4 +1,13 @@
-schema: http://localhost:8000/___graphql
+overwrite: true
+schema: "http://localhost:8000/___graphql"
 generates:
   src/types.ts:
-    - typescript
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"
+config:
+  namingConvention:
+    enumValues: keep
