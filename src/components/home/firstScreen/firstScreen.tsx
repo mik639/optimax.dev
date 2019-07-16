@@ -1,4 +1,4 @@
-import React, {ReactNode} from 'react';
+import React from 'react';
 
 import Title from 'components/title/title';
 import Button from 'components/button/button';
@@ -6,7 +6,7 @@ import useSiteMetadata from 'hooks/useSiteMetaData';
 
 import s from './firstScreen.module.scss';
 
-const FirstScreen = (): ReactNode => {
+const FirstScreen: React.SFC = (): React.ReactElement => {
     const {contact} = useSiteMetadata();
     return (
         <div className={s.container}>

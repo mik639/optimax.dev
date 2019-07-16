@@ -1,4 +1,4 @@
-import React, {ReactNode} from 'react';
+import React from 'react';
 import {
     FacebookShareButton,
     LinkedinShareButton,
@@ -12,7 +12,11 @@ import {
 
 import s from './jobShare.module.scss';
 
-const JobShare = ({path}: string): ReactNode => {
+interface JobSharePropsType {
+    path: string;
+}
+
+const JobShare: React.SFC<JobSharePropsType> = ({path}: JobSharePropsType): React.ReactElement => {
     return (
         <div className={s.container}>
             <p className={s.title}>Share This Job Opening</p>

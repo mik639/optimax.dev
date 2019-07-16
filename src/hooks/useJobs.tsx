@@ -1,11 +1,11 @@
 import {useStaticQuery, graphql} from 'gatsby';
 
-import {SiteSiteMetadataFilterInput} from 'types';
+import {MarkdownRemarkEdge} from 'types';
 
-const useJobs = (): SiteSiteMetadataFilterInput => {
+const useJobs = (): MarkdownRemarkEdge[] => {
     const {allMarkdownRemark} = useStaticQuery(
         graphql`
-            query {
+            query JobsQuery {
                 allMarkdownRemark(
                     filter: {fileAbsolutePath: {regex: "/jobs/"}}
                     sort: {fields: [frontmatter___date], order: DESC}
@@ -26,6 +26,7 @@ const useJobs = (): SiteSiteMetadataFilterInput => {
             }
         `,
     );
+    console.log(allMarkdownRemark.edges);
     return allMarkdownRemark.edges;
 };
 

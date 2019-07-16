@@ -1,4 +1,4 @@
-import React, {ReactNode} from 'react';
+import React from 'react';
 
 import s from './content.module.scss';
 
@@ -23,10 +23,9 @@ const images = {
     uvpRight,
 };
 
-const Content = ({html, name}: ContentType): ReactNode => {
-    console.log(name);
+const Content: React.SFC<ContentType> = ({html, name}: ContentType): React.ReactElement => {
     return (
-        <div className={s.wrap}>
+        <div>
             <div className={s.wrapContent}>
                 <div className={s.content} dangerouslySetInnerHTML={{__html: html}} />
                 <img className={s.img} src={images[`${name}Right`]} alt={name} />

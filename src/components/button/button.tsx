@@ -32,17 +32,7 @@ class Button extends Component<ButtonProps> {
      * @return {ReactNode} - rendered component
      */
     render(): ReactNode {
-        const {
-            color,
-            onClick,
-            children,
-            isDisabled,
-            className,
-            type,
-            isShadow,
-            href,
-            ...restProps
-        } = this.props;
+        const {color, onClick, children, isDisabled, className, type, isShadow, href} = this.props;
         const colorClassName = s[color];
 
         if (href) {
@@ -53,7 +43,6 @@ class Button extends Component<ButtonProps> {
                     })}
                     onClick={onClick}
                     href={href}
-                    {...restProps}
                 >
                     {children}
                 </a>
@@ -66,7 +55,6 @@ class Button extends Component<ButtonProps> {
                 onClick={onClick}
                 type={type}
                 className={classNames(s.btn, colorClassName, className, {[s.shadow]: isShadow})}
-                {...restProps}
             >
                 {children}
             </button>

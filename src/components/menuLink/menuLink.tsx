@@ -11,7 +11,8 @@ interface MenuLinkProps {
     name: string;
     link?: string;
     color: string[];
-    size?: string;
+    icon?: string;
+    size?: 'big' | 'small';
 }
 
 class MenuLink extends PureComponent<MenuLinkProps> {
@@ -23,7 +24,7 @@ class MenuLink extends PureComponent<MenuLinkProps> {
     /**
      * Method is invoked immediately after a component is mounted.
      */
-    componentDidMount() {
+    componentDidMount(): void {
         this.scrollToBlock(location.hash)();
     }
 
@@ -31,7 +32,7 @@ class MenuLink extends PureComponent<MenuLinkProps> {
      *  Scroll to block by name
      * @param {string} name - name block
      */
-    scrollToBlock = (name: string): (() => void) => () => {
+    scrollToBlock = (name: string): (() => void) => (): void => {
         scroller.scrollTo(name, {
             duration: 700,
             smooth: true,
@@ -40,7 +41,8 @@ class MenuLink extends PureComponent<MenuLinkProps> {
         });
     };
 
-    getColorClasses = () => this.props.color.map(className => s[className]);
+    getColorClasses = (): string[] =>
+        this.props.color.map((className: string): string[] => s[className]);
 
     render(): ReactNode {
         const {name, icon, link, size} = this.props;

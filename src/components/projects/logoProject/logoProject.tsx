@@ -1,4 +1,4 @@
-import React, {ReactNode} from 'react';
+import React from 'react';
 
 import BaseIcon from 'components/baseIcon/baseIcon';
 
@@ -9,7 +9,10 @@ interface LogoProjectType {
     link: string;
 }
 
-const LogoProject = ({link, name}: LogoProjectType): ReactNode => (
+const LogoProject: React.SFC<LogoProjectType> = ({
+    link,
+    name,
+}: LogoProjectType): React.ReactElement => (
     <div className={s.wrap}>
         <div className={s.wrapLogo}>
             <BaseIcon name={name} />

@@ -1,4 +1,4 @@
-import React, {ReactNode} from 'react';
+import React from 'react';
 
 import optimax from './svg/optimax.svg';
 import language from './svg/language.svg';
@@ -58,7 +58,11 @@ interface IconProps {
     height: string;
 }
 
-const BaseIcon = ({name, width, height}: IconProps): ReactNode => {
+const BaseIcon: React.SFC<IconProps> = ({
+    name,
+    width,
+    height,
+}: IconProps): React.ReactElement | null => {
     const icon = ICONS[name];
 
     if (typeof icon === 'undefined') {

@@ -7,7 +7,7 @@ interface AuthorType {
     author: string;
 }
 
-const Author: React.SFC<AuthorType> = ({avatar, author}: AuthorType): ReactNode => (
+const Author: React.SFC<AuthorType> = ({avatar, author}: AuthorType): React.ReactElement => (
     <div className={s.wrapAuthor}>
         <img className={s.avatar} src={avatar} alt={author} />
         <span className={s.author}>{author}</span>

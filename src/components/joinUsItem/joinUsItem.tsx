@@ -1,14 +1,15 @@
-import React, {ReactNode} from 'react';
+import React from 'react';
 import {Link} from 'gatsby';
 
 import BaseIcon from 'components/baseIcon/baseIcon';
 
+import {MarkdownRemarkFrontmatter} from 'types';
+
 import s from './joinUsItem.module.scss';
 
-interface JoinUsProps {
-    item: {};
-}
-const JoinUsItem = ({item}: JoinUsProps): ReactNode => (
+const JoinUsItem: React.SFC<MarkdownRemarkFrontmatter> = ({
+    item,
+}: MarkdownRemarkFrontmatter): React.ReactElement => (
     <Link to={item.path} className={s.wrap}>
         <div className={s.content}>
             <span className={s.title}>{item.title}</span>

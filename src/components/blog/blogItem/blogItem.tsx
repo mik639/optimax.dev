@@ -2,16 +2,17 @@ import React, {ReactNode} from 'react';
 import {Link} from 'gatsby';
 
 import Tags from 'components/tags/tags';
+import {MarkdownRemarkFrontmatter} from 'types';
 
 import s from './blogItem.module.scss';
 
 interface BlogItemProps {
-    item: ReactNode;
+    item: MarkdownRemarkFrontmatter;
 }
 
-const BlogItem = ({
+const BlogItem: React.SFC<BlogItemProps> = ({
     item: {path, title, image, author, tags, avatar, shortDescription},
-}: BlogItemProps): ReactNode => {
+}: BlogItemProps): React.ReactElement => {
     return (
         <Link to={path} className={s.wrap}>
             <div className={s.wrapImg}>

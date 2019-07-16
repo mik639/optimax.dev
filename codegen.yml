@@ -1,10 +1,9 @@
 overwrite: true
 schema: "http://localhost:8000/___graphql"
 generates:
-  src/types.ts:
+  src/types.tsx:
     plugins:
       - "typescript"
-      - "typescript-operations"
   ./graphql.schema.json:
     plugins:
       - "introspection"

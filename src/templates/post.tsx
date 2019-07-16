@@ -11,22 +11,24 @@ import Tags from 'components/tags/tags';
 import Author from 'components/blog/author/author';
 import useBlogPosts from 'hooks/useBlog';
 
-import {MarkdownRemark} from 'types';
+import {MarkdownRemark, MarkdownRemarkEdge} from 'types';
 
 import s from './post.module.scss';
 
 interface PostType {
-    data: MarkdownRemark
+    data: MarkdownRemark;
 }
 
-const Post: React.SFC<PostType> = ({data}: PostType):ReactNode => {
+const Post: React.FunctionComponent<PostType> = ({data}: PostType): React.ReactElement => {
     const {
         html,
         id,
         frontmatter: {title, image, tags, avatar, author},
     } = data.markdownRemark;
     const posts = useBlogPosts();
-    const filteredPosts = posts.filter(item => item.node.id !== id).slice(0, 3);
+    const filteredPosts = posts
+        .filter((item: MarkdownRemarkEdge): boolean => item.node.id !== id)
+        .slice(0, 3);
 
     return (
         <Layout>
@@ -34,7 +36,7 @@ const Post: React.SFC<PostType> = ({data}: PostType):ReactNode => {
             <WrapHeader />
             <Background name="job" img={image}>
                 <Title isWhite>
-                    <div className={s.wrapTitle}>{title}</div>
+                    <div>{title}</div>
                     <div className={s.wrapTags}>
                         <Tags tags={tags} size="big" />
                     </div>
@@ -44,9 +46,14 @@ const Post: React.SFC<PostType> = ({data}: PostType):ReactNode => {
             <div className={s.body}>
                 <div className={s.content} dangerouslySetInnerHTML={{__html: html}} />
                 <div className={s.sideBar}>
-                    {filteredPosts.map(post => (
-                        <BlogItem key={post.node.frontmatter.path} item={post.node.frontmatter} />
-                    ))}
+                    {filteredPosts.map(
+                        (post: MarkdownRemarkEdge): ReactNode => (
+                            <BlogItem
+                                key={post.node.frontmatter.path}
+                                item={post.node.frontmatter}
+                            />
+                        ),
+                    )}
                 </div>
             </div>
         </Layout>

@@ -47,7 +47,7 @@ const PERKS: PerkType[] = [
     },
 ];
 
-const Benefits = (): ReactNode => {
+const Benefits: React.SFC = (): React.ReactElement => {
     const {contact} = useSiteMetadata();
     return (
         <div className={s.wrap}>

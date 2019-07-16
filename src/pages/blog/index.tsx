@@ -1,5 +1,4 @@
 import React, {ReactNode} from 'react';
-import {graphql} from 'gatsby';
 
 import SEO from 'components/SEO/SEO';
 import WrapHeader from 'components/wrapHeader/wrapHeader';

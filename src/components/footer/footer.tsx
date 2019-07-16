@@ -13,7 +13,7 @@ import s from './footer.module.scss';
  * Component main footer
  * @returns {RactNode} return component footer
  */
-const Footer = (): ReactNode => {
+const Footer: React.SFC = (): React.ReactElement => {
     const {menuLinks} = useSiteMetadata();
 
     return (

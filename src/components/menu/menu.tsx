@@ -14,7 +14,10 @@ interface MenuProps {
     isFixed: boolean;
 }
 
-const Menu = ({isOpen, isFixed}: MenuProps): ReactNode => {
+const Menu: React.FunctionComponent<MenuProps> = ({
+    isOpen,
+    isFixed,
+}: MenuProps): React.ReactElement => {
     const {menuLinks, contact} = useSiteMetadata();
 
     const colors = isFixed ? ['black'] : ['white', 'black'];

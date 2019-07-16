@@ -20,7 +20,11 @@ const IMAGES_MAP = {
     job,
 };
 
-const Background = ({name, children, img}: BackgroundProps): ReactNode => {
+const Background: React.SFC<BackgroundProps> = ({
+    name,
+    children,
+    img,
+}: BackgroundProps): React.ReactElement => {
     const image = img ? img : IMAGES_MAP[name];
 
     if (typeof image === 'undefined') {

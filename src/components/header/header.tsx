@@ -1,4 +1,4 @@
-import React, {ReactNode} from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import {Link} from 'gatsby';
 
@@ -13,7 +13,7 @@ import s from './header.module.scss';
 interface HeaderProps {
     isFixed: boolean;
 }
-const Header = ({isFixed}: HeaderProps): ReactNode => {
+const Header: React.SFC<HeaderProps> = ({isFixed}: HeaderProps): React.ReactElement => {
     const {contact} = useSiteMetadata();
     return (
         <div className={classNames(s.container, {[s.fixed]: isFixed})}>

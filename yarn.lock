@@ -884,14 +884,6 @@
     graphql-toolkit "0.2.14"
     tslib "1.10.0"
 
-"@graphql-codegen/introspection@1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/introspection/-/introspection-1.3.1.tgz#153341089801858a58474dd2af265d756c18e656"
-  integrity sha512-5it3IHzVLP4J/LWZV9gS+hoflCL7PTtddpHuf9jHO1F9RBJxxuWTjB4X5iKDpNkql6hEYmmNHFJfZEmNPrv93g==
-  dependencies:
-    "@graphql-codegen/plugin-helpers" "1.3.1"
-    tslib "1.10.0"
-
 "@graphql-codegen/plugin-helpers@1.3.1":
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/plugin-helpers/-/plugin-helpers-1.3.1.tgz#b707257d23b0e291a2a38c14fb0d44816485c808"
@@ -909,15 +901,6 @@
   dependencies:
     "@graphql-codegen/plugin-helpers" "1.3.1"
     "@graphql-codegen/typescript" "1.3.1"
-    "@graphql-codegen/visitor-plugin-common" "1.3.1"
-    tslib "1.10.0"
-
-"@graphql-codegen/typescript-react-apollo@1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript-react-apollo/-/typescript-react-apollo-1.3.1.tgz#386c0da562b8e9762983dfa91278c87c14abd7c0"
-  integrity sha512-btl1lqDH180SDNL9bKiOiOQ4e3GOHe0BW1FWZ2KZFf2J5d58R9gIlx4k/CtK91Pujc4dNjVCayHETzsSoRjPYA==
-  dependencies:
-    "@graphql-codegen/plugin-helpers" "1.3.1"
     "@graphql-codegen/visitor-plugin-common" "1.3.1"
     tslib "1.10.0"
 

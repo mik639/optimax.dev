@@ -5,15 +5,11 @@ import Subtitle from 'components/subtitle/subtitle';
 import JoinUsItem from 'components/joinUsItem/joinUsItem';
 import useJobs from 'hooks/useJobs';
 
+import {MarkdownRemarkEdge} from 'types';
+
 import s from './joinUs.module.scss';
 
-interface ItemType {
-    title: string;
-    address: string;
-    text: string;
-}
-
-const JoinUs = (): ReactNode => {
+const JoinUs: React.SFC = (): React.ReactElement => {
     const jobs = useJobs();
 
     return (
@@ -23,7 +19,7 @@ const JoinUs = (): ReactNode => {
                 <Subtitle>Current openings</Subtitle>
             </div>
             {jobs.map(
-                (item: ItemType): ReactNode => (
+                (item: MarkdownRemarkEdge): ReactNode => (
                     <JoinUsItem key={item.node.frontmatter.path} item={item.node.frontmatter} />
                 ),
             )}

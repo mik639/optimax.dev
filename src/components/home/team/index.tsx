@@ -100,7 +100,7 @@ const TEAMS: TeamType[] = [
     },
 ];
 
-const Team = (): ReactNode => (
+const Team: React.SFC = (): React.ReactElement => (
     <Element name="#ourTeam" className={s.wrap}>
         <div className={s.container}>
             <div className={s.titles}>
