@@ -11,7 +11,7 @@ interface SEOProps {
     keywords?: string[];
 }
 
-const SEO = (props: SEOProps) => {
+const SEO: React.SFC<SEOProps> = (props: SEOProps): React.ReactElement => {
     const siteMetadata = useSiteMetadata();
 
     const title = props.title || siteMetadata.title;

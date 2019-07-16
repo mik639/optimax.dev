@@ -18,7 +18,10 @@ class WrapHeader extends Component<WrapHeaderProps> {
         isHome: false,
     };
 
-    isFixed = (isFixed: boolean) => {
+    /**
+     * is fixed header
+     */
+    isFixed = (isFixed: boolean): void => {
         this.setState({isFixed});
     };
 
