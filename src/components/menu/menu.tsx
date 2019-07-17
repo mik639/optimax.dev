@@ -11,10 +11,10 @@ import s from './menu.module.scss'
 
 interface MenuProps {
   isOpen: boolean
-  isFixed: boolean
+  isFixed?: boolean
 }
 
-const Menu: React.FunctionComponent<MenuProps> = ({ isOpen, isFixed }: MenuProps): React.ReactElement => {
+const Menu: React.FunctionComponent<> = ({ isOpen, isFixed }: MenuProps): React.ReactElement => {
   const { menuLinks, contact } = useSiteMetadata()
 
   const colors = isFixed ? ['black'] : ['white', 'black']
@@ -36,6 +36,10 @@ const Menu: React.FunctionComponent<MenuProps> = ({ isOpen, isFixed }: MenuProps
       </nav>
     </div>
   )
+}
+
+Menu.defaultProps = {
+  isFixed: false
 }
 
 export default Menu

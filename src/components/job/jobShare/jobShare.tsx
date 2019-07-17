@@ -16,7 +16,7 @@ interface JobSharePropsType {
   path: string
 }
 
-const JobShare: React.SFC<JobSharePropsType> = ({ path }: JobSharePropsType): React.ReactElement => {
+const JobShare: React.FC<JobSharePropsType> = ({ path }: JobSharePropsType): React.ReactElement => {
   return (
     <div className={s.container}>
       <p className={s.title}>Share This Job Opening</p>

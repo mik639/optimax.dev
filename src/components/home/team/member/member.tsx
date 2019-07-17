@@ -1,11 +1,18 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 
 import s from './member.module.scss'
 
-const Member = ({ photo, name, position }: { photo: string; name: string; position: string }): ReactNode => (
+interface MemberType {
+  photo: string
+  name: string
+  position: string
+  description: string
+}
+
+const Member: React.FC<MemberType> = ({ photo, name, position }: MemberType): React.ReactElement => (
   <div className={s.member}>
     <div className={s.image}>
-      <img src={photo} />
+      <img src={photo} alt={name} />
     </div>
     <p className={s.name}>{name}</p>
     <p className={s.position}>{position}</p>

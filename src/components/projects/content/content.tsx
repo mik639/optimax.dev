@@ -14,7 +14,11 @@ interface ContentType {
   name: string
 }
 
-const images = {
+interface ImagesType {
+  [s: string]: string
+}
+
+const images: ImagesType = {
   glassesusaBottom,
   glassesusaRight,
   otticaBottom,
@@ -23,7 +27,7 @@ const images = {
   uvpRight
 }
 
-const Content: React.SFC<ContentType> = ({ html, name }: ContentType): React.ReactElement => {
+const Content: React.FC<ContentType> = ({ html, name }: ContentType): React.ReactElement => {
   return (
     <div>
       <div className={s.wrapContent}>

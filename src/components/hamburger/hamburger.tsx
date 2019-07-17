@@ -21,8 +21,8 @@ class Hamburger extends Component<HamburgerPropsType, HamburgerStateType> {
   /**
    * Change visability menu
    */
-  changeVisibilityMenu = (): void => {
-    this.setState({ isOpen: !this.state.isOpen })
+  changeVisibilityMenu = () => {
+    this.setState(isOpen => ({ isOpen: !isOpen }))
   }
 
   render(): ReactNode {
@@ -31,7 +31,13 @@ class Hamburger extends Component<HamburgerPropsType, HamburgerStateType> {
 
     return (
       <div className={classNames(s.wrap, { [s.white]: !isBlack }, { [s.black]: isBlack })}>
-        <div className={classNames(s.wrapHamburger, { [s.open]: isOpen })} onClick={this.changeVisibilityMenu}>
+        <div
+          role="button"
+          tabIndex={0}
+          className={classNames(s.wrapHamburger, { [s.open]: isOpen })}
+          onClick={this.changeVisibilityMenu}
+          onKeyDown={this.changeVisibilityMenu}
+        >
           <div className={s.inner} />
         </div>
         <Menu isOpen={isOpen} />

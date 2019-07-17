@@ -16,6 +16,8 @@
     "baseUrl": "./src",
     "paths": {
       "components/*": ["components/*"],
+      "hooks/*": ["hooks/*"],
+      "types": ["types.tsx"]
     }
   },
   "include": ["./src/**/*"]

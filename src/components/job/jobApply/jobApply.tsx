@@ -5,7 +5,7 @@ import useSiteMetadata from 'hooks/useSiteMetaData'
 
 import s from './jobApply.module.scss'
 
-const JobApply: React.SFC = (): React.ReactElement => {
+const JobApply: React.FC = (): React.ReactElement => {
   const { contact } = useSiteMetadata()
   return (
     <Button className={s.btn} href={`mailto:${contact.email}`}>

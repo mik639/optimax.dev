@@ -10,21 +10,21 @@ interface BlogItemProps {
   item: MarkdownRemarkFrontmatter
 }
 
-const BlogItem: React.SFC<BlogItemProps> = ({
-  item: { path, title, image, author, tags, avatar, shortDescription }
-}: BlogItemProps): React.ReactElement => {
+const BlogItem: React.FC<BlogItemProps> = ({ item }: BlogItemProps): React.ReactElement | null => {
+  if (!item) return null
+
+  const { path, title, image, author, tags, avatar, shortDescription } = item
+
   return (
-    <Link to={path} className={s.wrap}>
-      <div className={s.wrapImg}>
-        <img className={s.img} src={image} alt={title} />
-      </div>
+    <Link to={path || ''} className={s.wrap}>
+      <div className={s.wrapImg}>{image && <img className={s.img} src={image} alt={title || ''} />}</div>
       <span className={s.title}>{title}</span>
       <div className={s.wrapAuthor}>
-        <img className={s.avatar} src={avatar} alt="" />
+        {avatar && <img className={s.avatar} src={avatar} alt="" />}
         <span className={s.author}>{author}</span>
       </div>
       <p className={s.text}>{shortDescription}</p>
-      <Tags tags={tags} />
+      <Tags tags={tags || ''} />
     </Link>
   )
 }

@@ -23,7 +23,6 @@ const useJobs = (): MarkdownRemarkEdge[] => {
       }
     `
   )
-  console.log(allMarkdownRemark.edges)
   return allMarkdownRemark.edges
 }
 

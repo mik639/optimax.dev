@@ -1,8 +1,8 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+// import Helmet from 'react-helmet'
 
-import favicon from 'static/favicon.png'
-import useSiteMetadata from 'hooks/useSiteMetaData'
+// import favicon from 'static/favicon.png'
+// import useSiteMetadata from 'hooks/useSiteMetaData'
 
 interface SEOProps {
   title: string
@@ -11,21 +11,21 @@ interface SEOProps {
   keywords?: string[]
 }
 
-const SEO: React.SFC<SEOProps> = (props: SEOProps): React.ReactElement => {
-  const siteMetadata = useSiteMetadata()
-
-  const title = props.title || siteMetadata.title
-
-  return (
-    <Helmet
-      htmlAttributes={{
-        lang: 'en'
-      }}
-      title={title}
-      titleTemplate={`%s - ${siteMetadata.title}`}
-      link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
-    />
-  )
+// const SEO: React.SFC<SEOProps> = (props: SEOProps): React.ReactElement => {
+const SEO: React.SFC<SEOProps> = (): React.ReactElement | null => {
+  return null
+  // const siteMetadata = useSiteMetadata()
+  // const title = props.title || siteMetadata.title
+  // return (
+  //   <Helmet
+  //     htmlAttributes={{
+  //       lang: 'en'
+  //     }}
+  //     title={title}
+  //     titleTemplate={`%s - ${siteMetadata.title}`}
+  //     link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
+  //   />
+  // )
 }
 
 SEO.defaultProps = {

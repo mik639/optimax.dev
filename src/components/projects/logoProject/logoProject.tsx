@@ -9,7 +9,7 @@ interface LogoProjectType {
   link: string
 }
 
-const LogoProject: React.SFC<LogoProjectType> = ({ link, name }: LogoProjectType): React.ReactElement => (
+const LogoProject: React.FC<LogoProjectType> = ({ link, name }: LogoProjectType): React.ReactElement => (
   <div className={s.wrap}>
     <div className={s.wrapLogo}>
       <BaseIcon name={name} />

@@ -9,7 +9,7 @@ import { MarkdownRemarkEdge } from 'types'
 
 import s from './joinUs.module.scss'
 
-const JoinUs: React.SFC = (): React.ReactElement => {
+const JoinUs: React.FC = (): React.ReactElement => {
   const jobs = useJobs()
 
   return (

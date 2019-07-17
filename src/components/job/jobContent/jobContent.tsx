@@ -6,7 +6,7 @@ interface JobContentProps {
   children: string
 }
 
-const JobContent: React.SFC<JobContentProps> = ({ children }: JobContentProps): React.ReactElement => {
+const JobContent: React.FC<JobContentProps> = ({ children }: JobContentProps): React.ReactElement => {
   return <div className={s.content} dangerouslySetInnerHTML={{ __html: children }} />
 }
 

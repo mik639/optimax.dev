@@ -13,7 +13,7 @@ import s from './header.module.scss'
 interface HeaderProps {
   isFixed: boolean
 }
-const Header: React.SFC<HeaderProps> = ({ isFixed }: HeaderProps): React.ReactElement => {
+const Header: React.FC<HeaderProps> = ({ isFixed }: HeaderProps): React.ReactElement => {
   const { contact } = useSiteMetadata()
   return (
     <div className={classNames(s.container, { [s.fixed]: isFixed })}>

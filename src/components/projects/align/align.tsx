@@ -6,7 +6,7 @@ interface AlignPropsType {
   children: ReactNode
 }
 
-const Align: React.SFC<AlignPropsType> = ({ children }: AlignPropsType): React.ReactElement => {
+const Align: React.FC<AlignPropsType> = ({ children }: AlignPropsType): React.ReactElement => {
   return <div className={s.wrap}>{children}</div>
 }
 

@@ -7,7 +7,7 @@ import { MarkdownRemarkFrontmatter } from 'types'
 
 import s from './joinUsItem.module.scss'
 
-const JoinUsItem: React.SFC<MarkdownRemarkFrontmatter> = ({ item }: MarkdownRemarkFrontmatter): React.ReactElement => (
+const JoinUsItem: React.FC<MarkdownRemarkFrontmatter> = ({ item }: MarkdownRemarkFrontmatter): React.ReactElement => (
   <Link to={item.path} className={s.wrap}>
     <div className={s.content}>
       <span className={s.title}>{item.title}</span>

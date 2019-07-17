@@ -25,7 +25,7 @@ class MenuLink extends PureComponent<MenuLinkProps> {
    * Method is invoked immediately after a component is mounted.
    */
   componentDidMount(): void {
-    this.scrollToBlock(location.hash)()
+    this.scrollToBlock(window.location.hash)()
   }
 
   /**
@@ -41,18 +41,25 @@ class MenuLink extends PureComponent<MenuLinkProps> {
     })
   }
 
-  getColorClasses = (): string[] => this.props.color.map((className: string): string[] => s[className])
+  /**
+   * Get class as color for link
+   */
+  getColorClasses = (): string[] => {
+    const { color } = this.props
+
+    return color.map((className: string) => s[className])
+  }
 
   render(): ReactNode {
     const { name, icon, link, size } = this.props
 
     const classes = this.getColorClasses()
-    const isHash = link.indexOf('#')
+    const isHash = link ? link.indexOf('#') : false
 
     if (isHash) {
       return (
         <Link className={classNames(s.link, ...classes, s[size])} to={link} activeClassName={s.active} partiallyActive>
-          {icon && <BaseIcon name={icon} width={24} height={24} />}
+          {icon && <BaseIcon name={icon} width="24" height="24" />}
           <span className={s.name}>{name}</span>
         </Link>
       )
@@ -60,7 +67,7 @@ class MenuLink extends PureComponent<MenuLinkProps> {
 
     return (
       <a href={`/${link}`} onClick={this.scrollToBlock(link)} className={classNames(s.link, ...classes, s[size])}>
-        {icon && <BaseIcon name={icon} width={24} height={24} />}
+        {icon && <BaseIcon name={icon} width="24" height="24" />}
         <span className={s.name}>{name}</span>
       </a>
     )

@@ -6,7 +6,7 @@ import useSiteMetadata from 'hooks/useSiteMetaData'
 
 import s from './firstScreen.module.scss'
 
-const FirstScreen: React.SFC = (): React.ReactElement => {
+const FirstScreen: React.FC = (): React.ReactElement => {
   const { contact } = useSiteMetadata()
   return (
     <div className={s.container}>

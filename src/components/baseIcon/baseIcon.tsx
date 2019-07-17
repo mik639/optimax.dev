@@ -26,7 +26,11 @@ import marker from './svg/marker.svg'
 
 import s from './baseIcon.module.scss'
 
-const ICONS = {
+interface IconsType {
+  [s: string]: { id: string; viewBox: string }
+}
+
+const ICONS: IconsType = {
   optimax,
   language,
   glassesusa,
@@ -54,23 +58,29 @@ const ICONS = {
 
 interface IconProps {
   name: string
-  width: string
-  height: string
+  width?: string
+  height?: string
 }
 
-const BaseIcon: React.SFC<IconProps> = ({ name, width, height }: IconProps): React.ReactElement | null => {
+const BaseIcon: React.FC<IconProps> = ({ name, width, height }: IconProps): React.ReactElement | null => {
   const icon = ICONS[name]
 
   if (typeof icon === 'undefined') {
+    // eslint-disable-next-line no-console
     console.error('Requested icon does not exist', name)
     return null
   }
 
   return (
-    <svg width={width || '100%'} height={height || '100%'} viewBox={icon.viewBox} className={s.container}>
+    <svg width={width} height={height} viewBox={icon.viewBox} className={s.container}>
       <use xlinkHref={`#${icon.id}`} />
     </svg>
   )
+}
+
+BaseIcon.defaultProps = {
+  width: '100%',
+  height: '100%'
 }
 
 export default BaseIcon

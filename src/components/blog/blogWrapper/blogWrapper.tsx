@@ -6,15 +6,15 @@ import { MarkdownRemarkEdge } from 'types'
 
 import s from './blogWrapper.module.scss'
 
-const BlogWrapper: React.SFC = (): React.ReactElement => {
+const BlogWrapper: React.FC = (): React.ReactElement => {
   const posts = useBlogPosts()
 
   return (
     <div className={s.wrap}>
       {posts.map(
-        (post: MarkdownRemarkEdge): ReactNode => (
-          <BlogItem key={post.node.frontmatter.path} item={post.node.frontmatter} />
-        )
+        (post: MarkdownRemarkEdge): ReactNode => {
+          return <BlogItem key={post!.node!.frontmatter!.path || ''} item={post!.node!.frontmatter || {}} />
+        }
       )}
     </div>
   )

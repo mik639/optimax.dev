@@ -13,17 +13,22 @@ interface BackgroundProps {
   img: string
 }
 
-const IMAGES_MAP = {
+interface ImagesType {
+  [s: string]: string
+}
+
+const IMAGES_MAP: ImagesType = {
   glassesusa,
   ottica,
   uvp,
   job
 }
 
-const Background: React.SFC<BackgroundProps> = ({ name, children, img }: BackgroundProps): React.ReactElement => {
+const Background: React.FC<BackgroundProps> = ({ name, children, img }: BackgroundProps): React.ReactElement | null => {
   const image = img || IMAGES_MAP[name]
 
   if (typeof image === 'undefined') {
+    // eslint-disable-next-line no-console
     console.error('Requested icon does not exist', name)
     return null
   }

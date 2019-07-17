@@ -1,106 +1,122 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import { Element } from 'react-scroll'
 
 import Title from 'components/title/title'
 import Subtitle from 'components/subtitle/subtitle'
 import Member from 'components/home/team/member/member'
 
+import nehozin from './img/nehozin.png'
+import belonovich from './img/belonovich.jpg'
+import gusarov from './img/gusarov.jpg'
+import nikolaevskiy from './img/nikolaevskiy.jpg'
+import kruhmaleva from './img/kruhmaleva.jpg'
+import sustretov from './img/sustretov.jpg'
+import kolesnik from './img/kolesnik.jpg'
+import melnikov from './img/melnikov.jpg'
+import smirnov from './img/smirnov.jpg'
+import meling from './img/meling.jpg'
+import kirsanov from './img/kirsanov.png'
+import shilnikov from './img/shilnikov.jpg'
+import ulianov from './img/ulianov.jpg'
+import kornushkov from './img/kornushkov.png'
+
 import s from './index.module.scss'
 
 interface TeamType {
+  photo: string
   name: string
-  title: string
+  position: string
   description: string
 }
 
 const TEAMS: TeamType[] = [
   {
-    photo: require('./img/nehozin.png'),
+    photo: nehozin,
     name: 'Ilya Nekhozhin',
     position: 'SRE Teamlead',
     description: 'Max workplace comfort, high-end monitors for convenience'
   },
   {
-    photo: require('./img/belonovich.jpg'),
+    photo: belonovich,
     name: 'Anton Belonovich',
     position: 'GlassesUSA Teamlead',
     description: 'Plenty of corporate & team building events'
   },
   {
-    photo: require('./img/gusarov.jpg'),
+    photo: gusarov,
     name: 'Eugeny Gusarov',
     position: 'Release manager',
     description: 'Freshly brewed coffee, tea, juice, drinks, breakfast, lunch'
   },
   {
-    photo: require('./img/nikolaevskiy.jpg'),
+    photo: nikolaevskiy,
     name: 'Mikhail Nikolaevskiy',
     position: 'D.E.H.T.A. teamlead',
     description: 'English training, frequent practical use'
   },
   {
-    photo: require('./img/kruhmaleva.jpg'),
+    photo: kruhmaleva,
     name: 'Ekaterina Krukhmaleva',
     position: 'HR',
     description: 'Outdoors & indoors company sports days & activities'
   },
   {
-    photo: require('./img/sustretov.jpg'),
+    photo: sustretov,
     name: 'Alexander Sustretov',
     position: 'Growth teamlead',
     description: 'Fun, dynamic work enviornment with people like you :)'
   },
   {
-    photo: require('./img/kolesnik.jpg'),
+    photo: kolesnik,
     name: 'Kirill Kolesnik',
     position: 'QA manager/PO',
     description: 'Fun, dynamic work enviornment with people like you :)'
   },
   {
-    photo: require('./img/melnikov.jpg'),
+    photo: melnikov,
     name: 'Ivan Melnikov',
     position: 'UVP teamlead',
     description: 'Fun, dynamic work enviornment with people like you :)'
   },
   {
-    photo: require('./img/smirnov.jpg'),
+    photo: smirnov,
     name: 'Vladislav Smirnov',
     position: 'Rebels teamlead',
     description: 'Fun, dynamic work enviornment with people like you :)'
   },
   {
-    photo: require('./img/meling.jpg'),
+    photo: meling,
     name: 'Vadim Meling',
     position: 'Backend techlead',
     description: 'Fun, dynamic work enviornment with people like you :)'
   },
   {
-    photo: require('./img/kirsanov.png'),
+    photo: kirsanov,
     name: 'Eugene Kirsanov',
     position: 'Analytics teamlead',
     description: 'Fun, dynamic work enviornment with people like you :)'
   },
   {
-    photo: require('./img/shilnikov.jpg'),
+    photo: shilnikov,
     name: 'Denis Shilnikov',
     position: 'Backend teamlead',
     description: 'Fun, dynamic work enviornment with people like you :)'
   },
   {
-    photo: require('./img/ulianov.jpg'),
+    photo: ulianov,
     name: 'Aleksei Ulianov',
     position: 'Frontend techlead',
     description: 'Fun, dynamic work enviornment with people like you :)'
   },
   {
-    photo: require('./img/kornushkov.png'),
+    photo: kornushkov,
     name: 'Nickolay Kornushkov',
     position: 'Head of Russian department',
     description: 'Fun, dynamic work enviornment with people like you :)'
   }
 ]
 
-const Team: React.SFC = (): React.ReactElement => (
+const Team: React.FC = (): React.ReactElement => (
   <Element name="#ourTeam" className={s.wrap}>
     <div className={s.container}>
       <div className={s.titles}>
@@ -109,7 +125,7 @@ const Team: React.SFC = (): React.ReactElement => (
       </div>
       <div className={s.teams}>
         {TEAMS.map(
-          (team: TeamType): ReactNode => (
+          (team: TeamType): JSX.Element => (
             <Member key={team.name} {...team} />
           )
         )}
