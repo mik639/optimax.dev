@@ -1,50 +1,50 @@
-import React, {Component, ReactNode} from 'react';
+import React, { Component, ReactNode } from 'react'
 
-import Header from 'components/header/header';
-import Sticky from 'components/sticky/sticky';
+import Header from 'components/header/header'
+import Sticky from 'components/sticky/sticky'
 
-import s from './wrapHeader.module.scss';
+import s from './wrapHeader.module.scss'
 
 interface WrapHeaderProps {
-    isHome?: boolean;
+  isHome?: boolean
 }
 
 class WrapHeader extends Component<WrapHeaderProps> {
-    state = {
-        isFixed: false,
-    };
+  state = {
+    isFixed: false
+  }
 
-    static defaultProps = {
-        isHome: false,
-    };
+  static defaultProps = {
+    isHome: false
+  }
 
-    /**
-     * is fixed header
-     */
-    isFixed = (isFixed: boolean): void => {
-        this.setState({isFixed});
-    };
+  /**
+   * is fixed header
+   */
+  isFixed = (isFixed: boolean): void => {
+    this.setState({ isFixed })
+  }
 
-    render(): ReactNode {
-        const {isFixed} = this.state;
-        const {isHome} = this.props;
+  render(): ReactNode {
+    const { isFixed } = this.state
+    const { isHome } = this.props
 
-        if (isHome) {
-            return (
-                <Sticky isFixed={this.isFixed}>
-                    <Header isFixed={isFixed} />
-                </Sticky>
-            );
-        }
-
-        return (
-            <div className={s.wrap}>
-                <div className={s.sticky}>
-                    <Header isFixed={true} />
-                </div>
-            </div>
-        );
+    if (isHome) {
+      return (
+        <Sticky isFixed={this.isFixed}>
+          <Header isFixed={isFixed} />
+        </Sticky>
+      )
     }
+
+    return (
+      <div className={s.wrap}>
+        <div className={s.sticky}>
+          <Header isFixed />
+        </div>
+      </div>
+    )
+  }
 }
 
-export default WrapHeader;
+export default WrapHeader

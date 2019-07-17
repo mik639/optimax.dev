@@ -1,47 +1,43 @@
-import React, {ReactNode} from 'react';
+import React, { ReactNode } from 'react'
 
-import glassesusa from './img/glassesusaD.jpg';
-import ottica from './img/otticaD.jpg';
-import uvp from './img/uvpD.jpg';
-import job from './img/job.jpg';
+import glassesusa from './img/glassesusaD.jpg'
+import ottica from './img/otticaD.jpg'
+import uvp from './img/uvpD.jpg'
+import job from './img/job.jpg'
 
-import s from './background.module.scss';
+import s from './background.module.scss'
 
 interface BackgroundProps {
-    name: string;
-    children: ReactNode;
-    img: string;
+  name: string
+  children: ReactNode
+  img: string
 }
 
 const IMAGES_MAP = {
-    glassesusa,
-    ottica,
-    uvp,
-    job,
-};
+  glassesusa,
+  ottica,
+  uvp,
+  job
+}
 
-const Background: React.SFC<BackgroundProps> = ({
-    name,
-    children,
-    img,
-}: BackgroundProps): React.ReactElement => {
-    const image = img ? img : IMAGES_MAP[name];
+const Background: React.SFC<BackgroundProps> = ({ name, children, img }: BackgroundProps): React.ReactElement => {
+  const image = img || IMAGES_MAP[name]
 
-    if (typeof image === 'undefined') {
-        console.error('Requested icon does not exist', name);
-        return null;
-    }
+  if (typeof image === 'undefined') {
+    console.error('Requested icon does not exist', name)
+    return null
+  }
 
-    return (
-        <div className={s.wrap}>
-            <div className={s.inner}>
-                {children && <div className={s.content}>{children}</div>}
-                <div className={s.wrapImg}>
-                    <img className={s.img} src={image} alt="" />
-                </div>
-            </div>
+  return (
+    <div className={s.wrap}>
+      <div className={s.inner}>
+        {children && <div className={s.content}>{children}</div>}
+        <div className={s.wrapImg}>
+          <img className={s.img} src={image} alt="" />
         </div>
-    );
-};
+      </div>
+    </div>
+  )
+}
 
-export default Background;
+export default Background
