@@ -6,7 +6,7 @@ interface LayoutProps {
   children: ReactNode
 }
 
-const Layout: React.FunctionComponent<> = ({ children }: LayoutProps) => (
+const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps): React.ReactElement => (
   <Fragment>
     <div className={s.content}>{children}</div>
     <Footer />

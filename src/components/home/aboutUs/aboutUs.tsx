@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import { Element } from 'react-scroll'
 import { Link } from 'gatsby'
 
@@ -8,7 +8,7 @@ import BaseIcon from 'components/baseIcon/baseIcon'
 
 import s from './aboutUs.module.scss'
 
-const AboutUs = (): ReactNode => (
+const AboutUs: React.FC = (): React.ReactElement => (
   <Element name="#aboutUs" className={s.wrap}>
     <div className={s.wrapText}>
       <div className={s.wrapTitle}>

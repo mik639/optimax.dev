@@ -24,7 +24,7 @@ const Footer: React.FC = (): React.ReactElement => {
             <BaseIcon name="optimax" />
           </Link>
           {menuLinks &&
-            menuLinks.map((item: Maybe<SiteSiteMetadataMenuLinks>) => {
+            menuLinks.map((item: Maybe<SiteSiteMetadataMenuLinks>): React.ReactElement | null => {
               if (!item || !item.name) return null
 
               if (item.link) {

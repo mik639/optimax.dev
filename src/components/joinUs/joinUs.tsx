@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 
 import Title from 'components/title/title'
 import Subtitle from 'components/subtitle/subtitle'
@@ -18,11 +18,11 @@ const JoinUs: React.FC = (): React.ReactElement => {
         <Title>Join Us</Title>
         <Subtitle>Current openings</Subtitle>
       </div>
-      {jobs.map(
-        (item: MarkdownRemarkEdge): ReactNode => (
-          <JoinUsItem key={item.node.frontmatter.path} item={item.node.frontmatter} />
-        )
-      )}
+      {jobs.map((item: MarkdownRemarkEdge): React.ReactElement | null => {
+        if (!item || !item.node || !item.node.frontmatter) return null
+
+        return <JoinUsItem key={String(item.node.frontmatter.path)} item={item.node.frontmatter} />
+      })}
     </div>
   )
 }

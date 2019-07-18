@@ -1,10 +1,16 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 
 import BaseIcon from 'components/baseIcon/baseIcon'
 
 import s from './perk.module.scss'
 
-const Perk = ({ name, title, description }: { name: string; title: string; description: string }): ReactNode => (
+interface PerkProps {
+  name: string
+  title: string
+  description: string
+}
+
+const Perk: React.FC<PerkProps> = ({ name, title, description }: PerkProps): React.ReactElement => (
   <div className={s.perk}>
     <div className={s.icon}>
       <BaseIcon width="40" height="63" name={name} />

@@ -9,8 +9,8 @@ import s from './background.module.scss'
 
 interface BackgroundProps {
   name: string
-  children: ReactNode
-  img: string
+  children?: ReactNode
+  img?: string | null
 }
 
 interface ImagesType {

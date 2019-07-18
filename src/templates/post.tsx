@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 
 import SEO from 'components/SEO/SEO'
@@ -16,39 +16,36 @@ import { MarkdownRemark, MarkdownRemarkEdge } from 'types'
 import s from './post.module.scss'
 
 interface PostType {
-  data: MarkdownRemark
+  data: {
+    markdownRemark: MarkdownRemark
+  }
 }
 
 const Post: React.FunctionComponent<PostType> = ({ data }: PostType): React.ReactElement => {
-  const {
-    html,
-    id,
-    frontmatter: { title, image, tags, avatar, author }
-  } = data.markdownRemark
+  const { html, id, frontmatter } = data.markdownRemark
   const posts = useBlogPosts()
   const filteredPosts = posts.filter((item: MarkdownRemarkEdge): boolean => item.node.id !== id).slice(0, 3)
 
   return (
     <Layout>
-      <SEO title={title} />
+      <SEO title={frontmatter ? String(frontmatter.title) : ''} />
       <WrapHeader />
-      <Background name="job" img={image}>
+      <Background name="job" img={frontmatter ? frontmatter.image : null}>
         <Title isWhite>
-          <div>{title}</div>
+          <div>{frontmatter ? String(frontmatter.title) : ''}</div>
           <div className={s.wrapTags}>
-            <Tags tags={tags} size="big" />
+            <Tags tags={frontmatter ? String(frontmatter.tags) : ''} size="big" />
           </div>
         </Title>
-        <Author avatar={avatar} author={author} />
+        {frontmatter && frontmatter.avatar && frontmatter.author && <Author avatar={frontmatter.avatar} author={frontmatter.author} />}
       </Background>
       <div className={s.body}>
-        <div className={s.content} dangerouslySetInnerHTML={{ __html: html }} />
+        {html && <div className={s.content} dangerouslySetInnerHTML={{ __html: html }} />}
         <div className={s.sideBar}>
-          {filteredPosts.map(
-            (post: MarkdownRemarkEdge): ReactNode => (
-              <BlogItem key={post.node.frontmatter.path} item={post.node.frontmatter} />
-            )
-          )}
+          {filteredPosts.map((post: MarkdownRemarkEdge): React.ReactElement | null => {
+            if (!post || !post.node || !post.node.frontmatter) return null
+            return <BlogItem key={String(post.node.frontmatter.path)} item={post.node.frontmatter} />
+          })}
         </div>
       </div>
     </Layout>

@@ -4,6 +4,7 @@ title: 'Frontend-разработчик'
 date: 2018-11-18T12:33:46+10:00
 address: Tolyatti, St. 8b
 image: 'services/noun_591323.png'
+shortDescription: Ищем в свою растущую команду front-end-разработчика.
 weight: 1
 ---
 
@@ -21,6 +22,7 @@ weight: 1
 - Опыт работы в команде (Scrum / Kanban), работа в тасктрекере JIRA
 
 #### Функции:
+
 - имплементация аналитики (e.g. Google Anaytics, Dynamic Yield, Bronto...)
 - рефакторинг аналитики,
 - переписываем некоторые страницы на React чтобы улучшить user experience и избавиться от технического долга,

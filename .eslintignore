@@ -1,1 +1,4 @@
 /src/types.tsx
+/.cache
+/public
+/src/html.js

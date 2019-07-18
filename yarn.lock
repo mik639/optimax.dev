@@ -1117,6 +1117,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-share@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@types/react-share/-/react-share-2.1.1.tgz#0b6b6c73440f6100745db832d69bb0d639f8ccf4"
+  integrity sha512-xIWTe2lveY2wPJgbxw/DAJgroNLEvXFr9doahGjWIdQdIacB2wBXa4Yiwi6EJI2YWuJi6tN/z43q1rzq+7pdpg==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*":
   version "16.8.10"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.10.tgz#1ccb6fde17f71a62ef055382ec68bdc379d4d8d9"

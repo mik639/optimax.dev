@@ -28,7 +28,7 @@ const Header: React.FC<HeaderProps> = ({ isFixed }: HeaderProps): React.ReactEle
           <div className={s.wrapLanguage}>
             <BaseIcon name="language" />
           </div>
-          <Button className={s.btn} color={isFixed ? 'blue' : 'white'} href={`mailto:${contact.email}`}>
+          <Button className={s.btn} color={isFixed ? 'blue' : 'white'} href={`mailto:${contact ? contact.email : ''}`}>
             <span className={s.btnText}>Apply</span>
           </Button>
         </div>

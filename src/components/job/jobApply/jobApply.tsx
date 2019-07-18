@@ -8,7 +8,7 @@ import s from './jobApply.module.scss'
 const JobApply: React.FC = (): React.ReactElement => {
   const { contact } = useSiteMetadata()
   return (
-    <Button className={s.btn} href={`mailto:${contact.email}`}>
+    <Button className={s.btn} href={`mailto:${contact ? contact.email : ''}`}>
       <span className={s.btnText}>Apply For This Job</span>
     </Button>
   )

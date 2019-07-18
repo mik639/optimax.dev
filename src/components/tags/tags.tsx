@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import classNames from 'classnames'
 
 import s from './tags.module.scss'
@@ -8,14 +8,23 @@ interface TagsProps {
   size?: 'big' | 'small'
 }
 
-const Tags: React.FunctionComponent<TagsProps> = ({ tags, size }: TagsProps): React.ReactElement | null => {
+const Tags: React.FunctionComponent<TagsProps> = ({ tags, size = 'small' }: TagsProps): React.ReactElement | null => {
   if (!tags || (tags && tags.length === 0)) return null
 
-  return tags.split(',').map((tag: string) => (
-    <span className={classNames(s.tag, s[size])} key={tag}>
-      #{tag}
-    </span>
-  ))
+  const sizeClass = size && s[size] ? s[size] : ''
+  const arrTags = tags === '' ? [] : tags.split(',')
+
+  return (
+    <Fragment>
+      {arrTags.map(
+        (tag: string): React.ReactElement => (
+          <span className={classNames(s.tag, sizeClass)} key={tag}>
+            #{tag}
+          </span>
+        )
+      )}
+    </Fragment>
+  )
 }
 
 Tags.defaultProps = {

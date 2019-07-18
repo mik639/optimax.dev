@@ -12,27 +12,31 @@ import {
 
 import s from './jobShare.module.scss'
 
-interface JobSharePropsType {
-  path: string
-}
-
-const JobShare: React.FC<JobSharePropsType> = ({ path }: JobSharePropsType): React.ReactElement => {
+const JobShare: React.FC = (): React.ReactElement => {
   return (
     <div className={s.container}>
       <p className={s.title}>Share This Job Opening</p>
       <div className={s.socials}>
-        <FacebookShareButton className={s.item} url={path}>
-          <FacebookIcon size={32} round />
-        </FacebookShareButton>
-        <LinkedinShareButton className={s.item} url={path}>
-          <LinkedinIcon size={32} round />
-        </LinkedinShareButton>
-        <TwitterShareButton className={s.item} url={path}>
-          <TwitterIcon size={32} round />
-        </TwitterShareButton>
-        <VKShareButton className={s.item} url={path}>
-          <VKIcon size={32} round />
-        </VKShareButton>
+        <div className={s.item}>
+          <FacebookShareButton url="/">
+            <FacebookIcon size={32} round />
+          </FacebookShareButton>
+        </div>
+        <div className={s.item}>
+          <LinkedinShareButton url="/">
+            <LinkedinIcon size={32} round />
+          </LinkedinShareButton>
+        </div>
+        <div className={s.item}>
+          <TwitterShareButton url="/">
+            <TwitterIcon size={32} round />
+          </TwitterShareButton>
+        </div>
+        <div className={s.item}>
+          <VKShareButton url="/">
+            <VKIcon size={32} round />
+          </VKShareButton>
+        </div>
       </div>
     </div>
   )

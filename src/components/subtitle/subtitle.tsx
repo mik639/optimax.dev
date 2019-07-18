@@ -1,18 +1,19 @@
-import React, { Component, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import className from 'classnames'
 
 import s from './subtitle.module.scss'
 
-interface TitleProps {
+interface SubtitleProps {
   children: ReactNode
-  isWhite: boolean
+  isWhite?: boolean
 }
 
-class Subtitle extends Component<TitleProps> {
-  render(): ReactNode {
-    const { isWhite, children } = this.props
-    return <h3 className={className(s.subtitle, { [s.white]: isWhite })}>{children}</h3>
-  }
+const Subtitle: React.FC<SubtitleProps> = ({ children, isWhite }: SubtitleProps): React.ReactElement => (
+  <h2 className={className(s.title, { [s.white]: isWhite })}>{children}</h2>
+)
+
+Subtitle.defaultProps = {
+  isWhite: false
 }
 
 export default Subtitle

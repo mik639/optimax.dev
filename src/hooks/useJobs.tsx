@@ -16,6 +16,7 @@ const useJobs = (): MarkdownRemarkEdge[] => {
                 address
                 date
                 path
+                shortDescription
               }
             }
           }

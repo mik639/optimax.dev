@@ -13,54 +13,57 @@ import JobShare from 'components/job/jobShare/jobShare'
 import Title from 'components/title/title'
 import SubTitle from 'components/subtitle/subtitle'
 import Button from 'components/button/button'
-import { MarkdownRemark } from 'types'
+import { MarkdownRemark, MarkdownRemarkEdge } from 'types'
 
 import s from './job.module.scss'
 
-const Job = ({ data }: MarkdownRemark): ReactNode => {
-  const {
-    id,
-    html,
-    frontmatter: { title, path, address }
-  } = data.markdownRemark
+interface JobType {
+  data: {
+    markdownRemark: MarkdownRemark
+  }
+}
+
+const Job = ({ data }: JobType): ReactNode => {
+  const { id, html, frontmatter } = data.markdownRemark
+
   const jobs = useJobs()
 
   return (
     <Layout>
-      <SEO title={title} />
+      <SEO title={frontmatter ? String(frontmatter.title) : ''} />
       <WrapHeader />
       <Background name="job">
         <Title isWhite>
-          <div className={s.wrapTitle}>{title}</div>
+          <div className={s.wrapTitle}>{frontmatter ? frontmatter.title : ''}</div>
         </Title>
         <SubTitle isWhite>
           <div className={s.wrapSubtitle}>
             <div className={s.wrapMarker}>
               <BaseIcon width="8px" height="12px" name="marker" />
             </div>
-            <span className={s.wrapAddress}>{address}</span>
+            <span className={s.wrapAddress}>{frontmatter ? frontmatter.address : ''}</span>
           </div>
         </SubTitle>
       </Background>
       <div className={s.container}>
         <div className={s.content}>
-          <h1 className={s.title}>{title}</h1>
+          <h1 className={s.title}>{frontmatter ? frontmatter.title : ''}</h1>
           <h2 className={s.subtitle}>Job Description</h2>
-          <JobContent>{html}</JobContent>
+          <JobContent>{html || ''}</JobContent>
         </div>
         <div className={s.sidebar}>
           <JobApply />
-          <JobShare url={path} />
+          <JobShare />
         </div>
       </div>
 
       <div className={s.wrapJobs}>
         {jobs.map(
-          ({ node: { id: itemId, frontmatter: item } }: ItemType): ReactNode => {
-            if (itemId === id) return null
+          ({ node: { id: itemId, frontmatter: item } }: MarkdownRemarkEdge): ReactNode => {
+            if (itemId === id || !item) return null
 
             return (
-              <Link key={itemId} to={item.path} className={s.wrap}>
+              <Link key={itemId} to={String(item.path)} className={s.wrap}>
                 <div className={s.body}>
                   <span className={s.jobTitle}>{item.title}</span>
                   <span className={s.jobAddress}>{item.address}</span>

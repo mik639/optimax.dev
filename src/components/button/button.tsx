@@ -5,7 +5,7 @@ import s from './button.module.scss'
 
 interface ButtonProps {
   children: ReactNode
-  onClick: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>) => void
+  onClick?: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>) => void
   color?: 'blue' | 'white'
   type?: 'button' | 'reset' | 'submit'
   isShadow?: boolean
@@ -19,7 +19,7 @@ interface ButtonProps {
  */
 const Button: React.FC<ButtonProps> = ({
   color = 'blue',
-  onClick,
+  onClick = () => {},
   children,
   isDisabled = false,
   className = '',

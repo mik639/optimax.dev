@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 
 import Title from 'components/title/title'
 import Subtitle from 'components/subtitle/subtitle'
@@ -57,12 +57,12 @@ const Benefits: React.FC = (): React.ReactElement => {
       </div>
       <div className={s.perks}>
         {PERKS.map(
-          (perk: PerkType): ReactNode => (
+          (perk: PerkType): React.ReactElement => (
             <Perk key={perk.name} {...perk} />
           )
         )}
       </div>
-      <Button className={s.btn} isShadow href={`mailto:${contact.email}`}>
+      <Button className={s.btn} isShadow href={`mailto:${contact ? contact.email : ''}`}>
         <span className={s.btnText}>Apply now</span>
       </Button>
     </div>

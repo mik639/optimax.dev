@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import classNames from 'classnames'
 import { Element } from 'react-scroll'
 
@@ -6,7 +6,7 @@ import Title from 'components/title/title'
 
 import s from './jobByLocation.module.scss'
 
-const JobByLocation = (): ReactNode => (
+const JobByLocation: React.FC = (): React.ReactElement => (
   <Element name="#location" className={s.wrap}>
     <div className={s.container}>
       <div className={s.wrapTitle}>

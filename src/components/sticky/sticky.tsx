@@ -5,7 +5,7 @@ import s from './sticky.module.scss'
 
 interface StickyProps {
   children: ReactNode
-  isFixed: (arg0: boolean) => boolean
+  isFixed: (isFixed: boolean) => void
   topOffset: number
 }
 
@@ -16,8 +16,7 @@ class Sticky extends Component<StickyProps> {
   }
 
   static defaultProps = {
-    topOffset: 0,
-    isFixed: () => false
+    topOffset: 0
   }
 
   private wrapRef = React.createRef<HTMLDivElement>()

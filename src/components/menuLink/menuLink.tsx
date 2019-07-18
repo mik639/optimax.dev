@@ -55,10 +55,11 @@ class MenuLink extends PureComponent<MenuLinkProps> {
 
     const classes = this.getColorClasses()
     const isHash = link ? link.indexOf('#') : false
+    const sizeClass = size && s[size] ? s[size] : ''
 
     if (isHash) {
       return (
-        <Link className={classNames(s.link, ...classes, s[size])} to={link} activeClassName={s.active} partiallyActive>
+        <Link className={classNames(s.link, ...classes, sizeClass)} to={String(link)} activeClassName={s.active} partiallyActive>
           {icon && <BaseIcon name={icon} width="24" height="24" />}
           <span className={s.name}>{name}</span>
         </Link>
@@ -66,7 +67,7 @@ class MenuLink extends PureComponent<MenuLinkProps> {
     }
 
     return (
-      <a href={`/${link}`} onClick={this.scrollToBlock(link)} className={classNames(s.link, ...classes, s[size])}>
+      <a href={`/${link}`} onClick={this.scrollToBlock(String(size))} className={classNames(s.link, ...classes, sizeClass)}>
         {icon && <BaseIcon name={icon} width="24" height="24" />}
         <span className={s.name}>{name}</span>
       </a>
