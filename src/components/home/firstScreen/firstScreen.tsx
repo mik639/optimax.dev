@@ -3,6 +3,7 @@ import React from 'react'
 import Title from 'components/title/title'
 import Button from 'components/button/button'
 import useSiteMetadata from 'hooks/useSiteMetaData'
+import Astronaut from 'components/home/astronaut/astronaut'
 
 import s from './firstScreen.module.scss'
 
@@ -22,7 +23,7 @@ const FirstScreen: React.FC = (): React.ReactElement => {
             <span className={s.btnText}>Apply now</span>
           </Button>
         </div>
-        <div className={s.bg} />
+        <Astronaut />
       </div>
     </div>
   )

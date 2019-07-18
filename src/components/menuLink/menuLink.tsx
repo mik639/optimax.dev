@@ -32,7 +32,10 @@ class MenuLink extends PureComponent<MenuLinkProps> {
    *  Scroll to block by name
    * @param {string} name - name block
    */
-  scrollToBlock = (name: string): (() => void) => (): void => {
+  scrollToBlock = (name: string) => (event?: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    if (event) event.preventDefault()
+
+    window.history.replaceState(null, '', `${document.location.origin}${name ? `${name}` : ''}`)
     scroller.scrollTo(name, {
       duration: 700,
       smooth: true,
@@ -67,7 +70,7 @@ class MenuLink extends PureComponent<MenuLinkProps> {
     }
 
     return (
-      <a href={`/${link}`} onClick={this.scrollToBlock(String(size))} className={classNames(s.link, ...classes, sizeClass)}>
+      <a href={`/${link}`} onClick={this.scrollToBlock(String(link))} className={classNames(s.link, ...classes, sizeClass)}>
         {icon && <BaseIcon name={icon} width="24" height="24" />}
         <span className={s.name}>{name}</span>
       </a>

@@ -1,71 +1,68 @@
 @import 'variables.scss';
 
-.container {
-    padding: 0 17px;
-}
-
 .fixed {
-    background: $color-white;
-    
-    .wrapLanguage {
-        color: $color-limed-spruce;
-    }
+  background: $color-white;
+
+  .wrapLanguage {
+    color: $color-limed-spruce;
+  }
 }
 
 .wrap {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 960px;
-    margin: auto;
-    
-    @media screen and (max-width: 1024px) {
-        height: 60px;
-    }
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: $grid-width;
+  margin: auto;
+  padding: 0 17px;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 1024px) {
+    height: 60px;
+  }
 }
 
 .leftBox {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .wrapLogo {
-    width: 140px;
-    height: 67px;
-    margin-right: 30px;
+  width: 140px;
+  height: 67px;
+  margin-right: 30px;
 
-
-    @media screen and (max-width: 1024px) {
-        width: 96px;
-    }
+  @media screen and (max-width: 1024px) {
+    width: 96px;
+  }
 }
 
 .rightBox {
-    display: flex;
-    align-self: center;
+  display: flex;
+  align-self: center;
 
-    @media screen and (max-width: 1024px) {
-        display: none;
-    }
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .wrapLanguage {
-    width: 25px;
-    color: $color-white;
-    margin-right: 20px;
+  width: 25px;
+  color: $color-white;
+  margin-right: 20px;
 }
 
 .btn {
-    display: block;
-    width: 109px;
-    height: 37px; 
+  display: block;
+  width: 109px;
+  height: 37px;
 }
 
 .btnText {
-    font-size: 18px;
-    line-height: 2;
-    font-weight: $font-weight-normal;;
-    letter-spacing: -.17px;
-    text-transform: uppercase;
+  font-size: 18px;
+  line-height: 2;
+  font-weight: $font-weight-normal;
+  letter-spacing: -0.17px;
+  text-transform: uppercase;
 }

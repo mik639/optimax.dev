@@ -1,0 +1,55 @@
+.wrap {
+  position: relative;
+  margin-left: 153px;
+
+  @media screen and (max-width: 1024px) {
+    position: relative;
+    width: 372px;
+    height: 340px;
+    overflow: hidden;
+    margin-left: -48px;
+    margin-top: -68px;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    width: 674px;
+    height: 640px;
+    background: url(./img/space.png) 0 0 no-repeat;
+    margin-top: -128px;
+    margin-left: 60px;
+
+    @media screen and (max-width: 1024px) {
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 371px;
+      height: 340px;
+      transform: rotate(23deg);
+      background: url(./img/spaceMobile.png) 0 0 no-repeat;
+      margin-top: 0;
+      margin-left: 0;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 98px;
+    left: 155px;
+    width: 338px;
+    height: 370px;
+    background: url(./img/astronaut.png) 0 0 no-repeat;
+    transform: rotate(0.3deg);
+
+    @media screen and (max-width: 1024px) {
+      top: 119px;
+      left: 42px;
+      width: 210px;
+      height: 180px;
+      transform: rotate(23deg);
+      background: url(./img/astronautMobile.png) -57px -141px no-repeat;
+    }
+  }
+}

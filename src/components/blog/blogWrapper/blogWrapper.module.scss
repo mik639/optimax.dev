@@ -1,11 +1,13 @@
-.wrap {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 960px;
-    margin: 0 auto 20px;
-    padding-top: 60px;
+@import 'variables.scss';
 
-    @media screen and (max-width: 1024px) {
-        padding: 60px 20px 0;
-    }
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: $grid-width;
+  margin: 0 auto 20px;
+  padding-top: 60px;
+
+  @media screen and (max-width: 1024px) {
+    padding: 60px 20px 0;
+  }
 }

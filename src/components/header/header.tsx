@@ -16,7 +16,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ isFixed }: HeaderProps): React.ReactElement => {
   const { contact } = useSiteMetadata()
   return (
-    <div className={classNames(s.container, { [s.fixed]: isFixed })}>
+    <div className={classNames({ [s.fixed]: isFixed })}>
       <div className={s.wrap}>
         <div className={s.leftBox}>
           <Link to="/" className={s.wrapLogo}>

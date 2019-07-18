@@ -1,84 +1,85 @@
 @import 'variables.scss';
 
 .wrap {
-    position: relative;
-    margin-bottom: 108px;
+  position: relative;
+  margin-bottom: 108px;
 
-    @media screen and (max-width: 1024px) {
-        text-align: center;
-    }
+  @media screen and (max-width: 1024px) {
+    text-align: center;
+  }
 }
 
 .wrapText {
-    width: 890px;
-    margin: 73px auto 0;
+  display: flex;
+  justify-content: space-between;
+  max-width: $grid-width;
+  margin: 73px auto 0;
+  padding: 0 17px;
+  box-sizing: border-box;
 
-    @media screen and (max-width: 1024px) {
-        width: auto;
-        margin-top: 56px;
-    }
-}
-
-.wrapTitle {
-    display: inline-block;
-    vertical-align: top;
+  @media screen and (max-width: 1024px) {
+    width: auto;
+    margin-top: 56px;
+  }
 }
 
 .text {
-    display: inline-block;
-    vertical-align: top;
-    width: 455px;
-    font-size: 16px;	
-    letter-spacing: .38px;	
-    line-height: 1.5; 
-    margin-left: 50px;
+  width: 455px;
+  font-size: 16px;
+  letter-spacing: 0.38px;
+  line-height: 1.5;
+  margin-right: 80px;
 
-    @media screen and (max-width: 1024px) {
-        display: block;
-        width: auto;
-        margin-top: 24px;
-        margin-left: 0;
-        padding: 0 17px;
-    }
+  @media screen and (max-width: 1024px) {
+    display: block;
+    width: auto;
+    margin-top: 24px;
+    margin-right: 0;
+    padding: 0 17px;
+  }
 }
 
 .projects {
-    text-align: center;
-    width: 960px;
-    margin: 73px auto 0;
+  display: flex;
+  max-width: $grid-width;
+  margin: 73px auto 0;
+  padding: 0 17px;
+  box-sizing: border-box;
 
-    @media screen and (max-width: 1024px) {
-        width: auto;
-        margin-top: 28px;
-        padding: 0 27px;
-    }
+  @media screen and (max-width: 1024px) {
+    width: auto;
+    margin-top: 28px;
+    padding: 0 27px;
+  }
 }
 
 .item {
-    display: inline-block;
-    vertical-align: top;
-    height: 229px;
-    width: 296px;
-    border-radius: 8px;
-    background-color: $color-white;
-    box-shadow: 0 2px 8px 1px rgba($color-black, 0.1);
-    padding: 60px;
-    box-sizing: border-box;
-    margin-right: 20px;
-    color: transparent;
+  flex: 1 1 auto;
+  height: 229px;
+  border-radius: 8px;
+  background-color: $color-white;
+  box-shadow: 0 2px 8px 1px rgba($color-black, 0.1);
+  margin-right: 20px;
+  color: transparent;
+  text-align: center;
 
-    &:last-child {
-        margin-right: 0;
-    }
+  &:last-child {
+    margin-right: 0;
+  }
 
-    svg use {
-        min-width: 205px;
-    }
+  svg {
+    min-width: 205px;
+    max-width: 150px;
 
-    @media screen and (max-width: 1024px) {
-        width: 100%;
-        height: 220px;
-        margin-bottom: 20px;
-        margin-right: 0;
+    use {
+      min-width: 205px;
     }
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    height: 220px;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
 }

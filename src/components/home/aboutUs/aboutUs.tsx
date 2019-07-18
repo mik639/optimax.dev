@@ -11,7 +11,7 @@ import s from './aboutUs.module.scss'
 const AboutUs: React.FC = (): React.ReactElement => (
   <Element name="#aboutUs" className={s.wrap}>
     <div className={s.wrapText}>
-      <div className={s.wrapTitle}>
+      <div>
         <Title>About Us</Title>
         <Subtitle>We change the way people buy glasses</Subtitle>
       </div>
