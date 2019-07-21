@@ -1,3 +1,5 @@
+@import 'variables.scss';
+
 .wrap {
   position: relative;
   margin-left: 153px;
@@ -5,7 +7,7 @@
   @media screen and (max-width: 1024px) {
     position: relative;
     width: 372px;
-    height: 340px;
+    height: 337px;
     overflow: hidden;
     margin-left: -48px;
     margin-top: -68px;
@@ -34,22 +36,50 @@
   }
 
   &::after {
-    content: '';
     position: absolute;
-    top: 98px;
-    left: 155px;
-    width: 338px;
-    height: 370px;
-    background: url(./img/astronaut.png) 0 0 no-repeat;
-    transform: rotate(0.3deg);
+    content: '';
+    background: $color-alabaster;
+    width: 30px;
+    height: 30px;
+    bottom: 18px;
+    left: 462px;
+    transform: rotate(82.9deg);
+  }
+}
 
-    @media screen and (max-width: 1024px) {
-      top: 119px;
-      left: 42px;
-      width: 210px;
-      height: 180px;
-      transform: rotate(23deg);
-      background: url(./img/astronautMobile.png) -57px -141px no-repeat;
-    }
+@keyframes float {
+  0% {
+    transform: translatey(0px) rotate(0.9deg);
+  }
+  25% {
+    transform: translatey(0px) rotate(-0.5deg);
+  }
+  50% {
+    transform: translatey(-10px) rotate(0.9deg);
+  }
+  75% {
+    transform: translatey(-10px) rotate(2.3deg);
+  }
+  100% {
+    transform: translatey(0px) rotate(0.9deg);
+  }
+}
+
+.astronaut {
+  position: absolute;
+  top: 117px;
+  left: 155px;
+  width: 338px;
+  height: 370px;
+  background: url(./img/astronaut.png) 0 0 no-repeat;
+  animation: float 6s infinite linear;
+  transition: transform;
+
+  @media screen and (max-width: 1024px) {
+    top: 166px;
+    left: 53px;
+    width: 210px;
+    height: 180px;
+    background: url(./img/astronautMobile.png) -57px -141px no-repeat;
   }
 }
