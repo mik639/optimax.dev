@@ -32,36 +32,36 @@
   position: relative;
   display: flex;
   align-items: center;
-  height: 303px;
 
   @media screen and (max-width: 1024px) {
-    padding-top: 410px;
+    flex-direction: column;
+    flex-wrap: wrap;
     overflow: hidden;
   }
 }
 
 .item {
-  width: 214px;
+  flex: 0 0 214px;
 
   @media screen and (max-width: 1024px) {
     width: 214px;
-    margin: 0 auto 134px;
+    margin: 70px auto 100px;
+    order: 2;
   }
 }
 
 .map {
   position: relative;
-  width: 570px;
+  flex: 0 0 570px;
   height: 305px;
   margin-left: 220px;
   background: url(./img/map.png) 0 0 no-repeat;
 
   @media screen and (max-width: 1024px) {
-    left: 0;
     margin: auto;
-    width: 510px;
-    height: 365px;
-    background: url(./img/mapMobile.png) 39px -142px no-repeat;
+    width: 470px;
+    flex: 0 0 415px;
+    background: url(./img/mapMobile.png) center center no-repeat;
   }
 }
 
@@ -131,17 +131,17 @@
   left: 310px;
 
   @media screen and (max-width: 1024px) {
-    top: 170px;
-    left: 147px;
+    top: 202px;
+    left: 106px;
   }
 }
 
 .russia {
-  top: 83px;
+  top: 80px;
   left: 329px;
 
   @media screen and (max-width: 1024px) {
-    top: 121px;
-    left: 177px;
+    top: 140px;
+    left: 129px;
   }
 }

@@ -5,13 +5,12 @@ import SEO from 'components/SEO/SEO'
 import Layout from 'layouts/index'
 import WrapHeader from 'components/wrapHeader/wrapHeader'
 import Background from 'components/background/background'
-import BlogItem from 'components/blog/blogItem/blogItem'
 import Title from 'components/title/title'
 import Tags from 'components/tags/tags'
 import Author from 'components/blog/author/author'
-import useBlogPosts from 'hooks/useBlog'
+import SideBar from 'components/blog/sideBar/sideBar'
 
-import { MarkdownRemark, MarkdownRemarkEdge } from 'types'
+import { MarkdownRemark } from 'types'
 
 import s from './post.module.scss'
 
@@ -23,8 +22,6 @@ interface PostType {
 
 const Post: React.FunctionComponent<PostType> = ({ data }: PostType): React.ReactElement => {
   const { html, id, frontmatter } = data.markdownRemark
-  const posts = useBlogPosts()
-  const filteredPosts = posts.filter((item: MarkdownRemarkEdge): boolean => item.node.id !== id).slice(0, 3)
 
   return (
     <Layout>
@@ -32,7 +29,7 @@ const Post: React.FunctionComponent<PostType> = ({ data }: PostType): React.Reac
       <WrapHeader />
       <Background name="job" img={frontmatter ? frontmatter.image : null}>
         <Title isWhite>
-          <div>{frontmatter ? String(frontmatter.title) : ''}</div>
+          <div className={s.wrapTitle}>{frontmatter ? String(frontmatter.title) : ''}</div>
           <div className={s.wrapTags}>
             <Tags tags={frontmatter ? String(frontmatter.tags) : ''} size="big" />
           </div>
@@ -41,12 +38,7 @@ const Post: React.FunctionComponent<PostType> = ({ data }: PostType): React.Reac
       </Background>
       <div className={s.body}>
         {html && <div className={s.content} dangerouslySetInnerHTML={{ __html: html }} />}
-        <div className={s.sideBar}>
-          {filteredPosts.map((post: MarkdownRemarkEdge): React.ReactElement | null => {
-            if (!post || !post.node || !post.node.frontmatter) return null
-            return <BlogItem key={String(post.node.frontmatter.path)} item={post.node.frontmatter} />
-          })}
-        </div>
+        <SideBar id={id} />
       </div>
     </Layout>
   )

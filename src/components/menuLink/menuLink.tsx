@@ -1,7 +1,7 @@
 import React, { PureComponent, ReactNode } from 'react'
 import { scroller } from 'react-scroll'
 import classNames from 'classnames'
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 
 import BaseIcon from 'components/baseIcon/baseIcon'
 
@@ -35,13 +35,16 @@ class MenuLink extends PureComponent<MenuLinkProps> {
   scrollToBlock = (name: string) => (event?: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     if (event) event.preventDefault()
 
-    window.history.replaceState(null, '', `${document.location.origin}${name ? `${name}` : ''}`)
-    scroller.scrollTo(name, {
-      duration: 700,
-      smooth: true,
-      isDynamic: true,
-      offset: -110
-    })
+    if (name !== '') {
+      if (window.location.pathname !== '/') navigate(`/${name}`)
+      window.history.replaceState(null, '', `${document.location.origin}${name ? `${name}` : ''}`)
+      scroller.scrollTo(name, {
+        duration: 700,
+        smooth: true,
+        isDynamic: true,
+        offset: -110
+      })
+    }
   }
 
   /**

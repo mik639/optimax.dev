@@ -1,5 +1,10 @@
 @import 'variables.scss';
 
+.wrapTitle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .wrapTags {
   margin-top: 10px;
   text-align: center;
@@ -9,13 +14,17 @@
   display: flex;
   max-width: $grid-width;
   margin: 0 auto;
-  padding-top: 34px;
+  padding: 34px 17px 0;
 }
 
 .content {
   flex: 1 1 auto;
   margin-right: 50px;
   margin-bottom: 80px;
+
+  @media screen and (max-width: 1024px) {
+    margin-right: 0;
+  }
 
   h2 {
     opacity: 0.9;
@@ -84,22 +93,6 @@
       letter-spacing: 1px;
       line-height: 36px;
       text-align: center;
-    }
-  }
-}
-
-.sideBar {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  flex: 0 0 296px;
-
-  > a {
-    flex: inherit;
-    margin-right: 0;
-
-    &:first-child {
-      flex: inherit;
     }
   }
 }

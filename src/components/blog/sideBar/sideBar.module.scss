@@ -1,39 +1,24 @@
 @import 'variables.scss';
 
-.wrap {
-  flex: 1 1 407px;
-  margin: 0 5px 39px;
-
-  &:nth-child(3n + 5) {
-    margin-right: 0;
-  }
-
-  &:first-child {
-    flex: 1 1 calc(100% - 428px);
-    margin: 0 8px 39px 5px;
-
-    + .wrap {
-      margin-right: 0;
-      flex: 1 1 407px;
-      margin-left: 2px;
-    }
-  }
+.sideBar {
+  flex: 0 0 296px;
 
   @media screen and (max-width: 1024px) {
-    flex: 1 1 auto;
-    margin: 0 0 39px;
-
-    &:first-child {
-      flex: 1 1 auto;
-    }
+    display: none;
   }
+}
+
+.wrap {
+  display: block;
+  width: 296px;
+  margin-bottom: 39px;
 }
 
 .wrapImg {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
-  height: 209px;
+  height: 152px;
   margin-bottom: 20px;
 }
 

@@ -19,10 +19,37 @@ class Hamburger extends Component<HamburgerPropsType, HamburgerStateType> {
   }
 
   /**
+   * Called after component was mounted
+   */
+  componentDidMount() {
+    window.addEventListener('scroll', this.closeMenu)
+  }
+
+  /**
+   * Called before component will unmounted
+   */
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.closeMenu)
+  }
+
+  /**
+   * Close menu when user scrolling
+   */
+  closeMenu = () => {
+    const { isOpen } = this.state
+    const widthWindow = window.innerWidth || 0
+    const mediaPoint = 1024
+
+    if (widthWindow !== 0 && widthWindow < mediaPoint && isOpen) {
+      this.setState({ isOpen: false })
+    }
+  }
+
+  /**
    * Change visability menu
    */
   changeVisibilityMenu = () => {
-    this.setState(isOpen => ({ isOpen: !isOpen }))
+    this.setState(({ isOpen }) => ({ isOpen: !isOpen }))
   }
 
   render(): ReactNode {
