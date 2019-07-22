@@ -1,69 +1,70 @@
 @import 'variables.scss';
 
 .wrapContent {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 960px;
 }
 
 .content {
-    max-width: 410px;
+  max-width: 410px;
 
-    p {
-        color: $color-tundora;		
-        font-size: 16px;	
-        font-weight: $font-weight-light;	
-        letter-spacing: .38px;	
-        line-height: 1.7;
-    
-        @media screen and (max-width: 1024px) {
-            font-size: 18px;
-            letter-spacing: .78px;
-        }
+  p {
+    color: $color-tundora;
+    font-size: 16px;
+    font-weight: $font-weight-light;
+    letter-spacing: 0.38px;
+    line-height: 1.7;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 18px;
+      letter-spacing: 0.78px;
     }
-    
-    blockquote {
-        border-left: 1px solid color-limed-spruce;
-        margin: 13px 0 28px;
-        padding: 7px 0 7px 13px;
-    
-        @media screen and (max-width: 1024px) {
-            width: auto;
-            padding: 7px 13px;
-            margin: 20px 0 23px;
-        }
-    
-        > p {
-            font-weight: 500;
-            font-size: 30px;
-            line-height: 1.1;
-    
-            @media screen and (max-width: 1024px) {
-                font-size: 33px;
-                line-height: 1.2;
-                letter-spacing: 1.78px;
-                color: $color-dobger-blue;
-            }
-        }
+  }
+
+  blockquote {
+    border-left: 1px solid $color-limed-spruce;
+    margin: 13px 10px 28px;
+    padding: 7px 0 7px 13px;
+
+    @media screen and (max-width: 1024px) {
+      width: auto;
+      padding: 7px 13px;
+      margin: 20px 0 23px;
     }
+
+    > p {
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 1.1;
+
+      @media screen and (max-width: 1024px) {
+        font-size: 33px;
+        line-height: 1.2;
+        letter-spacing: 1.78px;
+        color: $color-dobger-blue;
+      }
+    }
+  }
 }
 
 .img {
-    width: 346px;
-    margin-right: 45px;
+  width: 346px;
+  margin-right: 45px;
 
-    @media screen and (max-width: 1024px) {
-        display: none;
-    }
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .notebook {
-    display: block;
-    width: 538px;
-    margin: 110px auto 80px;
+  display: block;
+  width: 538px;
+  margin: 110px auto 80px;
 
-    @media screen and (max-width: 1024px) {
-        width: calc(100% - 13px);
-        margin: 80px auto;
-    }
+  @media screen and (max-width: 1024px) {
+    width: calc(100% - 13px);
+    margin: 80px auto;
+  }
 }

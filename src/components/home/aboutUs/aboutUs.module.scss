@@ -4,8 +4,21 @@
   position: relative;
   margin-bottom: 108px;
 
+  &::before {
+    content: '';
+    position: absolute;
+    top: -140px;
+    width: 100%;
+    height: 1016px;
+    background: url('images/tentacle.png') 112px 0 no-repeat;
+  }
+
   @media screen and (max-width: 1024px) {
     text-align: center;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -41,6 +54,7 @@
 }
 
 .projects {
+  position: relative;
   display: flex;
   max-width: $grid-width;
   margin: 73px auto 0;

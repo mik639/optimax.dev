@@ -69,8 +69,8 @@
 }
 
 .sidebar {
-  flex: 0 0 335px;
-  padding: 5px 40px;
+  flex: 0 0 490px;
+  padding: 5px 100px;
   box-sizing: border-box;
 
   @media screen and (max-width: 1024px) {
@@ -130,8 +130,6 @@
 }
 
 .btnText {
-  font-size: 19px;
   font-weight: $font-weight-normal;
   letter-spacing: -0.41px;
-  line-height: 1.1;
 }

@@ -8,6 +8,7 @@ interface ButtonProps {
   onClick?: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>) => void
   color?: 'blue' | 'white'
   type?: 'button' | 'reset' | 'submit'
+  size?: 'small' | 'big'
   isShadow?: boolean
   className?: string
   isDisabled?: boolean
@@ -25,6 +26,7 @@ const Button: React.FC<ButtonProps> = ({
   className = '',
   type = 'button',
   isShadow = false,
+  size = 'small',
   href = ''
 }: ButtonProps): React.ReactElement => {
   const colorClassName: string = s[color]
@@ -32,7 +34,7 @@ const Button: React.FC<ButtonProps> = ({
   if (href) {
     return (
       <a
-        className={classNames(s.btn, colorClassName, className, {
+        className={classNames(s.btn, colorClassName, s[size], className, {
           [s.shadow]: isShadow
         })}
         onClick={onClick}
@@ -52,7 +54,7 @@ const Button: React.FC<ButtonProps> = ({
       disabled={isDisabled}
       type={type}
       onClick={onClick}
-      className={classNames(s.btn, colorClassName, className, { [s.shadow]: isShadow })}
+      className={classNames(s.btn, colorClassName, s[size], className, { [s.shadow]: isShadow })}
     >
       {children}
     </button>
