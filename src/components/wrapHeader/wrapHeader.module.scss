@@ -1,11 +1,15 @@
 @import 'variables.scss';
 
 .wrap {
-    height: 67px;
+  height: 67px;
+
+  @media screen and (max-width: 1024px) {
+    height: 60px;
+  }
 }
 
 .sticky {
-    position: fixed;
-    width: 100%;
-    z-index: 3;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
 }

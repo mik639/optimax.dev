@@ -30,7 +30,7 @@ const Menu: React.FC<MenuProps> = ({ isOpen, isFixed }: MenuProps): React.ReactE
             }
             return <MenuLink key={item.name} color={colors} name={item.name} icon={String(item.icon)} />
           })}
-        <Button className={s.btn} href={`mailto:${contact ? contact.email : ''}`}>
+        <Button className={s.btn} size="big" href={`mailto:${contact ? contact.email : ''}`}>
           <span className={s.btnText}>Apply</span>
         </Button>
       </nav>

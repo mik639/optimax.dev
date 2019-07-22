@@ -1,18 +1,17 @@
 @import 'variables.scss';
 
 .title {
-    opacity: .9;
-    font-size: 41px;	
-    font-weight: $font-weight-bold;	
-    letter-spacing: -.02px;
-    margin-bottom: 6px;;
+  opacity: 0.9;
+  font-size: 41px;
+  font-weight: $font-weight-bold;
+  letter-spacing: -0.02px;
+  margin-bottom: 6px;
 
-    @media screen and (max-width: 1024px) {
-        font-weight: $font-weight-normal;
-        margin-bottom: 15px;
-    }
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 15px;
+  }
 }
 
 .white {
-    color: white;
+  color: white;
 }

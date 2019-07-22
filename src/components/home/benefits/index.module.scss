@@ -40,4 +40,8 @@
 .btnText {
   font-weight: $font-weight-bold;
   letter-spacing: -0.39px;
+
+  @media screen and (max-width: 1024px) {
+    @include font-size(18px, 54px);
+  }
 }

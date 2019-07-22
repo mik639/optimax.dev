@@ -18,27 +18,27 @@ const PERKS: PerkType[] = [
   {
     name: 'comfortable',
     title: 'Get Comfortable',
-    description: 'Max workplace comfort, high-end monitors for convenience'
+    description: 'Max workplace comfort, high-end monitors for convenience.'
   },
   {
     name: 'social',
     title: 'Social Activities',
-    description: 'Plenty of corporate & team building events'
+    description: 'Plenty of corporate & team building events.'
   },
   {
     name: 'food',
     title: 'Food & Drinks',
-    description: 'Freshly brewed coffee, tea, juice, drinks, breakfast, lunch'
+    description: 'Freshly brewed coffee, tea, juice, drinks, breakfast, lunch.'
   },
   {
     name: 'grow',
     title: 'Learning & Grow',
-    description: 'English training, frequent practical use'
+    description: 'English training, frequent practical use.'
   },
   {
     name: 'sport',
     title: 'Sports Activities',
-    description: 'Outdoors & indoors company sports days & activities'
+    description: 'Outdoors & indoors company sports days & activities.'
   },
   {
     name: 'people',
