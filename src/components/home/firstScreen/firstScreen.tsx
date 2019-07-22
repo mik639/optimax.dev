@@ -20,7 +20,7 @@ const FirstScreen: React.FC = (): React.ReactElement => {
             leader in the eyewear industry.
           </span>
           <Button className={s.btn} size="big" href={`mailto:${contact ? contact.email : ''}`}>
-            <span className={s.btnText}>Apply now</span>
+            <span className={s.btnText}>Apply Now</span>
           </Button>
         </div>
         <Astronaut />

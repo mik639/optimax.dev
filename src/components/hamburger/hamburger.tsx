@@ -68,6 +68,7 @@ class Hamburger extends Component<HamburgerPropsType, HamburgerStateType> {
           <div className={s.inner} />
         </div>
         <Menu isOpen={isOpen} />
+        {isOpen && <div className={s.overlay} />}
       </div>
     )
   }
