@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Title from 'components/title/title'
 import Button from 'components/button/button'
 import useSiteMetadata from 'hooks/useSiteMetaData'
 import Astronaut from 'components/home/astronaut/astronaut'
@@ -13,7 +12,7 @@ const FirstScreen: React.FC = (): React.ReactElement => {
     <div className={s.container}>
       <div className={s.wrap}>
         <div className={s.content}>
-          <Title>Work With Us</Title>
+          <h2 className={s.title}>Work With Us</h2>
           <span className={s.desc}>
             We are a worldwide e-commerce
             <br />

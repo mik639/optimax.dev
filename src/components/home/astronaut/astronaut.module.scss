@@ -9,8 +9,8 @@
     width: 372px;
     height: 337px;
     overflow: hidden;
-    margin-left: -48px;
-    margin-top: -68px;
+    margin-left: -51px;
+    margin-top: -39px;
   }
 
   &::before {
@@ -70,10 +70,11 @@
   transition: transform;
 
   @media screen and (max-width: 1024px) {
-    top: 166px;
-    left: 53px;
+    top: 116px;
+    left: 35px;
     width: 210px;
     height: 180px;
     background: url(./img/astronautMobile.png) -57px -141px no-repeat;
+    //     transform: rotate(23deg);
   }
 }
