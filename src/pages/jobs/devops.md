@@ -6,6 +6,7 @@ image: '/services/noun_1013177.png'
 address: Tolyatti, St. 8b
 draft: false
 featured: true
+link: https://www.glassesusa.com
 shortDescription: Готовы взять в свою дружную it-команду Программиста в отдел Devops
 weight: 10
 ---

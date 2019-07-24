@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react'
 
+import SEO from 'components/SEO/SEO'
 import Layout from 'layouts/index'
 import JobByLocation from 'components/home/jobByLocation/jobByLocation'
 import AboutUs from 'components/home/aboutUs/aboutUs'
@@ -11,6 +12,7 @@ import Team from 'components/home/team'
 
 const Home = (): ReactNode => (
   <Layout>
+    <SEO />
     <WrapHeader isHome />
     <FirstScreen />
     <AboutUs />

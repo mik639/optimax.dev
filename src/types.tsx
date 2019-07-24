@@ -1035,18 +1035,18 @@ export enum MarkdownRemarkFieldsEnum {
   internal___type = 'internal___type',
   frontmatter___title = 'frontmatter___title',
   frontmatter___path = 'frontmatter___path',
-  frontmatter___image = 'frontmatter___image',
-  frontmatter___author = 'frontmatter___author',
-  frontmatter___avatar = 'frontmatter___avatar',
-  frontmatter___shortDescription = 'frontmatter___shortDescription',
-  frontmatter___tags = 'frontmatter___tags',
-  frontmatter___date = 'frontmatter___date',
-  frontmatter___featured = 'frontmatter___featured',
-  frontmatter___draft = 'frontmatter___draft',
-  frontmatter___address = 'frontmatter___address',
-  frontmatter___weight = 'frontmatter___weight',
   frontmatter___name = 'frontmatter___name',
   frontmatter___link = 'frontmatter___link',
+  frontmatter___featured = 'frontmatter___featured',
+  frontmatter___draft = 'frontmatter___draft',
+  frontmatter___date = 'frontmatter___date',
+  frontmatter___image = 'frontmatter___image',
+  frontmatter___address = 'frontmatter___address',
+  frontmatter___shortDescription = 'frontmatter___shortDescription',
+  frontmatter___weight = 'frontmatter___weight',
+  frontmatter___author = 'frontmatter___author',
+  frontmatter___avatar = 'frontmatter___avatar',
+  frontmatter___tags = 'frontmatter___tags',
   excerpt = 'excerpt',
   rawMarkdownBody = 'rawMarkdownBody',
   fileAbsolutePath = 'fileAbsolutePath',
@@ -1085,18 +1085,18 @@ export type MarkdownRemarkFrontmatter = {
   __typename?: 'MarkdownRemarkFrontmatter'
   title?: Maybe<Scalars['String']>
   path?: Maybe<Scalars['String']>
-  image?: Maybe<Scalars['String']>
-  author?: Maybe<Scalars['String']>
-  avatar?: Maybe<Scalars['String']>
-  shortDescription?: Maybe<Scalars['String']>
-  tags?: Maybe<Scalars['String']>
-  date?: Maybe<Scalars['Date']>
-  featured?: Maybe<Scalars['Boolean']>
-  draft?: Maybe<Scalars['Boolean']>
-  address?: Maybe<Scalars['String']>
-  weight?: Maybe<Scalars['Int']>
   name?: Maybe<Scalars['String']>
   link?: Maybe<Scalars['String']>
+  featured?: Maybe<Scalars['Boolean']>
+  draft?: Maybe<Scalars['Boolean']>
+  date?: Maybe<Scalars['Date']>
+  image?: Maybe<Scalars['String']>
+  address?: Maybe<Scalars['String']>
+  shortDescription?: Maybe<Scalars['String']>
+  weight?: Maybe<Scalars['Int']>
+  author?: Maybe<Scalars['String']>
+  avatar?: Maybe<Scalars['String']>
+  tags?: Maybe<Scalars['String']>
 }
 
 export type MarkdownRemarkFrontmatterDateArgs = {
@@ -1109,18 +1109,18 @@ export type MarkdownRemarkFrontmatterDateArgs = {
 export type MarkdownRemarkFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>
   path?: Maybe<StringQueryOperatorInput>
-  image?: Maybe<StringQueryOperatorInput>
-  author?: Maybe<StringQueryOperatorInput>
-  avatar?: Maybe<StringQueryOperatorInput>
-  shortDescription?: Maybe<StringQueryOperatorInput>
-  tags?: Maybe<StringQueryOperatorInput>
-  date?: Maybe<DateQueryOperatorInput>
-  featured?: Maybe<BooleanQueryOperatorInput>
-  draft?: Maybe<BooleanQueryOperatorInput>
-  address?: Maybe<StringQueryOperatorInput>
-  weight?: Maybe<IntQueryOperatorInput>
   name?: Maybe<StringQueryOperatorInput>
   link?: Maybe<StringQueryOperatorInput>
+  featured?: Maybe<BooleanQueryOperatorInput>
+  draft?: Maybe<BooleanQueryOperatorInput>
+  date?: Maybe<DateQueryOperatorInput>
+  image?: Maybe<StringQueryOperatorInput>
+  address?: Maybe<StringQueryOperatorInput>
+  shortDescription?: Maybe<StringQueryOperatorInput>
+  weight?: Maybe<IntQueryOperatorInput>
+  author?: Maybe<StringQueryOperatorInput>
+  avatar?: Maybe<StringQueryOperatorInput>
+  tags?: Maybe<StringQueryOperatorInput>
 }
 
 export type MarkdownRemarkGroupConnection = {
@@ -1758,6 +1758,7 @@ export enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___layouts = 'pluginCreator___pluginOptions___layouts',
   pluginCreator___pluginOptions___hooks = 'pluginCreator___pluginOptions___hooks',
   pluginCreator___pluginOptions___types = 'pluginCreator___pluginOptions___types',
+  pluginCreator___pluginOptions___static = 'pluginCreator___pluginOptions___static',
   pluginCreator___pluginOptions___path = 'pluginCreator___pluginOptions___path',
   pluginCreator___pluginOptions___name = 'pluginCreator___pluginOptions___name',
   pluginCreator___pluginOptions___trackingId = 'pluginCreator___pluginOptions___trackingId',
@@ -1965,6 +1966,7 @@ export enum SitePluginFieldsEnum {
   pluginOptions___layouts = 'pluginOptions___layouts',
   pluginOptions___hooks = 'pluginOptions___hooks',
   pluginOptions___types = 'pluginOptions___types',
+  pluginOptions___static = 'pluginOptions___static',
   pluginOptions___path = 'pluginOptions___path',
   pluginOptions___name = 'pluginOptions___name',
   pluginOptions___trackingId = 'pluginOptions___trackingId',
@@ -2105,6 +2107,7 @@ export type SitePluginPluginOptions = {
   layouts?: Maybe<Scalars['String']>
   hooks?: Maybe<Scalars['String']>
   types?: Maybe<Scalars['String']>
+  static?: Maybe<Scalars['String']>
   path?: Maybe<Scalars['String']>
   name?: Maybe<Scalars['String']>
   trackingId?: Maybe<Scalars['String']>
@@ -2125,6 +2128,7 @@ export type SitePluginPluginOptionsFilterInput = {
   layouts?: Maybe<StringQueryOperatorInput>
   hooks?: Maybe<StringQueryOperatorInput>
   types?: Maybe<StringQueryOperatorInput>
+  static?: Maybe<StringQueryOperatorInput>
   path?: Maybe<StringQueryOperatorInput>
   name?: Maybe<StringQueryOperatorInput>
   trackingId?: Maybe<StringQueryOperatorInput>

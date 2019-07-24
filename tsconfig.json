@@ -13,11 +13,13 @@
     "noUnusedParameters": true,
     "removeComments": false,
     "preserveConstEnums": true,
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "paths": {
-      "components/*": ["components/*"],
-      "hooks/*": ["hooks/*"],
-      "types": ["types.tsx"]
+      "layouts/*": ["src/layouts/*"],
+      "components/*": ["src/components/*"],
+      "hooks/*": ["src/hooks/*"],
+      "static/*": ["static/*"],
+      "types": ["src/types.tsx"]
     }
   },
   "include": ["src/**/*"]

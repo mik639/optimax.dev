@@ -52,7 +52,7 @@ const Job = ({ data }: JobType): ReactNode => {
           <JobContent>{html || ''}</JobContent>
         </div>
         <div className={s.sidebar}>
-          <JobApply />
+          <JobApply link={frontmatter ? frontmatter.link : null} />
           <JobShare />
         </div>
       </div>
@@ -88,6 +88,7 @@ export const query = graphql`
         title
         path
         address
+        link
       }
       html
     }

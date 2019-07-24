@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 
+import SEO from 'components/SEO/SEO'
 import WrapHeader from 'components/wrapHeader/wrapHeader'
 import Background from 'components/background/background'
 import Layout from 'layouts/index'
@@ -38,6 +39,7 @@ const Glassesusa = (): ReactNode => {
 
   return (
     <Layout>
+      <SEO title="Glassesusa" />
       <WrapHeader />
       <Background name={name} />
       <Align>

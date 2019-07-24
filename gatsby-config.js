@@ -58,7 +58,8 @@ module.exports = {
         pages: path.join(__dirname, 'src/pages'),
         layouts: path.join(__dirname, 'src/layouts'),
         hooks: path.join(__dirname, 'src/hooks'),
-        types: path.join(__dirname, 'src/types')
+        types: path.join(__dirname, 'src/types'),
+        static: path.join(__dirname, 'static')
       }
     },
     {
