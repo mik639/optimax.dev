@@ -8,11 +8,12 @@
     "start": "npm run develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "deploy": "gatsby build && gh-pages -d public -b master",
+    "deploy": "gatsby build && npm run add-domain && gh-pages -d public -b master",
     "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "graphql-types": "graphql-codegen init",
     "gen-types": "graphql-codegen --config codegen.yml",
-    "generate": "graphql-codegen --config codegen.yml"
+    "generate": "graphql-codegen --config codegen.yml",
+    "add-domain": "echo \"optimax.dev\" > public/CNAME"
   },
   "dependencies": {
     "@graphql-codegen/cli": "^1.3.1",

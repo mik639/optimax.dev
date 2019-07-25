@@ -4,7 +4,7 @@ title: 'Test Automation Engineer'
 date: 2018-11-28T15:14:54+10:00
 address: Tolyatti, St. 8b
 image: '/services/default.png'
-shortDescription: 'В команду автотестирования мы ищем кандидатов которым важно не просто наличие рабочего места, но также личностный рост и профессиональное развитие.'
+shortDescription: 'В команду автотестирования'
 featured: true
 draft: false
 link: https://docs.google.com/forms/d/e/1FAIpQLSe0gH03THaEHb8wEW2lVANLdMWIo4FoyVWwZDU1huvUDRcSyQ/viewform?usp=send_form
