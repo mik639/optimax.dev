@@ -9,7 +9,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "deploy": "gatsby build && npm run add-domain && gh-pages -d public -b master",
-    "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "lint": "tsc && eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "graphql-types": "graphql-codegen init",
     "gen-types": "graphql-codegen --config codegen.yml",
     "generate": "graphql-codegen --config codegen.yml",
