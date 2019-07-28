@@ -50,11 +50,13 @@
 
 .socialLink {
   flex: 1 1 auto;
-  padding: 19px;
+  padding: 14px;
   box-sizing: border-box;
   opacity: 0.3;
+  color: $color-tower-gray;
 
   @media screen and (max-width: 1024px) {
+    padding: 19px;
     border-right: 1px solid $color-tower-gray;
     opacity: 1;
   }

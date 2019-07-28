@@ -1,21 +1,20 @@
 @import 'variables.scss';
 
 .wrap {
-  flex: 1 1 407px;
-  margin: 0 5px 39px;
+  flex: 0 0 407px;
+  margin: 0 12.5px 39px;
 
   &:nth-child(3n + 5) {
     margin-right: 0;
   }
 
   &:first-child {
-    flex: 1 1 calc(100% - 428px);
-    margin: 0 8px 39px 5px;
+    flex: 0 0 calc(100% - 461px);
+    margin: 0 25px 39px 12.5px;
 
     + .wrap {
-      margin-right: 0;
-      flex: 1 1 407px;
-      margin-left: 2px;
+      flex: 0 0 407px;
+      margin: 0 0 30px;
     }
   }
 

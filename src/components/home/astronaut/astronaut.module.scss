@@ -2,7 +2,7 @@
 
 .wrap {
   position: relative;
-  margin-left: 153px;
+  margin-left: 230px;
 
   @media screen and (max-width: 1024px) {
     position: relative;
@@ -75,6 +75,5 @@
     width: 210px;
     height: 180px;
     background: url(./img/astronautMobile.png) -57px -141px no-repeat;
-    //     transform: rotate(23deg);
   }
 }

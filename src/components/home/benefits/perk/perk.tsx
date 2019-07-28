@@ -16,7 +16,7 @@ const Perk: React.FC<PerkProps> = ({ name, title, description }: PerkProps): Rea
       <BaseIcon name={name} width="70" height="70" />
     </div>
     <h3 className={s.title}>{title}</h3>
-    <h4 className={s.description}>{description}</h4>
+    <h4 className={s.description} dangerouslySetInnerHTML={{ __html: description }} />
   </div>
 )
 

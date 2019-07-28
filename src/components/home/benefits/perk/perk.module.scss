@@ -1,13 +1,14 @@
 @import 'variables.scss';
 
 .perk {
-  flex: 0 0 26.33%;
+  flex: 0 0 33.33%;
   padding-right: 20px;
-  padding-left: 20px;
+  padding-left: 56px;
   padding-bottom: 40px;
   padding-top: 30px;
-  border-right: 1px solid $color-tower-gray;
-  border-bottom: 1px solid $color-tower-gray;
+  border-right: 1px solid rgba($color-tower-gray, 0.4);
+  border-bottom: 1px solid rgba($color-tower-gray, 0.4);
+  box-sizing: border-box;
 
   @media screen and (min-width: 1024px) {
     &:nth-child(3n) {
@@ -22,14 +23,14 @@
   }
 
   @media screen and (max-width: 1024px) {
-    flex: 1 1 auto;
+    flex: 0 0 calc(100% - 80px);
     padding-right: 0;
     padding-left: 0;
     margin-left: 40px;
     margin-right: 40px;
     text-align: center;
     border-right: 0;
-    border-bottom: 1px solid $color-tower-gray;
+    border-bottom: 1px solid rgba($color-tower-gray, 0.4);
 
     &:last-child {
       border-bottom: 0;
@@ -39,30 +40,7 @@
 
 .icon {
   height: 75px;
-}
-
-.comfortable {
-  width: 43px;
-}
-
-.social {
-  width: 65px;
-}
-
-.food {
-  width: 33px;
-}
-
-.grow {
-  width: 40px;
-}
-
-.sport {
-  width: 67px;
-}
-
-.people {
-  width: 60px;
+  margin-bottom: 22px;
 }
 
 .title {
