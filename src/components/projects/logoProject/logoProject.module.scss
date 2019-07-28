@@ -1,45 +1,44 @@
 @import 'variables.scss';
 
 .wrap {
-    display: flex;
-    align-items: center;
-    min-width: 274px;
-    margin-top: 70px;
-    margin-bottom: 50px;
-    padding-left: 20px;
+  display: flex;
+  align-items: center;
+  min-width: 274px;
+  margin-top: 70px;
+  margin-bottom: 50px;
 
-    @media screen and (max-width: 1024px) {
-        min-width: 100px;
-        justify-content: center;
-        margin-top: 50px;
-        margin-bottom: 30px;
-        padding-left: 0;
-    }
+  @media screen and (max-width: 1024px) {
+    min-width: 100px;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-left: 0;
+  }
 }
 
 .wrapLogo {
-    flex: 0 0 157px;
-    margin-right: 25px;
-    color: transparent;
+  flex: 0 0 157px;
+  margin-right: 25px;
+  color: transparent;
 
-    @media screen and (max-width: 1024px) {
-        flex: 0 0 193px;
-        margin-right: 0;
-    }
+  @media screen and (max-width: 1024px) {
+    flex: 0 0 193px;
+    margin-right: 0;
+  }
 }
 
 .link {
-    opacity: .9;	
-    color: $color-azure-radiance;	
-    font-size: 14px;	
-    letter-spacing: -.17px;
-    text-decoration: none;
+  opacity: 0.9;
+  color: $color-azure-radiance;
+  font-size: 14px;
+  letter-spacing: -0.17px;
+  text-decoration: none;
 
-    &:hover {
-        text-decoration: underline; 
-    }
+  &:hover {
+    text-decoration: underline;
+  }
 
-    @media screen and (max-width: 1024px) {
-        display: none;
-    }
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 }

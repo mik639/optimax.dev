@@ -27,7 +27,7 @@ const Post: React.FunctionComponent<PostType> = ({ data }: PostType): React.Reac
     <Layout>
       <SEO title={frontmatter ? String(frontmatter.title) : ''} />
       <WrapHeader />
-      <Background name="job" img={frontmatter ? frontmatter.image : null}>
+      <Background name="job" isOverlay img={frontmatter ? frontmatter.image : null}>
         <Title isWhite>
           <div className={s.wrapTitle}>{frontmatter ? String(frontmatter.title) : ''}</div>
           <div className={s.wrapTags}>

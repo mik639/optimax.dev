@@ -1,13 +1,12 @@
 @import 'variables.scss';
 
 .wrap {
-  width: $grid-width;
+  max-width: $grid-width;
   margin: 0 auto;
-  padding-left: 20px;
+  padding: 0 17px;
   box-sizing: border-box;
 
   @media screen and (max-width: 1024px) {
     width: auto;
-    padding-right: 20px;
   }
 }

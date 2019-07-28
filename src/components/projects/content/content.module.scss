@@ -4,11 +4,15 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 960px;
+  max-width: 1120px;
 }
 
 .content {
   max-width: 410px;
+
+  @media screen and (max-width: 1024px) {
+    margin: 0 auto;
+  }
 
   p {
     color: $color-tundora;
@@ -32,6 +36,7 @@
       width: auto;
       padding: 7px 13px;
       margin: 20px 0 23px;
+      border-left: 0;
     }
 
     > p {
@@ -51,7 +56,6 @@
 
 .img {
   width: 346px;
-  margin-right: 45px;
 
   @media screen and (max-width: 1024px) {
     display: none;
@@ -64,6 +68,7 @@
   margin: 110px auto 80px;
 
   @media screen and (max-width: 1024px) {
+    max-width: 530px;
     width: calc(100% - 13px);
     margin: 80px auto;
   }
