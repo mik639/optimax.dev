@@ -67,6 +67,7 @@
   transition-property: transform;
   top: 2px;
   transition: background-color 0s linear 0.13s;
+  border-radius: 4px;
 
   &::after,
   &::before {
