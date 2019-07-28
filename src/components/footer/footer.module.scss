@@ -49,6 +49,8 @@
 }
 
 .socialLink {
+  display: flex;
+  align-items: center;
   flex: 1 1 auto;
   padding: 14px;
   box-sizing: border-box;
