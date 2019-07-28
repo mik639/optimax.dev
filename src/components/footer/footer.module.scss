@@ -43,6 +43,7 @@
   @media screen and (max-width: 1024px) {
     border-top: 1px solid $color-tower-gray;
   }
+
   @media screen and (min-width: 1024px) {
     width: 240px;
   }
@@ -65,5 +66,9 @@
 
   &:last-child {
     border-right: 0;
+  }
+
+  &:hover {
+    opacity: 1;
   }
 }
