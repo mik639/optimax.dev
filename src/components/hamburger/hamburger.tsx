@@ -68,7 +68,9 @@ class Hamburger extends Component<HamburgerPropsType, HamburgerStateType> {
           <div className={s.inner} />
         </div>
         <Menu isOpen={isOpen} />
-        {isOpen && <div className={s.overlay} />}
+        {isOpen && (
+          <div role="button" tabIndex={0} onClick={this.changeVisibilityMenu} onKeyDown={this.changeVisibilityMenu} className={s.overlay} />
+        )}
       </div>
     )
   }

@@ -14,9 +14,9 @@ const FirstScreen: React.FC = (): React.ReactElement => {
         <div className={s.content}>
           <h2 className={s.title}>Work With Us</h2>
           <span className={s.desc}>
-            We are a worldwide e-commerce
+            We are the leading
             <br />
-            leader in the eyewear industry.
+            e-commerce eyewear retailer
           </span>
           <Button className={s.btn} size="big" href={`mailto:${contact ? contact.email : ''}`}>
             <span className={s.btnText}>Apply Now</span>

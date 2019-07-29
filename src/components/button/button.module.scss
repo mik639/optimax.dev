@@ -25,8 +25,4 @@
 
 .big {
   @include font-size(21px, 62px);
-
-  @media screen and (max-width: 1024px) {
-    @include font-size(21px, 53px);
-  }
 }
