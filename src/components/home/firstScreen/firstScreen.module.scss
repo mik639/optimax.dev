@@ -83,6 +83,7 @@
   letter-spacing: -0.85px;
 
   @media screen and (max-width: 1024px) {
+    letter-spacing: 0.2px;
     font-weight: $font-weight-bold;
   }
 }

@@ -43,6 +43,7 @@
   letter-spacing: -0.39px;
 
   @media screen and (max-width: 1024px) {
+    letter-spacing: 0;
     @include font-size(18px, 53px);
   }
 }
