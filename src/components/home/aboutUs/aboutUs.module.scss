@@ -28,7 +28,7 @@
   justify-content: space-between;
   max-width: $grid-width;
   margin: 73px auto 0;
-  padding: 0 17px;
+  padding: 0 35px;
   box-sizing: border-box;
 
   @media screen and (max-width: 1024px) {
@@ -51,7 +51,7 @@
     width: auto;
     margin-top: 24px;
     margin-right: 0;
-    padding: 0 17px;
+    padding: 0 35px;
   }
 }
 
@@ -60,7 +60,7 @@
   display: flex;
   max-width: $grid-width;
   margin: 73px auto 0;
-  padding: 0 17px;
+  padding: 0 35px;
   box-sizing: border-box;
 
   @media screen and (max-width: 1024px) {

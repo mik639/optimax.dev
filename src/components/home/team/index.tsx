@@ -18,7 +18,6 @@ import meling from './img/meling.jpg'
 import kirsanov from './img/kirsanov.png'
 import shilnikov from './img/shilnikov.jpg'
 import ulianov from './img/ulianov.jpg'
-import kornushkov from './img/kornushkov.png'
 
 import s from './index.module.scss'
 
@@ -106,12 +105,6 @@ const TEAMS: TeamType[] = [
     photo: ulianov,
     name: 'Aleksei Ulianov',
     position: 'Frontend techlead',
-    description: 'Fun, dynamic work enviornment with people like you :)'
-  },
-  {
-    photo: kornushkov,
-    name: 'Nickolay Kornushkov',
-    position: 'Head of Russian department',
     description: 'Fun, dynamic work enviornment with people like you :)'
   }
 ]
