@@ -1,5 +1,5 @@
 ---
-path: '/jobs/ta'
+path: '/jobs/qa'
 title: 'QA Engineer'
 date: 2018-11-28T15:14:54+10:00
 address: Tolyatti, St. 8b
