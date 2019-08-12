@@ -14,8 +14,8 @@ link: https://docs.google.com/forms/d/e/1FAIpQLSfC9rP4K2fhCuBCO1fp0AVI-8yYmRijFw
 
 #### Стэк
 
-- React / Redux
-- Redux-saga
+- React
+- Redux / Redux-saga
 - Reselect
 Мы покрываем свой код тестами (jest, enzyme), поэтому будет круто если ты писал(а) unit-тесты.
 
