@@ -52,9 +52,9 @@ class Content extends PureComponent<ContentType> {
           <img className={s.notebook} src={images[`${name}Bottom`]} alt="" />
           {isGlassesUsa && (
             <Fragment>
-              <ParallaxItem name="revel" speed={0.3} />
+              <ParallaxItem name="revel" speed={0.27} />
               <ParallaxItem name="yoji" speed={0.45} />
-              <ParallaxItem name="ottoto" speed={0.7} />
+              <ParallaxItem name="ottoto" speed={0.6} />
             </Fragment>
           )}
         </div>
