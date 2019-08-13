@@ -39,7 +39,7 @@ const Job = ({ data }: JobType): ReactNode => {
         <SubTitle isWhite>
           <div className={s.wrapSubtitle}>
             <div className={s.wrapMarker}>
-              <BaseIcon width="8px" height="12px" name="marker" />
+              <BaseIcon name="marker" />
             </div>
             <span className={s.wrapAddress}>{frontmatter ? frontmatter.address : ''}</span>
           </div>

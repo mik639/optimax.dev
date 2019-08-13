@@ -7,7 +7,7 @@ import s from './parallaxItem.module.scss'
 
 interface ParallaxItemProps {
   name: string
-  isSlow: boolean
+  speed: number
 }
 
 class ParallaxItem extends PureComponent<ParallaxItemProps> {
@@ -34,10 +34,10 @@ class ParallaxItem extends PureComponent<ParallaxItemProps> {
   }
 
   handleScroll = () => {
-    const { isSlow } = this.props
+    const { speed } = this.props
     const scrollTop = window.pageYOffset
 
-    const top = isSlow ? 0 - scrollTop * 0.13 : 0 - scrollTop * 0.15
+    const top = 0 - scrollTop * speed
 
     this.setState({ top })
   }

@@ -44,17 +44,17 @@ class Content extends PureComponent<ContentType> {
         <div className={s.wrapParallax}>
           {isGlassesUsa && (
             <Fragment>
-              <ParallaxItem name="muse" />
-              <ParallaxItem name="amelis" isSlow />
-              <ParallaxItem name="gamespex" />
+              <ParallaxItem name="muse" speed={0.27} />
+              <ParallaxItem name="amelis" speed={0.28} />
+              <ParallaxItem name="gamespex" speed={0.29} />
             </Fragment>
           )}
           <img className={s.notebook} src={images[`${name}Bottom`]} alt="" />
           {isGlassesUsa && (
             <Fragment>
-              <ParallaxItem name="revel" />
-              <ParallaxItem name="yoji" isSlow />
-              <ParallaxItem name="ottoto" />
+              <ParallaxItem name="revel" speed={0.29} />
+              <ParallaxItem name="yoji" speed={0.28} />
+              <ParallaxItem name="ottoto" speed={0.27} />
             </Fragment>
           )}
         </div>

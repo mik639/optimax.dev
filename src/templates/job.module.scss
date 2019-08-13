@@ -25,6 +25,12 @@
 .wrapMarker {
   display: inline-block;
   vertical-align: middle;
+  width: 10px;
+  height: 13px;
+
+  svg {
+    vertical-align: top;
+  }
 }
 
 .wrapAddress {
