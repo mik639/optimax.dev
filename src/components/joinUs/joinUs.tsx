@@ -15,8 +15,8 @@ const JoinUs: React.FC = (): React.ReactElement => {
   return (
     <div className={s.wrap}>
       <div className={s.wrapTitles}>
-        <Title>Join Us</Title>
-        <Subtitle>Current openings</Subtitle>
+        <Title>Join Us!</Title>
+        <Subtitle>We are currently looking for:</Subtitle>
       </div>
 
       <div className={s.wrapItems}>

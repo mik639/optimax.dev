@@ -10,7 +10,7 @@ const JobByLocation: React.FC = (): React.ReactElement => (
   <Element name="#location" className={s.wrap}>
     <div className={s.container}>
       <div className={s.wrapTitle}>
-        <Title isWhite>Job by Location</Title>
+        <Title isWhite>Optimax Around the World</Title>
       </div>
       <div className={s.box}>
         <div className={s.item}>

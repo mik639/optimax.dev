@@ -113,8 +113,8 @@ const Team: React.FC = (): React.ReactElement => (
   <Element name="#ourTeam" className={s.wrap}>
     <div className={s.container}>
       <div className={s.titles}>
-        <Title isWhite>Jobs by Team</Title>
-        <Subtitle isWhite>The people behind our company</Subtitle>
+        <Title isWhite>Our Fantastic Team</Title>
+        <Subtitle isWhite>The people behind the company</Subtitle>
       </div>
       <div className={s.teams}>
         {TEAMS.map(
