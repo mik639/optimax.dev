@@ -1,7 +1,5 @@
 import React, { PureComponent, ReactNode, Fragment } from 'react'
-import classNames from 'classnames'
 
-import BaseIcon from 'components/baseIcon/baseIcon'
 import ParallaxItem from 'components/projects/parallaxItem/parallaxItem'
 
 import s from './content.module.scss'

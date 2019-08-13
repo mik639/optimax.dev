@@ -6,13 +6,17 @@ import BaseIcon from 'components/baseIcon/baseIcon'
 import s from './parallaxItem.module.scss'
 
 interface ParallaxItemProps {
-  name: string;
-  isSlow: boolean;
+  name: string
+  isSlow: boolean
 }
 
 class ParallaxItem extends PureComponent<ParallaxItemProps> {
   state = {
     top: 0
+  }
+
+  static defaultProps = {
+    isSlow: false
   }
 
   /**
@@ -43,7 +47,7 @@ class ParallaxItem extends PureComponent<ParallaxItemProps> {
     const { top } = this.state
 
     return (
-      <div cre className={classNames(s.icon, s[name])} style={{ transform: `translate3d(0px, ${top}px, 0px)` }}>
+      <div className={classNames(s.icon, s[name])} style={{ transform: `translate3d(0px, ${top}px, 0px)` }}>
         <BaseIcon name={name} width="134" height="134" />
       </div>
     )
