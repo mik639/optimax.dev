@@ -82,6 +82,10 @@
   color: transparent;
   text-align: center;
 
+  &:hover {
+    box-shadow: 0 6px 8px 1px rgba($color-black, 0.1);
+  }
+
   &:last-child {
     margin-right: 0;
   }
