@@ -1,4 +1,8 @@
-import React from 'react'
+import React, { PureComponent, ReactNode, Fragment } from 'react'
+import classNames from 'classnames'
+
+import BaseIcon from 'components/baseIcon/baseIcon'
+import ParallaxItem from 'components/projects/parallaxItem/parallaxItem'
 
 import s from './content.module.scss'
 
@@ -27,16 +31,38 @@ const images: ImagesType = {
   uvpRight
 }
 
-const Content: React.FC<ContentType> = ({ html, name }: ContentType): React.ReactElement => {
-  return (
-    <div>
-      <div className={s.wrapContent}>
-        <div className={s.content} dangerouslySetInnerHTML={{ __html: html }} />
-        <img className={s.img} src={images[`${name}Right`]} alt={name} />
+class Content extends PureComponent<ContentType> {
+  render(): ReactNode {
+    const { html, name } = this.props
+    const isGlassesUsa = name === 'glassesusa'
+
+    return (
+      <div>
+        <div className={s.wrapContent}>
+          <div className={s.content} dangerouslySetInnerHTML={{ __html: html }} />
+          <img className={s.img} src={images[`${name}Right`]} alt={name} />
+        </div>
+
+        <div className={s.wrapParallax}>
+          {isGlassesUsa && (
+            <Fragment>
+              <ParallaxItem name="muse" />
+              <ParallaxItem name="amelis" isSlow />
+              <ParallaxItem name="gamespex" />
+            </Fragment>
+          )}
+          <img className={s.notebook} src={images[`${name}Bottom`]} alt="" />
+          {isGlassesUsa && (
+            <Fragment>
+              <ParallaxItem name="revel" />
+              <ParallaxItem name="yoji" isSlow />
+              <ParallaxItem name="ottoto" />
+            </Fragment>
+          )}
+        </div>
       </div>
-      <img className={s.notebook} src={images[`${name}Bottom`]} alt="" />
-    </div>
-  )
+    )
+  }
 }
 
 export default Content

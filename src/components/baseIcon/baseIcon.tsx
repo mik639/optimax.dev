@@ -23,6 +23,12 @@ import location from './svg/location.svg'
 import ourTeam from './svg/ourTeam.svg'
 import arrow from './svg/arrow.svg'
 import marker from './svg/marker.svg'
+import revel from './svg/revel.svg'
+import yoji from './svg/yoji.svg'
+import ottoto from './svg/ottoto.svg'
+import muse from './svg/muse.svg'
+import gamespex from './svg/gamespex.svg'
+import amelis from './svg/amelis.svg'
 
 import s from './baseIcon.module.scss'
 
@@ -53,7 +59,13 @@ const ICONS: IconsType = {
   careers,
   ourTeam,
   arrow,
-  marker
+  marker,
+  revel,
+  yoji,
+  ottoto,
+  muse,
+  gamespex,
+  amelis
 }
 
 interface IconProps {
