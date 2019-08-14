@@ -16,9 +16,10 @@
   max-width: $grid-width;
   margin: auto;
   box-sizing: border-box;
+  height: 100%;
 
   @media screen and (min-width: 1024px) {
-    padding: 28px 35px 0;
+    padding: 28px 35px;
   }
 
   @media screen and (max-width: 1024px) {
@@ -28,6 +29,8 @@
 }
 
 .wrapTitle {
+  position: absolute;
+  width: 100%;
   text-align: center;
   margin-bottom: 80px;
 }
@@ -36,6 +39,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  height: 100%;
 
   @media screen and (max-width: 1024px) {
     flex-direction: column;
