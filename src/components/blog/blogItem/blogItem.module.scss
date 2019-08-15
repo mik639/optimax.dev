@@ -1,21 +1,12 @@
 @import 'variables.scss';
 
 .wrap {
-  flex: 0 0 407px;
-  margin: 0 12.5px 39px;
-
-  &:nth-child(3n + 5) {
-    margin-right: 0;
-  }
+  flex: 0 0 30.9%;
+  margin-right: 2.2%;
+  margin-bottom: 39px;
 
   &:first-child {
-    flex: 0 0 calc(100% - 461px);
-    margin: 0 25px 39px 12.5px;
-
-    + .wrap {
-      flex: 0 0 407px;
-      margin: 0 0 30px;
-    }
+    flex: 0 0 64%;
   }
 
   @media screen and (max-width: 1024px) {
